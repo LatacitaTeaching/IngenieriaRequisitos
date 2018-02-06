@@ -49,6 +49,7 @@
 		\column{0.50\linewidth}
 			\centering
 			\includegraphics[width=.25\textwidth,keepaspectratio=true]{images/uc.eps}
+    \end{columns}
 \end{frame}
 
 \begin{frame}[c]
@@ -115,18 +116,12 @@
 
 \begin{frame}[c]
 	\frametitle{Horario Tutorías}
-	\begin{center}
-	\begin{tabular}{||l|c|c|c|c|c||}
-	\hline \hline
-				  & Lunes  & Martes   & Miércoles  & Jueves  & Viernes \\ \hline
-	09:30 - 10:30 &        & Tutoría  &            & Tutoría &         \\ \hline
-	10:30 - 11:00 &        & Tutoría  &            & Tutoría &         \\ \hline
-	11:30 - 12:00 &        & Tutoría  &            & Tutoría &         \\ \hline
-	12:00 - 13:00 &        &          &            &         &         \\ \hline
-	13:00 - 14:00 &        &          &            &         &         \\ \hline
-	\hline
-	\end{tabular}
-	\end{center}
+    \begin{itemize}[<+->]
+        \item A cualquier hora, preferentemente de mañana. 
+        \item Disponible tardes de Martes y Jueves.
+        \item Si se quiere asegurar disponibilidad, avisar con antelación.
+        \item Disponible a través de correo y \alert{moodle}.
+	\end{itemize}
 \end{frame}
 
 
@@ -260,12 +255,16 @@
 \begin{frame}[c]
 	\frametitle{Cálculo de la Calificación Final}
 	\begin{block}{Fórmula de Cálculo de la Calificación Final}
-		\begin{align*}
-			Calificacion Final =\  & ((CalificacionPruebaFinal >= CalificacionProyecto)? \\
-                                   &  \ \ \ CalificacionPruebaFinal + 1 : \\
-                                   &  \ \ \ CalificacionProyecto)  \\
-                                   & + CalificacionParticipacion
-		\end{align*}
+		\begin{scriptsize}
+        \begin{tabular}{ll}
+			Calificación Final = & SI Calificación Prueba Final  $>$= Calificación Proyecto ENTONCES \\
+                                 & \ \ \ \ Calificación Prueba Final + 1  \\
+                                 &  SINO \\
+                                 & \ \ \ \ Calificación Proyecto \\
+                                 & FINSI \\
+                                 & + Calificación Participación
+		\end{tabular}
+        \end{scriptsize}
 	\end{block}
 	\begin{itemize}
 		\item<2-> Es necesario presentarse a la prueba final para superar la asignatura.
@@ -279,7 +278,7 @@
 
 \begin{frame}
 	\frametitle{Prueba Evaluable Escrita Final}
-	\begin{enumerate}[<+->]
+	\begin{itemize}[<+->]
 		\item Prueba evaluable escrita en las fechas asignadas por el centro.
 		\item La prueba contendrá ejercicios y cuestiones sobre razonamientos teóricos.
 		\item Tendrá una duración de unas 4 horas, dividida en dos partes.
@@ -288,35 +287,37 @@
 		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no debería hacerse ningún uso de los mismos}.
 		\item Aquellas respuestas que sean una simple copia de lo disponible en algún tipo de material de la asignatura se calificarán con 0 puntos.
         \item Hay modelos de pruebas escritas disponibles en moodle.
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Evaluación de Proyecto Integrado}
-	\begin{itemize}
-        \item<2-> La calificación de la primera parte es única para todo el grupo.
-        \item<3-> La calificación de la segunda parte es individual.
-        \item<4-> Calificación final determinada por la media ponderada de las diversas entregas.
-        \item<5-> Por cada entrega se proporcionarán unos criterios de evaluación y calificación claros.
-        \item<6-> Hay que demostrar un mínimo de desempeño en la parte individual para poder superar la asignatura.
 	\end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[c]
+	\frametitle{Evaluación del Proyecto}
+	\begin{itemize}[<+->]
+        \item La calificación de la primera parte es única para todo el grupo.
+        \item La calificación de la segunda parte es individual.
+        \item Calificación final determinada por la media ponderada de las diversas entregas.
+        \item Por cada entrega se proporcionarán unos criterios de evaluación y calificación claros.
+        \item Hay que demostrar un mínimo de desempeño en la parte individual para poder superar la asignatura.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
 	\frametitle{Peso de las Etapas del Proyecto}
+    \begin{center}
 	\begin{tabular}{||l|r||}
-    \hline
-    Actas y Planes de Trabajo                   &&  5\% \\ \hline
-    Definición de la Visión del Proyecto        && 10\% \\ \hline
-    Definición del Contexto                     && 15\% \\ \hline
-    Identificación de las Fuentes de Requisitos && 10\% \\ \hline
-    Diseño del Plan de Captura de Requisitos    && 10\% \\ \hline \hline
-    Diseño de una Actividad de Captura de Requisitos && 10\% \\ \hline 
-    Especificación de un Modelo de Objetivos    && 15\% \\ \hline 
-    Especificación de Requisitos Funcionales    && 15\% \\ \hline 
-    Especificación de Requisitos No Funcionales && 10\% \\ \hline \hline
-    Modelado de Procesos de Negocio             &&  5\% \\
+    \hline \hline
+    Actas y Planes de Trabajo                   & 5\% \\ \hline
+    Definición de la Visión del Proyecto        & 10\% \\ \hline
+    Definición del Contexto                     & 15\% \\ \hline
+    Identificación de las Fuentes de Requisitos & 10\% \\ \hline
+    Diseño del Plan de Captura de Requisitos    & 10\% \\ \hline \hline
+    Diseño de una Actividad de Captura de Requisitos & 10\% \\ \hline
+    Especificación de un Modelo de Objetivos    & 15\% \\ \hline
+    Especificación de Requisitos Funcionales    & 15\% \\ \hline
+    Especificación de Requisitos No Funcionales & 10\% \\ \hline \hline
+    Modelado de Procesos de Negocio             &  5\% \\ \hline \hline
 	\end{tabular}
+\end{center}
 \end{frame}
 
 \section{Bibliografía}
@@ -333,11 +334,57 @@
 	\end{enumerate}
 \end{frame}
 
-\begin{frame}[allowframebreaks]
+\begin{frame}
 	\frametitle{Bibliografía}
-	\nocite{pohl:2010,lamsweerde:2009,cockburn:2000,chung:1999,gray:2012,Cohn2004}
-	\bibliographystyle{apa}
-	\bibliography{ir}
+%	\nocite{pohl:2010,lamsweerde:2009,cockburn:2000,chung:1999,gray:2012,Cohn2004}
+%	\bibliographystyle{apa}
+%	\bibliography{ir}
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Pohl}{2010}]{pohl:2010}
+Pohl, K. (2010).
+\newblock {\em {Requirements Engineering: Fundamentals, Principles and
+  Techniques}}.
+\newblock Springer.
+
+\bibitem[\protect\astroncite{Gray et~al.}{2012}]{gray:2012}
+Gray, D., Brown, S., and Macanufo, J. (2012).
+\newblock {\em {Gamestorming: 83 juegos para innovadores, inconformistas y
+  generadores del cambio}}.
+\newblock Deusto.
+
+\bibitem[\protect\astroncite{van Lamsweerde}{2009}]{lamsweerde:2009}
+van Lamsweerde, A. (2009).
+\newblock {\em {Requirements Engineering: From System Goals to UML Models to
+  Software Specifications}}.
+\newblock Wiley.
+
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Bibliografía}
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Cockburn}{2000}]{cockburn:2000}
+Cockburn, A. (2000).
+\newblock {\em {Writing Effective Use Cases}}.
+\newblock Addison-Wesley.
+
+\bibitem[\protect\astroncite{Cohn}{2004}]{Cohn2004}
+Cohn, M. (2004).
+\newblock {\em {User Stories Applied: For Agile Software Development}},
+  volume~1 of {\em The Addison-Wesley signature series}.
+\newblock Addison-Wesley Professional.
+
+\bibitem[\protect\astroncite{Chung et~al.}{1999}]{chung:1999}
+Chung, L., Nixon, B.~A., Yu, E., and Mylopoulos, J. (1999).
+\newblock {\em {Non-Functional Requirements in Software Engineering}}.
+\newblock Kluwer Academic Puvlishers.
+
+\end{thebibliography}
+
+
 \end{frame}
 
 \end{document}
