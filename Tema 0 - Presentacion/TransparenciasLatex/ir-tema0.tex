@@ -1,0 +1,343 @@
+\documentclass[handout,4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+
+\newcommand{\imp}[1]{{\small{\sf #1}}}
+
+\usepackage{beamerthemesplit}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{pstricks} % PSTricks package
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{pgfpages}
+
+% \setbeamercovered{dynamic}
+\setcounter{tocdepth}{1}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+
+\setbeamertemplate{frametitle}{
+	\begin{centering}
+		\insertframetitle
+		\par
+	\end{centering}
+}
+
+\usetheme[secheader]{Boadilla}
+
+\title[Ing. Requisitos]{Ingeniería de Requisitos}
+
+\author[Pablo Sánchez]{\alert{Pablo Sánchez}}
+
+\institute[I2E]{
+		   Dpto. Ingeniería Informática y Electrónica \\
+		   Universidad de Cantabria \\
+		   Santander (Cantabria, España) \\
+		   p.sanchez@unican.es
+}
+
+\date{}
+
+\begin{document}
+
+\begin{frame}[c]
+	\titlepage
+	\begin{columns}
+		\column{0.50\linewidth}
+			\centering
+			\includegraphics[width=.28\textwidth,keepaspectratio=true]{images/istr.eps}
+		\column{0.50\linewidth}
+			\centering
+			\includegraphics[width=.25\textwidth,keepaspectratio=true]{images/uc.eps}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item \alert{Índice}
+        \item Datos Administrativos
+        \item Objetivos y Temario
+        \item Metodología
+        \item Evaluación
+        \item Bibliografía
+	\end{enumerate}
+\end{frame}
+
+\section{Datos Administrativos}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item Índice
+        \item \alert{Datos Administrativos}
+        \item Objetivos y Temario
+        \item Metodología
+        \item Evaluación
+        \item Bibliografía
+	\end{enumerate}
+\end{frame}
+
+\subsection{Profesorado}
+
+\begin{frame}[c]
+	\frametitle{Profesorado}
+	\begin{center}
+		\alert{Pablo S\'{a}nchez Barreiro}  \\
+		\begin{small}
+		Despacho 1069 \\
+		Departamento de Ingeniería Informática y Electrónica \\
+		p.sanchez@unican.es \\
+		\end{small}
+	\end{center}
+\end{frame}
+
+\subsection{Horarios}
+
+\begin{frame}[c]
+	\frametitle{Horario Clases}
+	\begin{small}
+	\begin{center}
+	\begin{tabular}{||l|c|c|c|c|c||}
+	\hline \hline
+				   & Lunes  & Martes      & Miércoles    & Jueves       & Viernes      \\ \hline \hline
+    08:30 - 09:30  & Aula   &             & Aula         &              & Laboratorio  \\ \hline
+    09:30 - 10:30  &        &             &              &              & Laboratorio  \\ \hline \hline
+	10:45 - 11:45  &        &             &              &              &              \\ \hline
+    11:45 - 12:45  &        &             &              &              &              \\ \hline
+    12:45 - 13:45  &        &             &              &              &              \\ \hline
+	\end{tabular}
+	\end{center}
+	\end{small}
+	\begin{itemize}
+		\item<2-> La asistencia a las clases teóricas y prácticas no es obligatoria, \uncover<3->{\alert{pero si altamente recomendable e incluso necesaria}.}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Horario Tutorías}
+	\begin{center}
+	\begin{tabular}{||l|c|c|c|c|c||}
+	\hline \hline
+				  & Lunes  & Martes   & Miércoles  & Jueves  & Viernes \\ \hline
+	09:30 - 10:30 &        & Tutoría  &            & Tutoría &         \\ \hline
+	10:30 - 11:00 &        & Tutoría  &            & Tutoría &         \\ \hline
+	11:30 - 12:00 &        & Tutoría  &            & Tutoría &         \\ \hline
+	12:00 - 13:00 &        &          &            &         &         \\ \hline
+	13:00 - 14:00 &        &          &            &         &         \\ \hline
+	\hline
+	\end{tabular}
+	\end{center}
+\end{frame}
+
+
+\section{Objetivos y Temario}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item Índice
+        \item Datos Administrativos
+        \item \alert{Objetivos y Temario}
+        \item Metodología
+        \item Evaluación
+        \item Bibliografía
+	\end{enumerate}
+\end{frame}
+
+\subsection{Objetivos}
+
+\begin{frame}[t]
+	\frametitle{Objetivos de la Asignatura}
+    \begin{enumerate}
+			\item<1-> Conocer y comprender la importancia y papel de la \emph{Ingeniería de Requisitos}.
+            \item<2-> Conocer, comprender y saber diseñar y ejecutar procesos de \emph{Ingeniería de Requisitos}.
+			\item<3-> Conocer, comprender y saber aplicar técnicas para la \emph{Captura de Requisitos}.
+			\item<4-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Requisitos Funcionales}.
+			\item<5-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Requisitos No Funcionales}.
+			\item<6-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Procesos de Negocio}.
+	 \end{enumerate}
+\end{frame}
+
+\subsection{Resultados de Aprendizaje}
+
+\begin{frame}[t]
+	\frametitle{Resultados de Aprendizaje}
+    	\begin{enumerate}
+			\item<1-> El alumno conocerá, comprenderá y sabrá utilizar la terminología propia de la \emph{Ingeniería de Requisitos}.
+			\item<2-> El alumno sabrá diseñar y ejecutar procesos de \emph{Ingeniería de Requisitos}.
+            \item<3-> El alumno sabrá diseñar y ejecutar procesos de \emph{Captura de Requisitos}, empleando diferentes técnicas y estrategias, y sabiendo escoger la más adecuada en función de cada tipo de proyecto.
+            \item<4-> El alumno sabrá especificar requisitos funcionales utilizando para ello \emph{objetivos}, \emph{escenarios}, \emph{casos de uso} e \emph{historias de usuario}.
+            \item<5-> El alumno sabrá especificar requisitos no funcionales, en especial los requisitos relacionados con la seguridad, utilizando para ello \emph{objetivos} y catálogos predefinidos de requisitos no funcionales.
+            \item<6-> El alumno sabrá modelar procesos de negocio mediante alguna notación estándar, como BPMN.
+		\end{enumerate}
+\end{frame}
+
+\subsection{Temario}
+
+\begin{frame}[c]
+	\frametitle{Temario}
+	\begin{enumerate}[<+->]
+		\item Procesos de Ingeniería de Requisitos
+		\item Técnicas de Captura de Requisitos.
+		\item Modelado y Especificación de Requisitos Funcionales.
+		\item Modelado y Especificación de Requisitos No Funcionales..
+		\item Modelado y Especificación de Procesos de Negocio en Organizaciones.
+	\end{enumerate}
+\end{frame}
+
+\section{Metodología}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item Índice
+        \item Datos Administrativos
+        \item Objetivos y Temario
+        \item \alert{Metodología}
+        \item Evaluación
+        \item Bibliografía
+	\end{enumerate}
+\end{frame}
+
+\subsection{Plataforma}
+
+\begin{frame}[c]
+	\frametitle{Plataforma de Trabajo}
+	\begin{itemize}
+		\item<1-> La plataforma de trabajo de la asignatura es \emph{moodle}.
+		\item<2-> Todas las notificaciones y publicaciones se harán a través de \emph{moodle}.
+		\item<3-> \alert{Es obligación del alumno estar atento a las posibles notificaciones y avisos que se realicen a través de moodle}.
+	\end{itemize}
+\end{frame}
+
+\subsection{Actividades}
+
+\begin{frame}
+	\frametitle{Clases en Aula}
+	\begin{block}{Objetivo}
+        Entender los conocimientos teóricos que constituyen la base de las habilidades, destrezas y competencias a adquirir al final de la asignatura.
+	\end{block}
+	\begin{itemize}
+        \item<2-> Preparación autónoma y exposición del contenido teórico.
+        \item<3-> Actividades de aprendizaje activo en función del contenido y predisposición del alumnado.
+		\item<4-> Resolución autónoma, dirigida y supervisada de ejercicios.
+		\item<5-> Clases magistrales puntuales usando pizarra y/o transparencias.
+		\item<6-> NOTA: \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
+		\item<7-> \alert{Sin conocimiento teórico es imposible alcanzar las habilidades prácticas}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Clases en Laboratorio}
+	\begin{block}{Objetivo}
+		Aplicar los conceptos teóricos aprendidos en las clases de aula al desarrollo de un sistema software real de mediana escala, con el objetivo
+        de desarrollar las competencias procedimentales y actitudinales deseadas.
+	\end{block}
+	\begin{itemize}
+        \item<2-> Desarrollo de un proyecto de especificación de requisitos, divido en varias etapas.
+		\item<3-> Dos etapas diferenciadas: \emph{definición del proceso} y \emph{ejecución del proceso} de Ingeniería de Requisitos.
+        \item<4-> La primera parte del proyecto requiere del trabajo en equipo y de actividades de grupo.
+        \item<5-> La segunda parte se realizará de manera coordinada pero individual.
+	\end{itemize}
+\end{frame}
+
+\section{Métodos de Evaluación/Calificación}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item Índice
+        \item Datos Administrativos
+        \item Objetivos y Temario
+        \item Metodología
+        \item \alert{Evaluación}
+        \item Bibliografía
+	\end{enumerate}
+\end{frame}
+
+\subsection{Fórmula Calificación}
+
+\begin{frame}[c]
+	\frametitle{Cálculo de la Calificación Final}
+	\begin{block}{Fórmula de Cálculo de la Calificación Final}
+		\begin{align*}
+			Calificacion Final =\  & ((CalificacionPruebaFinal >= CalificacionProyecto)? \\
+                                   &  \ \ \ CalificacionPruebaFinal + 1 : \\
+                                   &  \ \ \ CalificacionProyecto)  \\
+                                   & + CalificacionParticipacion
+		\end{align*}
+	\end{block}
+	\begin{itemize}
+		\item<2-> Es necesario presentarse a la prueba final para superar la asignatura.
+        \item<3-> Tanto el proyecto como la prueba final se evalúan de 0 a 10.
+        \item<4-> La calificación por participación es un extra adicional que variará entre (0, 0.5).
+        \item<5-> La calificación por participación dependerá del desempeño y la actitud de cada alumno en el aula.
+	\end{itemize}
+\end{frame}
+
+\subsection{Métodos y Criterios de Evaluación}
+
+\begin{frame}
+	\frametitle{Prueba Evaluable Escrita Final}
+	\begin{enumerate}[<+->]
+		\item Prueba evaluable escrita en las fechas asignadas por el centro.
+		\item La prueba contendrá ejercicios y cuestiones sobre razonamientos teóricos.
+		\item Tendrá una duración de unas 4 horas, dividida en dos partes.
+        \item Se podrá hacer uso todo tipo de material escrito.
+        \item En ningún caso se dejará hacer uso de de dispositivos electrónicos, especialmente, de aquellos con capacidades de comunicación inalámbrica.
+		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no debería hacerse ningún uso de los mismos}.
+		\item Aquellas respuestas que sean una simple copia de lo disponible en algún tipo de material de la asignatura se calificarán con 0 puntos.
+        \item Hay modelos de pruebas escritas disponibles en moodle.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Evaluación de Proyecto Integrado}
+	\begin{itemize}
+        \item<2-> La calificación de la primera parte es única para todo el grupo.
+        \item<3-> La calificación de la segunda parte es individual.
+        \item<4-> Calificación final determinada por la media ponderada de las diversas entregas.
+        \item<5-> Por cada entrega se proporcionarán unos criterios de evaluación y calificación claros.
+        \item<6-> Hay que demostrar un mínimo de desempeño en la parte individual para poder superar la asignatura.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Peso de las Etapas del Proyecto}
+	\begin{tabular}{||l|r||}
+    \hline
+    Actas y Planes de Trabajo                   &&  5\% \\ \hline
+    Definición de la Visión del Proyecto        && 10\% \\ \hline
+    Definición del Contexto                     && 15\% \\ \hline
+    Identificación de las Fuentes de Requisitos && 10\% \\ \hline
+    Diseño del Plan de Captura de Requisitos    && 10\% \\ \hline \hline
+    Diseño de una Actividad de Captura de Requisitos && 10\% \\ \hline 
+    Especificación de un Modelo de Objetivos    && 15\% \\ \hline 
+    Especificación de Requisitos Funcionales    && 15\% \\ \hline 
+    Especificación de Requisitos No Funcionales && 10\% \\ \hline \hline
+    Modelado de Procesos de Negocio             &&  5\% \\
+	\end{tabular}
+\end{frame}
+
+\section{Bibliografía}
+
+\begin{frame}[c]
+	\frametitle{Índice}
+	\begin{enumerate}
+        \item Índice
+        \item Datos Administrativos
+        \item Objetivos y Temario
+        \item Metodología
+        \item Evaluación
+        \item \alert{Bibliografía}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Bibliografía}
+	\nocite{pohl:2010,lamsweerde:2009,cockburn:2000,chung:1999,gray:2012,Cohn2004}
+	\bibliographystyle{apa}
+	\bibliography{ir}
+\end{frame}
+
+\end{document}
