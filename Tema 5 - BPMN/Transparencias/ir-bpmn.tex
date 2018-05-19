@@ -79,29 +79,197 @@
     }
 \end{frame}
 
+\begin{frame}[c]
+    \frametitle{Características de un Proceso de Negocio}
+    \begin{enumerate}[<+->]
+        \item Contiene un conjunto finito de actividades.
+        \item Sus actividades están parcialmente ordenadas.
+        \item Cada actividad tiene asociado uno o más eventos que originan su ejecución.
+        \item Cada actividad produce una salida.
+        \item La salida general del proceso es de interés para un consumidor.
+    \end{enumerate}
+\end{frame}
 
 \begin{frame}[c]
-    \frametitle{Proceso de Negocio}
-        \begin{center}
-            \href{http://youtu.be/gQ_OHOelPvM}{Ejemplo Informal}
+    \frametitle{Ejemplo de Proceso de Negocio}
+    \begin{center}
+        \href{http://youtu.be/gQ_OHOelPvM}{Ejemplo Informal I} \ \\
+        \href{https://youtu.be/bfB38RlXRbI}{Ejemplo Informal II} \ \\
+        \href{https://youtu.be/vvbN-cWe0A0}{Ejemplo Informal II} \ \\
+    \end{enumerate}
+\end{frame}
+
+\section{BPMN 2.0}
+
+\subsection{Introducción}
+
+\begin{frame}[c]
+    \frametitle{Business Process Modelling Notation (BPMN)}
+    \begin{block}{BPMN 2.0}
+        \emph{Business Process Modelling Notation} (BPMN) es un lenguaje de modelado de procesos de negocio estandarizado por la OMG (\emph{Object Managament Group}) con el objetivo de proporcionar una notación fácilmente entendible por todos los actores de un proceso de negocio, abarcando desde los analistas que lo definen hasta los programadores que desarrollan las herramientas que dan soporte al mismo.
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Características BPMN}
+    \begin{enumerate}[<+->]
+        \item Intento de proporcionar una notación de alto nivel para WSBPEL.
+        \item Notación basada en diagramas de flujo.
+        \item Semántica basada en tokens.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Tipos de Procesos}
+
+\begin{frame}[c]
+    \frametitle{Tipos de Procesos de Negocio}
+    \begin{description}[<+->]
+        \item[Privados] Internos a una organización.
+        \item[Públicos] Interacción entre un proceso privado y otro proceso o un participante.
+        \item[Colaboración] Interacción entre dos o más entidades de negocio.
+        \item[Coreografías] Contrato o definición del comportamiento de la interacción entre varios participantes.
+        \item[Conversaciones] Intercambio de mensajes y objetos de negocio entre entidades.
+    \end{description}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos de BPMN 2.0}
+    \begin{enumerate}[<+->]
+        \item Flow Objects.
+        \item Data.
+        \item Swimlanes.
+        \item Artifacts.
     \end{enumerate}
 \end{frame}
 
 
-
-
-\section{BPMN 2.0}
-
-%% Definición y características.
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Evento}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Tarea}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Gateways}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+\end{frame}
 
 \begin{frame}[c]
-    \frametitle{Elementos BPMN 2.0}
-    %% Participants, Pools y Lanes
-    %% Tasks
-    %% Start Event, End Event?
-    %% Flow
-    %% Parallel Gateway, Exclusive Gateway, Inclusive Gateway, Synchronizing Gateway
+    \frametitle{Elementos Básicos}
+    \begin{block}{Sequence Flow}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Message Flow}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
 \end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Pool}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Lane}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Message}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Data Object}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Subproceso}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Conditional Flow}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Default Flow}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Elementos Básicos}
+    \begin{block}{Event Based Decisions}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+    \begin{block}{Default Flow}
+        %% Defintion - Table 7.1
+        \ \\
+        \begin{center}
+            \includegraphics[width=]{symbols/event.eps}
+        \end{center}
+    \end{block}
+
+\end{frame}
+
 
 
 
