@@ -57,11 +57,10 @@
 \begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{1}
-
-        %% Estandar
-
-        %% Buscar libro en biblioteca
-
+        \bibitem[\protect\astroncite{OMG}{2011}]{bpmn:2011}
+        Object Management Group (OMG). (2011).
+        \newblock {\em {Business Process Model and Notation (BPMN) 2.0}}.
+        \newblock OMG Document Number: formal/2011-01-03.
     \end{thebibliography}
 \end{frame}
 
@@ -95,8 +94,8 @@
     \begin{center}
         \href{http://youtu.be/gQ_OHOelPvM}{Ejemplo Informal I} \ \\
         \href{https://youtu.be/bfB38RlXRbI}{Ejemplo Informal II} \ \\
-        \href{https://youtu.be/vvbN-cWe0A0}{Ejemplo Informal II} \ \\
-    \end{enumerate}
+        \href{https://youtu.be/vvbN-cWe0A0}{Ejemplo Informal II} 
+    \end{center}
 \end{frame}
 
 \section{BPMN 2.0}
@@ -132,158 +131,137 @@
     \end{description}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Elementos de BPMN 2.0}
-    \begin{enumerate}[<+->]
-        \item Flow Objects.
-        \item Data.
-        \item Swimlanes.
-        \item Artifacts.
-    \end{enumerate}
-\end{frame}
+%%\begin{frame}[c]
+%%    \frametitle{Elementos de BPMN 2.0}
+%%    \begin{enumerate}[<+->]
+%%        \item Flow Objects.
+%%        \item Data.
+%%        \item Swimlanes.
+%%        \item Artifacts.
+%%    \end{enumerate}
+%%\end{frame}
 
-
-\begin{frame}[c]
-    \frametitle{Elementos Básicos}
-    \begin{block}{Evento}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-    \begin{block}{Tarea}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-    \begin{block}{Gateways}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-\end{frame}
+\subsection{Pools and Lanes}
 
 \begin{frame}[c]
-    \frametitle{Elementos Básicos}
-    \begin{block}{Sequence Flow}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-    \begin{block}{Message Flow}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Elementos Básicos}
     \begin{block}{Pool}
-        %% Defintion - Table 7.1
+        Un \emph{pool} representa un participante u organización dentro de un proceso de negocio.
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.25\textwidth]{symbols/pool.eps}
         \end{center}
     \end{block}
     \begin{block}{Lane}
-        %% Defintion - Table 7.1
+        Una \emph{pool} representa una entidad perteneciente a una determinada organización y que realiza una serie de tareas concretas dentro de un proceso de negocio.  
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.25\textwidth]{symbols/lane.eps}
+        \end{center}
+    \end{block}
+\end{frame}
+
+\subsection{Eventos, Tareas y Flujos}
+
+\begin{frame}[c]
+    \frametitle{Eventos y Tareas}
+    \begin{block}{Evento}
+        Un \alert{\emph{evento}} es algo que ocurre durante el curso de un proceso de negocio. \uncover<2->{Un evento sucede a consecuencia de una causa (\emph{trigger}) y puede poseer un impacto (\emph{result}).}
+        \uncover<3->{Los eventos puede ser de \emph{inicio}, \emph{intermedios} o de \emph{finalización}.}
+        \begin{columns}
+        \begin{column}{width=0.33\textwidth}
+            \begin{center}
+                \includegraphics[width=0.50\textwidth]{symbols/startEvent.eps}
+            \end{center}
+        \end{column}
+        \begin{column}{width=0.33\textwidth}
+            \begin{center}
+                \includegraphics[width=0.50\textwidth]{symbols/intermediateEvent.eps}
+            \end{center}
+        \end{column}
+        \begin{column}{width=0.33\textwidth}
+            \begin{center}
+                \includegraphics[width=0.50\textwidth]{symbols/endEvent.eps}
+            \end{center}
+        \end{column}
+    \end{block}
+    \begin{block}{Tarea}
+        Una \alert{\emph{tarea}} es una unidad de trabajo atómica realizada por una entidad dentro de un proceso de negocio.
+        \ \\
+        \begin{center}
+            \includegraphics[width=0.25\textwidth]{symbols/task.eps}
         \end{center}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Elementos Básicos}
-    \begin{block}{Message}
-        %% Defintion - Table 7.1
+    \frametitle{Flujos de Control}
+    \begin{block}{Sequence Flow}
+        Un \emph{flujo de secuencia} especifica el orden en el cual se han de ejecutar las actividades de un proceso de negocio. Representa la transferencia de un token de una actividad de origen a una actividad de destino. 
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.5/textwidth]{symbols/sequenceFlow.eps}
         \end{center}
     \end{block}
-    \begin{block}{Data Object}
-        %% Defintion - Table 7.1
+    \begin{block}{Message Flow}
+        Un \emph{flujo de mensajes} especifica cómo dos participantes de un proceso de negocio intercambian un mensaje. 
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Elementos Básicos}
-    \begin{block}{Subproceso}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.5/textwidth]{symbols/messageFlow.eps}
         \end{center}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Elementos Básicos}
+    \frametitle{Tipos de Eventos Principales}
+    \begin{center}
+        \includegraphics[width=\linewidth]{symbols/eventKinds.eps}
+    \end{center}
+\end{frame}
+
+\subsection{Ramificaciones y Uniones}
+
+\begin{frame}[c]
+    \frametitle{Ramificaciones y Uniones}
+    \begin{block}{Gateways}
+        Un \emph{gateway} es una estructura que se utiliza para dividir o unir flujos de ejecución.
+        \ \\
+        \begin{center}
+            \includegraphics[width=0.25\text]{symbols/gateway.eps}
+        \end{center}
+    \end{block}
     \begin{block}{Conditional Flow}
-        %% Defintion - Table 7.1
+        Un \emph{flujo condicional} es un flujo con una condición asociada que se evalúa en tiempo de ejecución para determinar cuando el flujo estará activo y por tanto fluirá un token a través de él.
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.5/textwidth]{symbols/conditionalFlow.eps}
         \end{center}
     \end{block}
     \begin{block}{Default Flow}
-        %% Defintion - Table 7.1
+        Un \emph{flujo por defecto} es un flujo condicional cuya guarda es siempre verdadera.
         \ \\
         \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
+            \includegraphics[width=0.5/textwidth]{symbols/defaultFlow.eps}
         \end{center}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Elementos Básicos}
-    \begin{block}{Event Based Decisions}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-    \begin{block}{Default Flow}
-        %% Defintion - Table 7.1
-        \ \\
-        \begin{center}
-            \includegraphics[width=]{symbols/event.eps}
-        \end{center}
-    \end{block}
-
+    \frametitle{Tipos de Gateway}
+    \begin{center}
+            \includegraphics[width=\linewidth]{symbols/gatewayKinds.eps}
+    \end{center}
 \end{frame}
 
-
-
-
-\section{Sumario y Conclusiones}
+\section{Sumario}
 
 \begin{frame}[c]
-    \frametitle{Sumario}
-    %% Definición
+    \frametitle{¿Qué tengo que saber de todo esto?}
+    \begin{enumerate}[<+->]
+        \item Entender el concepto de proceso de negocio.
+        \item Conocer los diferentes tipos de proceso de negocio que existen.
+        \item Conocer la utilidad y filosofía de BPMN 2.0.
+        \item Ser capaz de modelar procesos de negocio sencillos utilizando BPMN 2.0.
+    \end{enumerate}
 \end{frame}
-
-\begin{frame}[c]
-    \frametitle{Conclusiones}
-    %% Definición
-\end{frame}
-
 
 \end{document}
