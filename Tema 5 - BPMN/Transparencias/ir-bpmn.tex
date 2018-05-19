@@ -1,6 +1,18 @@
-\documentclass[a4paper,slidestop,xcolor=pst,blue]{beamer}
+\documentclass[handout,a4paper,slidestop,xcolor=pst,blue]{beamer}
 
 \input{slidesHeader.tex}
+
+\newcommand{\bpmnElement}[2]{
+        \vspace{5pt}
+        \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.70\textwidth}
+            {#1}
+        \end{column}
+        \begin{column}{0.30\textwidth}
+                \includegraphics[width=.9\textwidth]{#2}
+        \end{column}
+        \end{columns}
+}
 
 \title[Procesos de Negocio]{Especificación y Modelado de Procesos de Negocio}
 
@@ -42,8 +54,6 @@
 
 \section{Introducción}
 
-\subsection{Objetivos y Bibliografía}
-
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
     \begin{enumerate}[<+->]
@@ -68,11 +78,11 @@
 
 \begin{frame}[c]
     \frametitle{Proceso de Negocio}
-    \begin{block}{Proceso de Negocio~\cite{}}
+    \begin{block}{Proceso de Negocio~\cite{hammer:1993}}
         Un \emph{proceso de negocio} es una colección de actividades que aceptan una o más entradas y producen una salida que es de valor para un cliente. Cada proceso de negocio tiene un objetivo, el cual se ve influenciado por eventos procedentes del exterior o de otros procesos.
     \end{block}
     \uncover<2->{
-        \begin{block}{Proceso de Negocio~\cite{}}
+        \begin{block}{Proceso de Negocio~\cite{davenport:1992}}
             Un \emph{proceso de negocio} es una conjunto estructurado y medible de actividades diseñados para producir una salida concreta para un cliente o mercado. Un proceso es por tanto un conjunto de actividades ordenados en el tiempo y el espacio, con un principio, un fin y entradas y salidas claramente identificadas.
         \end{block}
     }
@@ -92,9 +102,9 @@
 \begin{frame}[c]
     \frametitle{Ejemplo de Proceso de Negocio}
     \begin{center}
-        \href{http://youtu.be/gQ_OHOelPvM}{Ejemplo Informal I} \ \\
-        \href{https://youtu.be/bfB38RlXRbI}{Ejemplo Informal II} \ \\
-        \href{https://youtu.be/vvbN-cWe0A0}{Ejemplo Informal II} 
+        \href{http://youtu.be/gQ_OHOelPvM}{Ejemplo Informal I} \ \\ \ \\
+        \uncover<2->{\href{https://youtu.be/bfB38RlXRbI}{Ejemplo Informal II} \ \\ \ \\}
+        \uncover<3->{\href{https://youtu.be/vvbN-cWe0A0}{Ejemplo Informal III}}
     \end{center}
 \end{frame}
 
@@ -131,124 +141,121 @@
     \end{description}
 \end{frame}
 
-%%\begin{frame}[c]
-%%    \frametitle{Elementos de BPMN 2.0}
-%%    \begin{enumerate}[<+->]
-%%        \item Flow Objects.
-%%        \item Data.
-%%        \item Swimlanes.
-%%        \item Artifacts.
-%%    \end{enumerate}
-%%\end{frame}
+\subsection{Pools y Lanes}
 
-\subsection{Pools and Lanes}
-
-\begin{frame}[c]
+\begin{frame}[t]
+    \frametitle{Participantes y Entidades}
     \begin{block}{Pool}
-        Un \emph{pool} representa un participante u organización dentro de un proceso de negocio.
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.25\textwidth]{symbols/pool.eps}
-        \end{center}
+        \vspace{5pt}
+        \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.70\textwidth}
+            Un \emph{pool} representa un participante u organización dentro de un proceso de negocio.
+        \end{column}
+        \begin{column}{0.30\textwidth}
+           \includegraphics[width=.9\columnwidth]{images/symbols/pool.eps}
+        \end{column}
+        \end{columns}
     \end{block}
-    \begin{block}{Lane}
-        Una \emph{pool} representa una entidad perteneciente a una determinada organización y que realiza una serie de tareas concretas dentro de un proceso de negocio.  
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.25\textwidth]{symbols/lane.eps}
-        \end{center}
-    \end{block}
+    \uncover<2->{
+        \begin{block}{Lane}
+            \bpmnElement{Una \emph{lane} representa una entidad, perteneciente a una determinada organización, que realiza una serie de tareas concretas dentro de un proceso de negocio.}{images/symbols/lane.eps}
+        \end{block}
+    }
 \end{frame}
 
-\subsection{Eventos, Tareas y Flujos}
+\subsection{Eventos}
 
-\begin{frame}[c]
-    \frametitle{Eventos y Tareas}
+\begin{frame}[t]
+    \frametitle{Eventos}
     \begin{block}{Evento}
-        Un \alert{\emph{evento}} es algo que ocurre durante el curso de un proceso de negocio. \uncover<2->{Un evento sucede a consecuencia de una causa (\emph{trigger}) y puede poseer un impacto (\emph{result}).}
-        \uncover<3->{Los eventos puede ser de \emph{inicio}, \emph{intermedios} o de \emph{finalización}.}
+        \begin{itemize}[<+->]
+            \item Un \alert{\emph{evento}} es algo que ocurre durante un proceso de negocio, de manera externa al mismo. 
+            \item Un evento sucede a consecuencia de una causa (\emph{trigger}) y puede poseer un impacto (\emph{result}).
+            \item Los eventos puede ser de \emph{inicio}, \emph{intermedios} o de \emph{finalización}.
+        \end{itemize}
+        \vspace{-15pt}
         \begin{columns}
-        \begin{column}{width=0.33\textwidth}
+        \begin{column}{0.33\textwidth}
             \begin{center}
-                \includegraphics[width=0.50\textwidth]{symbols/startEvent.eps}
+                \includegraphics[width=0.35\columnwidth]{images/symbols/startEvent.eps}
             \end{center}
         \end{column}
-        \begin{column}{width=0.33\textwidth}
+        \begin{column}{0.33\textwidth}
             \begin{center}
-                \includegraphics[width=0.50\textwidth]{symbols/intermediateEvent.eps}
+                \includegraphics[width=0.35\columnwidth]{images/symbols/intermediateEvent.eps}
             \end{center}
         \end{column}
-        \begin{column}{width=0.33\textwidth}
+        \begin{column}{0.33\textwidth}
             \begin{center}
-                \includegraphics[width=0.50\textwidth]{symbols/endEvent.eps}
+                \includegraphics[width=0.35\columnwidth]{images/symbols/endEvent.eps}
             \end{center}
         \end{column}
-    \end{block}
-    \begin{block}{Tarea}
-        Una \alert{\emph{tarea}} es una unidad de trabajo atómica realizada por una entidad dentro de un proceso de negocio.
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.25\textwidth]{symbols/task.eps}
-        \end{center}
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Flujos de Control}
-    \begin{block}{Sequence Flow}
-        Un \emph{flujo de secuencia} especifica el orden en el cual se han de ejecutar las actividades de un proceso de negocio. Representa la transferencia de un token de una actividad de origen a una actividad de destino. 
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.5/textwidth]{symbols/sequenceFlow.eps}
-        \end{center}
-    \end{block}
-    \begin{block}{Message Flow}
-        Un \emph{flujo de mensajes} especifica cómo dos participantes de un proceso de negocio intercambian un mensaje. 
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.5/textwidth]{symbols/messageFlow.eps}
-        \end{center}
+        \end{columns}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Tipos de Eventos Principales}
     \begin{center}
-        \includegraphics[width=\linewidth]{symbols/eventKinds.eps}
+        \includegraphics[width=\textwidth]{images/symbols/eventKinds.eps}
     \end{center}
+\end{frame}
+
+\subsection{Tareas y Flujos}
+
+\begin{frame}[t]
+    \frametitle{Tareas y Flujos de Secuencia}
+    \begin{block}{Tarea}
+        \bpmnElement{Una \alert{\emph{tarea}} es una unidad de trabajo atómica realizada por una entidad dentro de un proceso de negocio.}{images/symbols/task.eps}
+    \end{block}
+    \uncover<2->{
+        \begin{block}{Sequence Flow}
+            \bpmnElement{Un \emph{flujo de secuencia} especifica el orden en el cual se han de ejecutar las actividades de un proceso de negocio. Representa la transferencia de un token de una actividad de origen a una actividad de destino.}{images/symbols/sequenceFlow.eps}
+        \end{block}
+    } 
+\end{frame}
+       
+\begin{frame}[t]
+    \frametitle{Flujos de Mensaje}
+    \begin{block}{Message Flow}
+        \bpmnElement{Un \emph{flujo de mensajes} especifica cómo dos participantes de un proceso de negocio intercambian un mensaje, indicando el origen y el destino de dicho mensaje}{images/symbols/messageFlow.eps}
+    \end{block}
 \end{frame}
 
 \subsection{Ramificaciones y Uniones}
 
-\begin{frame}[c]
+\begin{frame}[t]
     \frametitle{Ramificaciones y Uniones}
     \begin{block}{Gateways}
-        Un \emph{gateway} es una estructura que se utiliza para dividir o unir flujos de ejecución.
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.25\text]{symbols/gateway.eps}
-        \end{center}
+        \vspace{5pt}
+        \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.70\textwidth}
+            Un \emph{gateway} es una estructura que se utiliza para dividir o unir flujos de ejecución.
+        \end{column}
+        \begin{column}{0.30\textwidth}
+           \centering
+           \includegraphics[width=.45\columnwidth]{images/symbols/gateway.eps}
+        \end{column}
+        \end{columns}
     \end{block}
+\end{frame}
+    
+\begin{frame}[t]
+    \frametitle{Ramificaciones y Uniones}
     \begin{block}{Conditional Flow}
-        Un \emph{flujo condicional} es un flujo con una condición asociada que se evalúa en tiempo de ejecución para determinar cuando el flujo estará activo y por tanto fluirá un token a través de él.
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.5/textwidth]{symbols/conditionalFlow.eps}
-        \end{center}
+        \bpmnElement{Un \emph{flujo condicional} es un flujo con una condición asociada que se evalúa en tiempo de ejecución para determinar cuando el flujo estará activo y por tanto fluirá un token a través de él.}{images/symbols/conditionalSeqFlow.eps}
     \end{block}
-    \begin{block}{Default Flow}
-        Un \emph{flujo por defecto} es un flujo condicional cuya guarda es siempre verdadera.
-        \ \\
-        \begin{center}
-            \includegraphics[width=0.5/textwidth]{symbols/defaultFlow.eps}
-        \end{center}
-    \end{block}
+    \uncover<2->{
+        \begin{block}{Default Flow}
+            \bpmnElement{Un \emph{flujo por defecto} es un flujo condicional cuya guarda es siempre verdadera.}{images/symbols/defaultSeqFlow.eps}
+        \end{block}
+    }
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Tipos de Gateway}
     \begin{center}
-            \includegraphics[width=\linewidth]{symbols/gatewayKinds.eps}
+        \includegraphics[width=0.75\linewidth]{images/symbols/gatewayKinds.eps}
     \end{center}
 \end{frame}
 
@@ -262,6 +269,21 @@
         \item Conocer la utilidad y filosofía de BPMN 2.0.
         \item Ser capaz de modelar procesos de negocio sencillos utilizando BPMN 2.0.
     \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+    \frametitle{Bibliografía}
+    \begin{thebibliography}{1}
+        \bibitem[Hammer and Champy, 1993]{hammer:1993}
+        M. Hammer and J. Champy. (1993).
+        \newblock {\em {Reengineering the Corporation: A Manifesto for Business Revolution.}}.
+        \newblock Harper Business.
+
+        \bibitem[Davenport, 1992]{davenport:1992}
+        T.H. Davenport. (1992) 
+        \newblock {\em {Process Innovation: ReengineeringWork Through Information Technology.}}
+        \newblock Harvard Business Press.
+    \end{thebibliography}
 \end{frame}
 
 \end{document}
