@@ -1,38 +1,15 @@
-\documentclass[4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
 
-\newcommand{\imp}[1]{{\small{\sf #1}}}
+\input{slidesHeader.tex}
 
-\usepackage{beamerthemesplit}
-\usepackage[latin1]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
-\usepackage{pstricks} % PSTricks package
-\usepackage{setspace}
-\usepackage{multirow}
-\usepackage{listings}
-\usepackage{pgfpages}
+\title[Ing. Requisitos]{Ingenier√≠a de Requisitos}
 
-% \setbeamercovered{dynamic}
-\setcounter{tocdepth}{1}
-\setbeamercolor{frametitle}{fg=black,bg=white}
-
-\setbeamertemplate{frametitle}{
-	\begin{centering}
-		\insertframetitle
-		\par
-	\end{centering}
-}
-
-\usetheme[secheader]{Boadilla}
-
-\title[Ing. Requisitos]{IngenierÌa de Requisitos}
-
-\author[Pablo S·nchez]{\alert{Pablo S·nchez}}
+\author[Pablo S√°nchez]{\alert{Pablo S√°nchez}}
 
 \institute[I2E]{
-		   Dpto. IngenierÌa Inform·tica y ElectrÛnica \\
+		   Dpto. Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		   Universidad de Cantabria \\
-		   Santander (Cantabria, EspaÒa) \\
+		   Santander (Cantabria, Espa√±a) \\
 		   p.sanchez@unican.es
 }
 
@@ -53,30 +30,18 @@
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{Õndice}
+	\frametitle{√çndice}
 	\begin{enumerate}
-        \item \alert{Õndice}
+        \item \alert{√çndice}
         \item Datos Administrativos
         \item Objetivos y Temario
-        \item MetodologÌa
-        \item EvaluaciÛn
-        \item BibliografÌa
+        \item Metodolog√≠a
+        \item Evaluaci√≥n
+        \item Bibliograf√≠a
 	\end{enumerate}
 \end{frame}
 
 \section{Datos Administrativos}
-
-\begin{frame}[c]
-	\frametitle{Õndice}
-	\begin{enumerate}
-        \item Õndice
-        \item \alert{Datos Administrativos}
-        \item Objetivos y Temario
-        \item MetodologÌa
-        \item EvaluaciÛn
-        \item BibliografÌa
-	\end{enumerate}
-\end{frame}
 
 \subsection{Profesorado}
 
@@ -86,7 +51,7 @@
 		\alert{Pablo S\'{a}nchez Barreiro}  \\
 		\begin{small}
 		Despacho 1069 \\
-		Departamento de IngenierÌa Inform·tica y ElectrÛnica \\
+		Departamento de Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		p.sanchez@unican.es \\
 		\end{small}
 	\end{center}
@@ -100,7 +65,7 @@
 	\begin{center}
 	\begin{tabular}{||l|c|c|c|c|c||}
 	\hline \hline
-				   & Lunes  & Martes      & MiÈrcoles    & Jueves       & Viernes      \\ \hline \hline
+				   & Lunes  & Martes      & Mi√©rcoles    & Jueves       & Viernes      \\ \hline \hline
     08:30 - 09:30  &        &             &              &              &              \\ \hline
     09:30 - 10:30  &        &             &              &              & Laboratorio  \\ \hline \hline
 	10:45 - 11:45  &        &             &              &              & Laboratorio  \\ \hline
@@ -110,46 +75,33 @@
 	\end{center}
 	\end{small}
 	\begin{itemize}
-		\item<2-> La asistencia a las clases teÛricas y pr·cticas no es obligatoria, \uncover<3->{\alert{pero si altamente recomendable e incluso necesaria}.}
+		\item<2-> La asistencia a las clases te√≥ricas y pr√°cticas no es obligatoria, \uncover<3->{\alert{pero si altamente recomendable e incluso necesaria}.}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{Horario TutorÌas}
+	\frametitle{Horario Tutor√≠as}
     \begin{itemize}[<+->]
-        \item A cualquier hora, preferentemente de maÒana.
+        \item A cualquier hora, preferentemente de ma√±ana.
         \item Disponible tardes de Lunes y Jueves.
-        \item Si se quiere asegurar disponibilidad, avisar con antelaciÛn.
-        \item Disponible a travÈs de correo y \alert{moodle}.
+        \item Si se quiere asegurar disponibilidad, avisar con antelaci√≥n.
+        \item Disponible a trav√©s de correo y \alert{moodle}.
 	\end{itemize}
 \end{frame}
-
 
 \section{Objetivos y Temario}
-
-\begin{frame}[c]
-	\frametitle{Õndice}
-	\begin{enumerate}
-        \item Õndice
-        \item Datos Administrativos
-        \item \alert{Objetivos y Temario}
-        \item MetodologÌa
-        \item EvaluaciÛn
-        \item BibliografÌa
-	\end{enumerate}
-\end{frame}
 
 \subsection{Objetivos}
 
 \begin{frame}[t]
 	\frametitle{Objetivos de la Asignatura}
     \begin{enumerate}
-			\item<1-> Conocer y comprender la importancia y papel de la \emph{IngenierÌa de Requisitos}.
-            \item<2-> Conocer, comprender y saber diseÒar y ejecutar procesos de \emph{IngenierÌa de Requisitos}.
-			\item<3-> Conocer, comprender y saber aplicar tÈcnicas para la \emph{Captura de Requisitos}.
-			\item<4-> Conocer, comprender y saber aplicar tÈcnicas para la especificaciÛn de \emph{Requisitos Funcionales}.
-			\item<5-> Conocer, comprender y saber aplicar tÈcnicas para la especificaciÛn de \emph{Requisitos No Funcionales}.
-			\item<6-> Conocer, comprender y saber aplicar tÈcnicas para la especificaciÛn de \emph{Procesos de Negocio}.
+			\item<1-> Conocer y comprender la importancia y papel de la \emph{Ingenier√≠a de Requisitos}.
+            \item<2-> Conocer, comprender y saber dise√±ar y ejecutar procesos de \emph{Ingenier√≠a de Requisitos}.
+			\item<3-> Conocer, comprender y saber aplicar t√©cnicas para la \emph{Captura de Requisitos}.
+			\item<4-> Conocer, comprender y saber aplicar t√©cnicas para la especificaci√≥n de \emph{Requisitos Funcionales}.
+			\item<5-> Conocer, comprender y saber aplicar t√©cnicas para la especificaci√≥n de \emph{Requisitos No Funcionales}.
+			\item<6-> Conocer, comprender y saber aplicar t√©cnicas para la especificaci√≥n de \emph{Procesos de Negocio}.
 	 \end{enumerate}
 \end{frame}
 
@@ -158,12 +110,12 @@
 \begin{frame}[t]
 	\frametitle{Resultados de Aprendizaje}
     	\begin{enumerate}
-			\item<1-> El alumno conocer·, comprender· y sabr· utilizar la terminologÌa propia de la \emph{IngenierÌa de Requisitos}.
-			\item<2-> El alumno sabr· diseÒar y ejecutar procesos de \emph{IngenierÌa de Requisitos}.
-            \item<3-> El alumno sabr· diseÒar y ejecutar procesos de \emph{Captura de Requisitos}, empleando diferentes tÈcnicas y estrategias, y sabiendo escoger la m·s adecuada en funciÛn de cada tipo de proyecto.
-            \item<4-> El alumno sabr· especificar requisitos funcionales utilizando para ello \emph{objetivos}, \emph{escenarios}, \emph{casos de uso} e \emph{historias de usuario}.
-            \item<5-> El alumno sabr· especificar requisitos no funcionales, en especial los requisitos relacionados con la seguridad, utilizando para ello \emph{objetivos} y cat·logos predefinidos de requisitos no funcionales.
-            \item<6-> El alumno sabr· modelar procesos de negocio mediante alguna notaciÛn est·ndar, como BPMN.
+			\item<1-> El alumno conocer√°, comprender√° y sabr√° utilizar la terminolog√≠a propia de la \emph{Ingenier√≠a de Requisitos}.
+			\item<2-> El alumno sabr√° dise√±ar y ejecutar procesos de \emph{Ingenier√≠a de Requisitos}.
+            \item<3-> El alumno sabr√° dise√±ar y ejecutar procesos de \emph{Captura de Requisitos}, empleando diferentes t√©cnicas y estrategias, y sabiendo escoger la m√°s adecuada en funci√≥n de cada tipo de proyecto.
+            \item<4-> El alumno sabr√° especificar requisitos funcionales utilizando para ello \emph{objetivos}, \emph{escenarios}, \emph{casos de uso} e \emph{historias de usuario}.
+            \item<5-> El alumno sabr√° especificar requisitos no funcionales, en especial los requisitos relacionados con la seguridad, utilizando para ello \emph{objetivos} y cat√°logos predefinidos de requisitos no funcionales.
+            \item<6-> El alumno sabr√° modelar procesos de negocio mediante alguna notaci√≥n est√°ndar, como BPMN.
 		\end{enumerate}
 \end{frame}
 
@@ -172,27 +124,15 @@
 \begin{frame}[c]
 	\frametitle{Temario}
 	\begin{enumerate}[<+->]
-		\item Procesos de IngenierÌa de Requisitos
-		\item TÈcnicas de Captura de Requisitos.
-		\item EspecificaciÛn y Modelado de Requisitos Funcionales.
-		\item EspecificaciÛn y Modelado de Requisitos No Funcionales..
-		\item EspecificaciÛn y Modelado de Procesos de Negocio.
+		\item Procesos de Ingenier√≠a de Requisitos
+		\item T√©cnicas de Captura de Requisitos.
+		\item Especificaci√≥n y Modelado de Requisitos Funcionales.
+		\item Especificaci√≥n y Modelado de Requisitos No Funcionales..
+		\item Especificaci√≥n y Modelado de Procesos de Negocio.
 	\end{enumerate}
 \end{frame}
 
-\section{MetodologÌa}
-
-\begin{frame}[c]
-	\frametitle{Õndice}
-	\begin{enumerate}
-        \item Õndice
-        \item Datos Administrativos
-        \item Objetivos y Temario
-        \item \alert{MetodologÌa}
-        \item EvaluaciÛn
-        \item BibliografÌa
-	\end{enumerate}
-\end{frame}
+\section{Metodolog√≠a}
 
 \subsection{Plataforma}
 
@@ -200,8 +140,8 @@
 	\frametitle{Plataforma de Trabajo}
 	\begin{itemize}
 		\item<1-> La plataforma de trabajo de la asignatura es \emph{moodle}.
-		\item<2-> Todas las notificaciones y publicaciones se har·n a travÈs de \emph{moodle}.
-		\item<3-> \alert{Es obligaciÛn del alumno estar atento a las posibles notificaciones y avisos que se realicen a travÈs de moodle}.
+		\item<2-> Todas las notificaciones y publicaciones se har√°n a trav√©s de \emph{moodle}.
+		\item<3-> \alert{Es obligaci√≥n del alumno estar atento a las posibles notificaciones y avisos que se realicen a trav√©s de moodle}.
 	\end{itemize}
 \end{frame}
 
@@ -210,97 +150,85 @@
 \begin{frame}
 	\frametitle{Clases en Aula}
 	\begin{block}{Objetivo}
-        Entender los conocimientos teÛricos que constituyen la base de las habilidades, destrezas y competencias a adquirir al final de la asignatura.
+        Entender los conocimientos te√≥ricos que constituyen la base de las habilidades, destrezas y competencias a adquirir al final de la asignatura.
 	\end{block}
 	\begin{itemize}
-        \item<2-> PreparaciÛn autÛnoma y exposiciÛn del contenido teÛrico.
-        \item<3-> Actividades de aprendizaje activo en funciÛn del contenido y predisposiciÛn del alumnado.
-		\item<4-> ResoluciÛn autÛnoma, dirigida y supervisada de ejercicios.
+        \item<2-> Preparaci√≥n aut√≥noma y exposici√≥n del contenido te√≥rico.
+        \item<3-> Actividades de aprendizaje activo en funci√≥n del contenido y predisposici√≥n del alumnado.
+		\item<4-> Resoluci√≥n aut√≥noma, dirigida y supervisada de ejercicios.
 		\item<5-> Clases magistrales puntuales usando pizarra y/o transparencias.
 		\item<6-> NOTA: \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
-		\item<7-> \alert{Sin conocimiento teÛrico es imposible alcanzar las habilidades pr·cticas}.
+		\item<7-> \alert{Sin conocimiento te√≥rico es imposible alcanzar las habilidades pr√°cticas}.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[c]
 	\frametitle{Clases en Laboratorio}
 	\begin{block}{Objetivo}
-		Aplicar los conceptos teÛricos aprendidos en las clases de aula al desarrollo de un sistema software real de mediana escala, con el objetivo
+		Aplicar los conceptos te√≥ricos aprendidos en las clases de aula al desarrollo de un sistema software real de mediana escala, con el objetivo
         de desarrollar las competencias procedimentales y actitudinales deseadas.
 	\end{block}
 	\begin{itemize}
-        \item<2-> Desarrollo de un proyecto de especificaciÛn de requisitos, dividido en varias etapas.
-		\item<3-> Dos etapas diferenciadas: \emph{definiciÛn del proceso} y \emph{ejecuciÛn del proceso} de IngenierÌa de Requisitos.
+        \item<2-> Desarrollo de un proyecto de especificaci√≥n de requisitos, dividido en varias etapas.
+		\item<3-> Dos etapas diferenciadas: \emph{definici√≥n del proceso} y \emph{ejecuci√≥n del proceso} de Ingenier√≠a de Requisitos.
         \item<4-> La primera parte del proyecto requiere del trabajo en equipo y de actividades de grupo.
-        \item<5-> La segunda parte se realizar· de manera coordinada pero individual.
+        \item<5-> La segunda parte se realizar√° de manera coordinada pero individual.
 	\end{itemize}
 \end{frame}
 
-\section{MÈtodos de EvaluaciÛn/CalificaciÛn}
+\section{M√©todos de Evaluaci√≥n y Calificaci√≥n}
+
+\subsection{F√≥rmula Calificaci√≥n}
 
 \begin{frame}[c]
-	\frametitle{Õndice}
-	\begin{enumerate}
-        \item Õndice
-        \item Datos Administrativos
-        \item Objetivos y Temario
-        \item MetodologÌa
-        \item \alert{EvaluaciÛn}
-        \item BibliografÌa
-	\end{enumerate}
-\end{frame}
-
-\subsection{FÛrmula CalificaciÛn}
-
-\begin{frame}[c]
-	\frametitle{C·lculo de la CalificaciÛn Final}
-	\begin{block}{FÛrmula de C·lculo de la CalificaciÛn Final}
+	\frametitle{C√°lculo de la Calificaci√≥n Final}
+	\begin{block}{F√≥rmula de C√°lculo de la Calificaci√≥n Final}
 		\begin{scriptsize}
         \begin{tabular}{ll}
-			CalificaciÛn Final = & SI CalificaciÛn Proyecto >= 5.00 ENTONCES \\
-                                 & \ \ \ SI CalificaciÛn Prueba Final  $>$= CalificaciÛn Proyecto ENTONCES \\
-                                 & \ \ \ \ \ \ CalificaciÛn Prueba Final + 1  \\
+			Calificaci√≥n Final = & SI Calificaci√≥n Proyecto >= 5.00 ENTONCES \\
+                                 & \ \ \ SI Calificaci√≥n Prueba Final  $>$= Calificaci√≥n Proyecto ENTONCES \\
+                                 & \ \ \ \ \ \ Calificaci√≥n Prueba Final + 1  \\
                                  & \ \ \ SINO \\
-                                 & \ \ \ \ \ \ CalificaciÛn Proyecto \\
-                                 & \ \ \ FINSI \\ 
+                                 & \ \ \ \ \ \ Calificaci√≥n Proyecto \\
+                                 & \ \ \ FINSI \\
                                  & SINO \\
-                                 & \ \ \  CalificaciÛn Prueba Final \\
+                                 & \ \ \  Calificaci√≥n Prueba Final \\
                                  & FINSI \\
-                                 & + CalificaciÛn ParticipaciÛn 
+                                 & + Calificaci√≥n Participaci√≥n
 		\end{tabular}
         \end{scriptsize}
 	\end{block}
 	\begin{itemize}
 		\item<2-> Es necesario presentarse a la prueba final para superar la asignatura.
-        \item<4-> La calificaciÛn por participaciÛn es un extra adicional que variar· entre (0, 0.5).
-        \item<5-> La calificaciÛn por participaciÛn depender· del desempeÒo y la actitud de cada alumno en el aula.
+        \item<4-> La calificaci√≥n por participaci√≥n es un extra adicional que variar√° entre (0, 0.5).
+        \item<5-> La calificaci√≥n por participaci√≥n depender√° del desempe√±o y la actitud de cada alumno en el aula.
 	\end{itemize}
 \end{frame}
 
-\subsection{MÈtodos y Criterios de EvaluaciÛn}
+\subsection{M√©todos y Criterios de Evaluaci√≥n}
 
 \begin{frame}
 	\frametitle{Prueba Evaluable Escrita Final}
 	\begin{itemize}[<+->]
 		\item Prueba evaluable escrita en las fechas asignadas por el centro.
-		\item La prueba contendr· ejercicios y cuestiones sobre razonamientos teÛricos.
-		\item Tendr· una duraciÛn de unas 4 horas, dividida en dos partes.
-        \item Se podr· hacer uso todo tipo de material escrito.
-        \item En ning˙n caso se dejar· hacer uso de dispositivos electrÛnicos, especialmente, de aquellos con capacidades de comunicaciÛn inal·mbrica.
-		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no deberÌa hacerse ning˙n uso de los mismos}.
-		\item Aquellas respuestas que sean una simple copia de lo disponible en alg˙n tipo de material de la asignatura se calificar·n con 0 puntos.
+		\item La prueba contendr√° ejercicios y cuestiones sobre razonamientos te√≥ricos.
+		\item Tendr√° una duraci√≥n de unas 4 horas, dividida en dos partes.
+        \item Se podr√° hacer uso todo tipo de material escrito.
+        \item En ning√∫n caso se dejar√° hacer uso de dispositivos electr√≥nicos, especialmente, de aquellos con capacidades de comunicaci√≥n inal√°mbrica.
+		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no deber√≠a hacerse ning√≠n uso de los mismos}.
+		\item Aquellas respuestas que sean una simple copia de lo disponible en alg√∫n tipo de material de la asignatura se calificar√°n con 0 puntos.
         \item Hay modelos de pruebas escritas disponibles en moodle.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[c]
-	\frametitle{EvaluaciÛn del Proyecto}
+	\frametitle{Evaluaci√≥n del Proyecto}
 	\begin{itemize}[<+->]
-        \item La calificaciÛn de la primera parte es ˙nica para todo el grupo.
-        \item La calificaciÛn de la segunda parte es individual.
-        \item CalificaciÛn final determinada por la media ponderada de las diversas entregas.
-        \item Por cada entrega se proporcionar·n unos criterios de evaluaciÛn y calificaciÛn claros.
-        \item Hay que demostrar un mÌnimo de desempeÒo en la parte individual para poder superar la asignatura.
+        \item La calificaci√≥n de la primera parte es √∫nica para todo el grupo.
+        \item La calificaci√≥n de la segunda parte es individual.
+        \item Calificaci√≥n final determinada por la media ponderada de las diversas entregas.
+        \item Por cada entrega se proporcionar√°n unos criterios de evaluaci√≥n y calificaci√≥n claros.
+        \item Hay que demostrar un m√≠nimo de desempe√±o en la parte individual para poder superar la asignatura.
 	\end{itemize}
 \end{frame}
 
@@ -309,36 +237,24 @@
     \begin{center}
 	\begin{tabular}{||l|r||}
     \hline \hline
-    Actas y Planes de Trabajo                   & 5\% \\ \hline
-    DefiniciÛn de la VisiÛn del Proyecto        & 10\% \\ \hline
-    DefiniciÛn del Contexto                     & 15\% \\ \hline
-    IdentificaciÛn de las Fuentes de Requisitos & 10\% \\ \hline
-    DiseÒo del Plan de Captura de Requisitos    & 10\% \\ \hline \hline
-    DiseÒo de una Actividad de Captura de Requisitos & 10\% \\ \hline
-    EspecificaciÛn de un Modelo de Objetivos    & 15\% \\ \hline
-    EspecificaciÛn de Requisitos Funcionales    & 15\% \\ \hline
-    EspecificaciÛn de Requisitos No Funcionales & 10\% \\ \hline \hline
+    Actas y Planes de Trabajo        & 5\% \\ \hline
+    Definici√≥n de la Visi√≥n del Proyecto        & 10\% \\ \hline
+    Definici√≥n del Contexto                           & 15\% \\ \hline
+    Identificaci√≥n de las Fuentes de Requisitos & 10\% \\ \hline
+    Dise√±o del Plan de Captura de Requisitos    & 10\% \\ \hline \hline
+    Dise√±o de una Actividad de Captura de Requisitos & 10\% \\ \hline
+    Especificaci√≥n de un Modelo de Objetivos    & 15\% \\ \hline
+    Especificaci√≥n de Requisitos Funcionales    & 15\% \\ \hline
+    Especificaci√≥n de Requisitos No Funcionales & 10\% \\ \hline \hline
     Modelado de Procesos de Negocio             &  5\% \\ \hline \hline
 	\end{tabular}
 \end{center}
 \end{frame}
 
-\section{BibliografÌa}
+\section{Bibliograf√≠a}
 
 \begin{frame}[c]
-	\frametitle{Õndice}
-	\begin{enumerate}
-        \item Õndice
-        \item Datos Administrativos
-        \item Objetivos y Temario
-        \item MetodologÌa
-        \item EvaluaciÛn
-        \item \alert{BibliografÌa}
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{BibliografÌa}
+	\frametitle{Bibliograf√≠a}
 \begin{thebibliography}{}
 
 \bibitem[\protect\astroncite{Pohl}{2010}]{pohl:2010}
@@ -362,8 +278,8 @@ van Lamsweerde, A. (2009).
 \end{thebibliography}
 \end{frame}
 
-\begin{frame}
-	\frametitle{BibliografÌa}
+\begin{frame}[c]
+	\frametitle{Bibliograf√≠a}
 \begin{thebibliography}{}
 
 \bibitem[\protect\astroncite{Cockburn}{2000}]{cockburn:2000}
@@ -382,7 +298,6 @@ Chung, L., Nixon, B.~A., Yu, E., and Mylopoulos, J. (1999).
 \newblock Kluwer Academic Puvlishers.
 
 \end{thebibliography}
-
 
 \end{frame}
 
