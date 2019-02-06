@@ -101,10 +101,10 @@
 	\begin{tabular}{||l|c|c|c|c|c||}
 	\hline \hline
 				   & Lunes  & Martes      & Miércoles    & Jueves       & Viernes      \\ \hline \hline
-    08:30 - 09:30  & Aula   &             & Aula         &              & Laboratorio  \\ \hline
+    08:30 - 09:30  &        &             &              &              &              \\ \hline
     09:30 - 10:30  &        &             &              &              & Laboratorio  \\ \hline \hline
-	10:45 - 11:45  &        &             &              &              &              \\ \hline
-    11:45 - 12:45  &        &             &              &              &              \\ \hline
+	10:45 - 11:45  &        &             &              &              & Laboratorio  \\ \hline
+    11:45 - 12:45  &        &  Aula       & Aula         &              &              \\ \hline
     12:45 - 13:45  &        &             &              &              &              \\ \hline
 	\end{tabular}
 	\end{center}
@@ -118,7 +118,7 @@
 	\frametitle{Horario Tutorías}
     \begin{itemize}[<+->]
         \item A cualquier hora, preferentemente de mañana.
-        \item Disponible tardes de Martes y Jueves.
+        \item Disponible tardes de Lunes y Jueves.
         \item Si se quiere asegurar disponibilidad, avisar con antelación.
         \item Disponible a través de correo y \alert{moodle}.
 	\end{itemize}
@@ -174,9 +174,9 @@
 	\begin{enumerate}[<+->]
 		\item Procesos de Ingeniería de Requisitos
 		\item Técnicas de Captura de Requisitos.
-		\item Modelado y Especificación de Requisitos Funcionales.
-		\item Modelado y Especificación de Requisitos No Funcionales..
-		\item Modelado y Especificación de Procesos de Negocio en Organizaciones.
+		\item Especificación y Modelado de Requisitos Funcionales.
+		\item Especificación y Modelado de Requisitos No Funcionales..
+		\item Especificación y Modelado de Procesos de Negocio.
 	\end{enumerate}
 \end{frame}
 
@@ -257,18 +257,21 @@
 	\begin{block}{Fórmula de Cálculo de la Calificación Final}
 		\begin{scriptsize}
         \begin{tabular}{ll}
-			Calificación Final = & SI Calificación Prueba Final  $>$= Calificación Proyecto ENTONCES \\
-                                 & \ \ \ \ Calificación Prueba Final + 1  \\
-                                 &  SINO \\
-                                 & \ \ \ \ Calificación Proyecto \\
+			Calificación Final = & SI Calificación Proyecto >= 5.00 ENTONCES \\
+                                 & \ \ \ SI Calificación Prueba Final  $>$= Calificación Proyecto ENTONCES \\
+                                 & \ \ \ \ \ \ Calificación Prueba Final + 1  \\
+                                 & \ \ \ SINO \\
+                                 & \ \ \ \ \ \ Calificación Proyecto \\
+                                 & \ \ \ FINSI \\ 
+                                 & SINO \\
+                                 & \ \ \  Calificación Prueba Final \\
                                  & FINSI \\
-                                 & + Calificación Participación
+                                 & + Calificación Participación 
 		\end{tabular}
         \end{scriptsize}
 	\end{block}
 	\begin{itemize}
 		\item<2-> Es necesario presentarse a la prueba final para superar la asignatura.
-        \item<3-> Tanto el proyecto como la prueba final se evalúan de 0 a 10.
         \item<4-> La calificación por participación es un extra adicional que variará entre (0, 0.5).
         \item<5-> La calificación por participación dependerá del desempeño y la actitud de cada alumno en el aula.
 	\end{itemize}
@@ -283,7 +286,7 @@
 		\item La prueba contendrá ejercicios y cuestiones sobre razonamientos teóricos.
 		\item Tendrá una duración de unas 4 horas, dividida en dos partes.
         \item Se podrá hacer uso todo tipo de material escrito.
-        \item En ningún caso se dejará hacer uso de de dispositivos electrónicos, especialmente, de aquellos con capacidades de comunicación inalámbrica.
+        \item En ningún caso se dejará hacer uso de dispositivos electrónicos, especialmente, de aquellos con capacidades de comunicación inalámbrica.
 		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no debería hacerse ningún uso de los mismos}.
 		\item Aquellas respuestas que sean una simple copia de lo disponible en algún tipo de material de la asignatura se calificarán con 0 puntos.
         \item Hay modelos de pruebas escritas disponibles en moodle.
@@ -336,9 +339,6 @@
 
 \begin{frame}
 	\frametitle{Bibliografía}
-%	\nocite{pohl:2010,lamsweerde:2009,cockburn:2000,chung:1999,gray:2012,Cohn2004}
-%	\bibliographystyle{apa}
-%	\bibliography{ir}
 \begin{thebibliography}{}
 
 \bibitem[\protect\astroncite{Pohl}{2010}]{pohl:2010}
