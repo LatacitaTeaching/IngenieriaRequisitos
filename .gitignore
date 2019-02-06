@@ -10,3 +10,5 @@ Tema 0 - Presentacion/TransparenciasLatex/ir-tema0.out
 *.sav
 *.toc
 *.log
+*.dvi
+*.synctex(busy)
