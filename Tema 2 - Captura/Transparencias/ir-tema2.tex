@@ -1,39 +1,18 @@
-\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+Ôªø\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+
+\input{slidesHeader.tex}
 
 \newcommand{\imp}[1]{{\small{\sf #1}}}
 \newcommand{\stk}{\emph{stakeholder}}
 
-\usepackage{beamerthemesplit}
-\usepackage[latin1]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{graphicx}
-\usepackage{pstricks} % PSTricks package
-\usepackage{setspace}
-\usepackage{multirow}
-\usepackage{listings}
-\usepackage{pgfpages}
-
-% \setbeamercovered{dynamic}
-\setcounter{tocdepth}{1}
-\setbeamercolor{frametitle}{fg=black,bg=white}
-
-\setbeamertemplate{frametitle}{
-	\begin{centering}
-		\insertframetitle
-		\par
-	\end{centering}
-}
-
-\usetheme[secheader]{Boadilla}
-
 \title[Captura de Requisitos]{Procesos de Captura de Requisitos}
 
-\author[P. S·nchez]{\alert{Pablo S·nchez}}
+\author[P. S√°nchez]{\alert{Pablo S√°nchez}}
 
 \institute[I2E]{
-		   Dpto. IngenierÌa Inform·tica y ElectrÛnica \\
+		   Dpto. Ingenier√≠a Inform√°tica y Electr√≥nica \\
 		   Universidad de Cantabria \\
-		   Santander (Cantabria, EspaÒa) \\
+		   Santander (Cantabria, Espa√±a) \\
 		   p.sanchez@unican.es
 }
 
@@ -44,11 +23,12 @@
 \begin{frame}[c]
 	\titlepage
 	\begin{columns}
-		% \column{.5\linewidth}
-		%	\centering \includegraphics[width=.33\textwidth,keepaspectratio=true]{images/logoMatesco.eps}
-		\column{\linewidth}
+		\column{0.50\linewidth}
 			\centering
-			\includegraphics[width=.15\textwidth,keepaspectratio=true]{images/uc.eps}
+    		\includegraphics[width=.28\textwidth,keepaspectratio=true]{images/istr.eps}
+		\column{0.50\linewidth}
+			\centering
+			\includegraphics[width=.25\textwidth,keepaspectratio=true]{images/uc.eps}
 	\end{columns}
 \end{frame}
 
@@ -57,9 +37,9 @@
     \begin{center}
         Todo el material contenido en este documento  no constituye en modo alguno una obra de referencia o apuntes oficiales mediante el cual se puedan preparar las pruebas evaluables necesarias para superar la asignatura a la cual pertenecen. \ \\
         \ \\
-        Este documento contiene exclusivamente una serie de diapositivas cuyo objetivo es servir de complemento visual a las actividades realizadas en el aula para la transmisiÛn del contenido sobre el cual versar·n las mencionadas pruebas evaluables.  \ \\
+        Este documento contiene exclusivamente una serie de diapositivas cuyo objetivo es servir de complemento visual a las actividades realizadas en el aula para la transmisi√≥n del contenido sobre el cual versar√°n las mencionadas pruebas evaluables.  \ \\
         \ \\
-        Dicho de forma m·s clara, \alert{estas transparencias no son apuntes y su objetivo no es en modo alguno servir para que el alumno pueda preparar la asignatura.}
+        Dicho de forma m√°s clara, \alert{estas transparencias no son apuntes y su objetivo no es en modo alguno servir para que el alumno pueda preparar la asignatura.}
     \end{center}
 \end{frame}
 
@@ -71,13 +51,13 @@
          \item Conocer, entender y saber aplicar las diferentes estrategias para la captura de requisitos.
          \item Saber definir el contexto de un sistema software.
          \item Saber identificar fuentes para la captura de requisitos de un sistema sw.
-         \item Saber diseÒar planes y estrategias para la captura de requisitos.
+         \item Saber dise√±ar planes y estrategias para la captura de requisitos.
          \item Saber utilizar herramientas para la captura de requisitos de un sistema sw.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{BibliografÌa}
+    \frametitle{Bibliograf√≠a}
     \begin{thebibliography}{1}
 
     \bibitem{pohl:2010} Klaus Pohl. \newblock {\em {Requirements Engineering: Fundamentals, Principles and Techniques}}.
@@ -85,7 +65,7 @@
 
     \bibitem{cockburn:2000} Alistair Cockburn. \newblock {\em {Writing Effective Use Cases}}.
     \newblock Addison-Wesley, October 2000.
-    
+
     \bibitem{gray:2012}
     Gray, D., Brown, S., and Macanufo, J. (2012).
     \newblock {\em {Gamestorming: 83 juegos para innovadores, inconformistas y generadores del cambio}}.
@@ -94,14 +74,14 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item \alert<2->{Procesos de Captura de Requisitos}.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item Sumario.
     \end{enumerate}
 \end{frame}
@@ -109,7 +89,7 @@
 \section{Procesos de Captura de Requisitos}
 
 \begin{frame}
-    \frametitle{Proceso de IngenierÌa de Requisitos}
+    \frametitle{Proceso de Ingenier√≠a de Requisitos}
     \only<1>{
 	\rput[lt](0,-0.5){
 	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/introduction/procesoIr00.eps}}
@@ -127,17 +107,17 @@
     \end{center}
 \end{frame}
 
-\section{TÈcnicas y MÈtodos}
+\section{T√©cnicas y M√©todos}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item \alert{TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos}.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item \alert{T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos}.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item Sumario.
     \end{enumerate}
 \end{frame}
@@ -145,13 +125,13 @@
 \subsection{Tormenta de Ideas}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para IngenierÌa de Requisitos}
+    \frametitle{T√©cnicas y M√©todos para Ingenier√≠a de Requisitos}
     \begin{enumerate}
          \item \alert<2->{Tormenta de Ideas}.
          \item Prototipado.
-         \item MÈtodo KJ.
+         \item M√©todo KJ.
          \item Mapas mentales.
-         \item Listas de comprobaciÛn.
+         \item Listas de comprobaci√≥n.
          \item El test de los 100\$
     \end{enumerate}
 \end{frame}
@@ -160,7 +140,7 @@
     \frametitle{Tormenta de Ideas - Fundamento}
     \begin{block}{Tormenta de Ideas}
         \begin{enumerate}[<+->]
-            \item Varias personas se re˙nen en una sala para expresar p˙blicamente sus ideas sobre un asunto concreto.
+            \item Varias personas se re√∫nen en una sala para expresar p√∫blicamente sus ideas sobre un asunto concreto.
             \item Las ideas no necesitan estar elaboradas, ni ser aplicables en la realidad.
             \item Un participante puede utilizar las ideas propuestas por otros para construir nuevas ideas.
         \end{enumerate}
@@ -168,154 +148,154 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Tormenta de Ideas - PreparaciÛn}
+    \frametitle{Tormenta de Ideas - Preparaci√≥n}
     \begin{enumerate}[<+->]
-        \item Definir con claridad el \alert{objetivo} de la sesiÛn.
+        \item Definir con claridad el \alert{objetivo} de la sesi√≥n.
         \item Seleccionar con exhaustividad los integrantes adecuados para alcanzar el objetivo.
-        \item Reservar una sala adecuada y fijar la hora de la sesiÛn.
+        \item Reservar una sala adecuada y fijar la hora de la sesi√≥n.
         %% Sala adecuada: Todos se ven las caras y debe disponer de un medio para visualizar los resultados
         \item Notificar lugar y hora a los participantes.
-        \item Preparar el mecanismo de visualizaciÛn.
+        \item Preparar el mecanismo de visualizaci√≥n.
         \item Seleccionar un moderador y un secretario.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Tormenta de Ideas - EjecuciÛn}
+    \frametitle{Tormenta de Ideas - Ejecuci√≥n}
     \begin{enumerate}[<+->]
         \item Prima la cantidad sobre la calidad.
-        \item AsociaciÛn libre de ideas e imaginaciÛn.
+        \item Asociaci√≥n libre de ideas e imaginaci√≥n.
         \item Combinar ideas.
-        \item Las crÌticas (destructivas) no est·n permitidas.
+        \item Las cr√≠ticas (destructivas) no est√°n permitidas.
         \item Se pueden pedir aclaraciones sobre las ideas expuestas.
-        \item No interrumpir la sesiÛn al primer silencio largo.
-        \item Dejar que la sesiÛn termine de forma natural, sin controlar el tiempo.
+        \item No interrumpir la sesi√≥n al primer silencio largo.
+        \item Dejar que la sesi√≥n termine de forma natural, sin controlar el tiempo.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Tormenta de Ideas - Resultados}
     \begin{enumerate}[<+->]
-        \item Clasificar las ideas (utilizables, probablemente ˙tiles, no ˙tiles).
+        \item Clasificar las ideas (utilizables, probablemente √∫tiles, no √∫tiles).
         \item Descartar las ideas no utilizables.
         \item Elaborar un plan para desarrollar las ideas utilizables.
-        \item Elaborar un documento que resuma la sesiÛn y recoja los resultados.
+        \item Elaborar un documento que resuma la sesi√≥n y recoja los resultados.
     \end{enumerate}
 \end{frame}
 
 \subsection{Prototipado}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para IngenierÌa de Requisitos}
+    \frametitle{T√©cnicas y M√©todos para Ingenier√≠a de Requisitos}
     \begin{enumerate}
          \item Tormenta de Ideas.
          \item \alert{Prototipado}.
-         \item MÈtodo KJ.
+         \item M√©todo KJ.
          \item Mapas mentales.
-         \item Listas de comprobaciÛn.
+         \item Listas de comprobaci√≥n.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
     \frametitle{Prototipado - Fundamento}
     \begin{block}{Prototipado}
-        Se construyen prototipos con los que diversos \emph{stakeholders} puedan interactuar para analizar su reacciÛn, asÌ como para comprobar que dichos prototipos satisfacen sus necesidades.
+        Se construyen prototipos con los que diversos \emph{stakeholders} puedan interactuar para analizar su reacci√≥n, as√≠ como para comprobar que dichos prototipos satisfacen sus necesidades.
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Prototipos - PreparaciÛn}
+    \frametitle{Prototipos - Preparaci√≥n}
     %% Los prototipos escenifican las consecuencias de los requisitos a los stakeholders
     %% Prototipos desechables y evoluvitos
     %% Mock-up
     \begin{enumerate}[<+->]
-        \item Decidir el momento de la creaciÛn del prototipo.
-        \item Definir escenarios de utilizaciÛn del prototipo, y decidir quÈ requisitos debe satisfacer el prototipo.
+        \item Decidir el momento de la creaci√≥n del prototipo.
+        \item Definir escenarios de utilizaci√≥n del prototipo, y decidir qu√© requisitos debe satisfacer el prototipo.
         \item Elegir el tipo de prototipo a construir: evolutivo o desechable.
-        \item En funciÛn del tipo de prototipo, elegir la tÈcnica m·s adecuada de elaboraciÛn.
-        \item Seleccionar una herramienta adecuada para la elaboraciÛn del prototipo.
+        \item En funci√≥n del tipo de prototipo, elegir la t√©cnica m√°s adecuada de elaboraci√≥n.
+        \item Seleccionar una herramienta adecuada para la elaboraci√≥n del prototipo.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Prototipos - EjecuciÛn y Resultados}
+    \frametitle{Prototipos - Ejecuci√≥n y Resultados}
     \begin{enumerate}[<+->]
-        \item Hacer que los \emph{stakeholders} interact˙en con el prototipo un tiempo suficiente.
-        \item Recopilar datos acerca de cÛmo los \emph{stakeholders} interact˙an con los prototipos, asÌ como de sus reacciones.
+        \item Hacer que los \emph{stakeholders} interact√∫en con el prototipo un tiempo suficiente.
+        \item Recopilar datos acerca de c√≥mo los \emph{stakeholders} interact√∫an con los prototipos, as√≠ como de sus reacciones.
         %% Eye-tracking
         \item Analizar los datos recogidos.
     \end{enumerate}
 \end{frame}
 
-\subsection{MÈtodo KJ}
+\subsection{M√©todo KJ}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para IngenierÌa de Requisitos}
+    \frametitle{T√©cnicas y M√©todos para Ingenier√≠a de Requisitos}
     \begin{enumerate}
          \item Tormenta de Ideas.
          \item Prototipado.
-         \item \alert{MÈtodo KJ}.
+         \item \alert{M√©todo KJ}.
          \item Mapas mentales.
-         \item Listas de comprobaciÛn.
+         \item Listas de comprobaci√≥n.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{MÈtodo KJ - Fundamento}
-    \begin{block}{MÈtodo KJ}
+    \frametitle{M√©todo KJ - Fundamento}
+    \begin{block}{M√©todo KJ}
         \begin{enumerate}
-            \item Cada participante describe sus ideas sobre un asunto concreto en una o m·s tarjetas de papel, destacando las palabras claves.
-            \item Las ideas se agrupan por categorÌa.
-            \item Los participantes seleccionan las mejores ideas, las cuales se refinan m·s tarde.
+            \item Cada participante describe sus ideas sobre un asunto concreto en una o m√°s tarjetas de papel, destacando las palabras claves.
+            \item Las ideas se agrupan por categor√≠a.
+            \item Los participantes seleccionan las mejores ideas, las cuales se refinan m√°s tarde.
         \end{enumerate}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{MÈtodo KJ - PreparaciÛn}
+    \frametitle{M√©todo KJ - Preparaci√≥n}
     \begin{enumerate}[<+->]
-        \item Definir con claridad el \alert{objetivo} de la sesiÛn.
+        \item Definir con claridad el \alert{objetivo} de la sesi√≥n.
         \item Seleccionar con exhaustividad los integrantes adecuados para alcanzar el objetivo.
-        \item Reservar una sala adecuada y fijar la hora de la sesiÛn.
+        \item Reservar una sala adecuada y fijar la hora de la sesi√≥n.
         %% Sala adecuada: Todos se ven las caras y debe disponer de un medio para visualizar los resultados
         \item Notificar lugar y hora a los participantes.
-        \item Preparar el mecanismo de visualizaciÛn.
+        \item Preparar el mecanismo de visualizaci√≥n.
         \item Seleccionar un moderador y un secretario.
     \end{enumerate}
 \end{frame}
 
 %% Revisar
 \begin{frame}[c]
-    \frametitle{MÈtodo KJ - EjecuciÛn (I)}
+    \frametitle{M√©todo KJ - Ejecuci√≥n (I)}
     \begin{enumerate}[<+->]
-        \item Explicar con claridad el objetivo de la sesiÛn.
+        \item Explicar con claridad el objetivo de la sesi√≥n.
         \item Explicar las reglas del juego y mostrar una tarjeta de ejemplo.
-        \item Repartir las tarjetas y bolÌgrafos.
-        \item Establecer un tiempo para la elaboraciÛn de las ideas.
-        \item Colocar las tarjetas sobre un tablero, numer·ndolas.
+        \item Repartir las tarjetas y bol√≠grafos.
+        \item Establecer un tiempo para la elaboraci√≥n de las ideas.
+        \item Colocar las tarjetas sobre un tablero, numer√°ndolas.
         \item Permitir a los participantes explicar sus tarjetas si eso fuese necesario.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{MÈtodo KJ - EjecuciÛn (II) y Resultados}
+    \frametitle{M√©todo KJ - Ejecuci√≥n (II) y Resultados}
     \begin{enumerate}[<+->]
-        \item Agrupar las tarjetas por categorÌas, sin eliminar las tarjetas.
-        \item Establecer de manera cooperativa un tÌtulo para cada categorÌa.
-        \item Establecer, si fuese necesario, relaciones entre categorÌas.
-        \item Determinar un plan de acciÛn.
-        \item Documentar la sesiÛn y distribuir los resultados.
+        \item Agrupar las tarjetas por categor√≠as, sin eliminar las tarjetas.
+        \item Establecer de manera cooperativa un t√≠tulo para cada categor√≠a.
+        \item Establecer, si fuese necesario, relaciones entre categor√≠as.
+        \item Determinar un plan de acci√≥n.
+        \item Documentar la sesi√≥n y distribuir los resultados.
     \end{enumerate}
 \end{frame}
 
 \subsection{Mapas Mentales}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para IngenierÌa de Requisitos}
+    \frametitle{T√©cnicas y M√©todos para Ingenier√≠a de Requisitos}
     \begin{enumerate}
          \item Tormenta de Ideas.
          \item Prototipado.
-         \item MÈtodo KJ.
+         \item M√©todo KJ.
          \item \alert{Mapas mentales}.
          \item Listas de control.
     \end{enumerate}
@@ -325,9 +305,9 @@
     \frametitle{Mapas mentales - Fundamento}
     \begin{block}{Mapa mental}
         \begin{enumerate}[<+->]
-            \item TÈcnica de representaciÛn gr·fica del conocimiento relacionado con un \alert{tema concreto}.
+            \item T√©cnica de representaci√≥n gr√°fica del conocimiento relacionado con un \alert{tema concreto}.
             \item Cada tema se descompone en una serie de subtemas o palabras claves.
-            \item Cada subtema o palabra clave se puede descomponer en una serie de subtemas o palabras claves, y asÌ sucesivamente.
+            \item Cada subtema o palabra clave se puede descomponer en una serie de subtemas o palabras claves, y as√≠ sucesivamente.
             \item Los subtemas de un tema o palabra clave se pueden relacionar con temas o palabras claves de otros temas o subtemas.
             \item Los diversos conocimientos relacionados con un tema aparecen como nodos de una red de nodos interrelacionados.
             \item Se estimula la capacidad verbal del lado izquierdo del cerebro y la capacidad visual y espacial del lado derecho.
@@ -343,14 +323,14 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Mapas mentales - PreparaciÛn y EjecuciÛn}
-    \begin{block}{PreparaciÛn}
+    \frametitle{Mapas mentales - Preparaci√≥n y Ejecuci√≥n}
+    \begin{block}{Preparaci√≥n}
     \begin{enumerate}[<+->]
-        \item Elegir el medio (herramienta sw, papel, pizarra (electrÛnica)) para la realizaciÛn del mapa mental.
+        \item Elegir el medio (herramienta sw, papel, pizarra (electr√≥nica)) para la realizaci√≥n del mapa mental.
     \end{enumerate}
     \end{block}
     \uncover<2->{
-    \begin{block}{EjecuciÛn}
+    \begin{block}{Ejecuci√≥n}
     \begin{enumerate}[<+->]
         \item Mapas mentales
         \item Subdividir el tema central en subtemas o palabras claves.
@@ -366,7 +346,7 @@
     \frametitle{Mapas mentales - Resultados}
     \begin{block}{Resultados}
     \begin{enumerate}[<+->]
-        \item Reorganizar la disposiciÛn espacial si fuese necesario.
+        \item Reorganizar la disposici√≥n espacial si fuese necesario.
         \item Incluir las aclaraciones que se consideren pertinentes.
     \end{enumerate}
     \end{block}
@@ -375,11 +355,11 @@
 \subsection{Listas de Control}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para Ing. Req.}
+    \frametitle{T√©cnicas y M√©todos para Ing. Req.}
     \begin{enumerate}
          \item Tormenta de Ideas.
          \item Prototipado.
-         \item MÈtodo KJ.
+         \item M√©todo KJ.
          \item Mapas mentales.
          \item \alert{Listas de control}.
          \item El test de los 100\$.
@@ -398,18 +378,18 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Listas de control - PreparaciÛn, EjecuciÛn y Resultados}
-    \begin{block}{PreparaciÛn}
+    \frametitle{Listas de control - Preparaci√≥n, Ejecuci√≥n y Resultados}
+    \begin{block}{Preparaci√≥n}
     \begin{enumerate}[<+->]
-        \item Elegir un lista de control de entre el cat·logo de listas existentes.
+        \item Elegir un lista de control de entre el cat√°logo de listas existentes.
         \item Si no existiese una determinada lista de control, crearla utilizando el procedimiento adecuado para ello (e.g., tormenta de ideas).
     \end{enumerate}
     \end{block}
     \uncover<3->{
-    \begin{block}{EjecuciÛn}
+    \begin{block}{Ejecuci√≥n}
     \begin{enumerate}[<+->]
         \item Revisar y procesar cada uno de los puntos de control.
-        \item Si se detectasen inconsistencias, imprecisiones, ambig¸edades, redundancias o carencias, notificarlo.
+        \item Si se detectasen inconsistencias, imprecisiones, ambig√ºedades, redundancias o carencias, notificarlo.
     \end{enumerate}
     \end{block}
     }
@@ -425,11 +405,11 @@
 \subsection{Test 100\$}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas y MÈtodos para Ing. Req.}
+    \frametitle{T√©cnicas y M√©todos para Ing. Req.}
     \begin{enumerate}
          \item Tormenta de Ideas.
          \item Prototipado.
-         \item MÈtodo KJ.
+         \item M√©todo KJ.
          \item Mapas mentales.
          \item Listas de control.
          \item \alert{El test de los 100\$}
@@ -440,29 +420,29 @@
     \frametitle{100\$ Test - Fundamento}
     \begin{block}{100\$ Test}
         \begin{enumerate}
-            \item<1-> Sistema colaborativo para la elecciÛn de elementos de una lista, o para ordenar una lista de elementos por prioridad o relevancia.
+            \item<1-> Sistema colaborativo para la elecci√≥n de elementos de una lista, o para ordenar una lista de elementos por prioridad o relevancia.
             \item<2-> Se asigna \emph{dinero virtual} a cada miembro del grupo.
-            \item<3-> Cada miembro invierte dinero en funciÛn de su criterio personal.
-            \item<4-> La inversiÛn colectiva se considera la m·s adecuada, y por tanto la elegida.
+            \item<3-> Cada miembro invierte dinero en funci√≥n de su criterio personal.
+            \item<4-> La inversi√≥n colectiva se considera la m√°s adecuada, y por tanto la elegida.
         \end{enumerate}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{100\$ Test - PreparaciÛn}
+    \frametitle{100\$ Test - Preparaci√≥n}
     \begin{enumerate}[<+->]
         \item Definir la lista de elementos a ordenar o filtrar.
-        \item Decidir si se usar· un sistema con acumulaciÛn o sin acumulaciÛn.
+        \item Decidir si se usar√° un sistema con acumulaci√≥n o sin acumulaci√≥n.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{100\$ Test - EjecuciÛn}
+    \frametitle{100\$ Test - Ejecuci√≥n}
     \begin{enumerate}[<+->]
-        \item Asignar dinero virtual a cada miembro del grupo. Un tercio de la longitud de la lista de elementos a procesar en sistemas sin acumulaciÛn, la mitad en sistemas con acumulaciÛn.
+        \item Asignar dinero virtual a cada miembro del grupo. Un tercio de la longitud de la lista de elementos a procesar en sistemas sin acumulaci√≥n, la mitad en sistemas con acumulaci√≥n.
         \item Cada participante reparte su dinero entre los elementos de la lista.
-        \item En sistemas sin acumulaciÛn, sÛlo se puede asignar un dÛlar a cada elemento.
-        \item En sistemas con acumulaciÛn, se puede asignar m·s un dÛlar a un elemento, hasta un m·ximo establecido.
+        \item En sistemas sin acumulaci√≥n, s√≥lo se puede asignar un d√≥lar a cada elemento.
+        \item En sistemas con acumulaci√≥n, se puede asignar m√°s un d√≥lar a un elemento, hasta un m√°ximo establecido.
         \item Se recogen las apuestas y se procesan.
     \end{enumerate}
 \end{frame}
@@ -470,40 +450,40 @@
 \begin{frame}[c]
     \frametitle{100\$ Test - Resultados}
     \begin{enumerate}[<+->]
-        \item Ordenar los elementos en funciÛn de la cantidad de dinero recibida.
+        \item Ordenar los elementos en funci√≥n de la cantidad de dinero recibida.
         \item Si se pretende filtrar o seleccionar un conjunto de elementos, establecer un criterio de corte claramente definido.
-        \item En caso de querer ordenarlos por relevancia, se puede aplicar alguna tÈcnica para deshacer los empates; o se pueden agrupar los elementos por niveles, donde todos los elementos de un nivel son de igual prioridad.
+        \item En caso de querer ordenarlos por relevancia, se puede aplicar alguna t√©cnica para deshacer los empates; o se pueden agrupar los elementos por niveles, donde todos los elementos de un nivel son de igual prioridad.
     \end{enumerate}
  \end{frame}
 
 \subsection{Resumen}
 
 \begin{frame}[c]
-    \frametitle{Resumen TÈcnicas y MÈtodos}
+    \frametitle{Resumen T√©cnicas y M√©todos}
     \begin{center}
     \begin{tabular}{||l|l|c|c|c||}
         \hline \hline
-        \textbf{TÈcnica}  & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
+        \textbf{T√©cnica}  & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
         Tormenta de Ideas & Bajo           & $\checkmark$     &                     & $\checkmark$    \\ \hline
         Prototipado       & Variable       &                  & $\checkmark$        & $\checkmark$    \\ \hline
-        MÈtodo KJ         & Bajo           & $\checkmark$     & $\checkmark$        & ($\checkmark$)  \\ \hline
+        M√©todo KJ         & Bajo           & $\checkmark$     & $\checkmark$        & ($\checkmark$)  \\ \hline
         Mapa Mental       & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline
         Listas de Control & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline \hline
     \end{tabular}
     \end{center}
 \end{frame}
 
-\section{DefiniciÛn del Contexto de un Sistema Sw}
+\section{Definici√≥n del Contexto de un Sistema Sw}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item \alert{DefiniciÛn del Contexto de un Sistema Sw}.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item \alert{Definici√≥n del Contexto de un Sistema Sw}.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item Sumario.
     \end{enumerate}
 \end{frame}
@@ -528,12 +508,12 @@
 \begin{frame}[c]
     \frametitle{Contexto y Frontera de un Sistemas Sw}
     \begin{block}{Contexto de un Sistema Sw~\cite{pohl:2010}}
-        El \alert{\emph{contexto de un sistema sw}} es la parte del entorno de dicho sistema sw que es de relevancia para la definiciÛn, comprensiÛn e interpretaciÛn de los requisitos de un sistema.
+        El \alert{\emph{contexto de un sistema sw}} es la parte del entorno de dicho sistema sw que es de relevancia para la definici√≥n, comprensi√≥n e interpretaci√≥n de los requisitos de un sistema.
     \end{block}
     \uncover<2->{
     \begin{block}{Frontera de un Sistema Sw~\cite{pohl:2010}}
         La \alert{\emph{frontera de un sistema sw}} separa el sistema sw bajo desarrollo (o desarrollado) del contexto del sistema.
-        %% Aclarar aquÌ que el sistema puede ser modificado, mientras que el contexto no puede serlo
+        %% Aclarar aqu√≠ que el sistema puede ser modificado, mientras que el contexto no puede serlo
     \end{block}
     }
     \uncover<3->{
@@ -561,42 +541,42 @@
     \uncover<2->{
     \begin{description}
         \item<2->[Vista del Dominio] Objetos y eventos que son relevantes para el sistema sw.
-        \item<3->[Vista de la UtilizaciÛn] CÛmo los usuarios (personas o sistemas) utilizan el sistema sw para satisfacer un objetivo.
-        \item<4->[Vista TecnolÛgica] La infraestructura tecnolÛgica donde se despliega el sistema sw.
-        \item<5->[Vista de Desarrollo] CÛmo debe desarrollarse el sistema sw.
+        \item<3->[Vista de la Utilizaci√≥n] C√≥mo los usuarios (personas o sistemas) utilizan el sistema sw para satisfacer un objetivo.
+        \item<4->[Vista Tecnol√≥gica] La infraestructura tecnol√≥gica donde se despliega el sistema sw.
+        \item<5->[Vista de Desarrollo] C√≥mo debe desarrollarse el sistema sw.
     \end{description}
     }
 \end{frame}
 
-\subsection{DefiniciÛn del Contexto de un Sistema Sw}
+\subsection{Definici√≥n del Contexto de un Sistema Sw}
 
 \begin{frame}[c]
-    \frametitle{DefiniciÛn del Contexto de un Sistema Sw}
+    \frametitle{Definici√≥n del Contexto de un Sistema Sw}
     \begin{enumerate}[<+->]
-        \item Definir la \emph{visiÛn del sistema}.
+        \item Definir la \emph{visi√≥n del sistema}.
         \item Crear un glosario con los elementos importantes del contexto del sistema.
         \item Definir la \emph{frontera del sistema} y la \emph{frontera del contexto}.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{DefiniciÛn de la Frontera del Sistema}
+    \frametitle{Definici√≥n de la Frontera del Sistema}
     \begin{enumerate}[<+->]
         \item Involucrar en el proceso a todos los \emph{stakeholders}.
-        \item Decidir quÈ elementos pertenecen al sistema.
-        \item Decidir quÈ elementos no pertenecen al sistema.
+        \item Decidir qu√© elementos pertenecen al sistema.
+        \item Decidir qu√© elementos no pertenecen al sistema.
         \item En caso de dudas, asignar el elemento a la \emph{zona gris}.
-        \item Revisar periÛdicamente la frontera del sistema. Si alg˙n elemento cambia de zona, revisar los requisitos afectados.
+        \item Revisar peri√≥dicamente la frontera del sistema. Si alg√∫n elemento cambia de zona, revisar los requisitos afectados.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{DefiniciÛn de la Frontera del Contexto}
+    \frametitle{Definici√≥n de la Frontera del Contexto}
     \begin{enumerate}[<+->]
         \item Involucrar en el proceso a todos los \emph{stakeholders}.
-        \item Decidir quÈ elementos pertenecen a cada una de las cuatro vistas del contexto.
+        \item Decidir qu√© elementos pertenecen a cada una de las cuatro vistas del contexto.
         \item En caso de dudas, asignar el elemento a la \emph{zona gris}.
-        \item Revisar periÛdicamente la frontera del contexto. Si alg˙n elemento cambia de zona, revisar los requisitos afectados.
+        \item Revisar peri√≥dicamente la frontera del contexto. Si alg√∫n elemento cambia de zona, revisar los requisitos afectados.
     \end{enumerate}
 \end{frame}
 
@@ -606,38 +586,38 @@
      \begin{tabular}{||l||c|c|c||}
      \hline \hline
      \textbf{Elemento}          & \textbf{Sistema} & \textbf{Contexto} & \textbf{Irrelevante} \\ \hline \hline
-     Notificar Fin ReparaciÛn   &   $\checkmark$   &                   &                      \\ \hline
+     Notificar Fin Reparaci√≥n   &   $\checkmark$   &                   &                      \\ \hline
      Generar Factura            &   $\checkmark$   &                   &                      \\ \hline
      Generar Trimestral IVA     &   $\checkmark$   & $\checkmark$      &                      \\ \hline
-     ComunicaciÛn Proveedores   &                  & $\checkmark$      &                      \\ \hline
+     Comunicaci√≥n Proveedores   &                  & $\checkmark$      &                      \\ \hline
      Plan RENOVE                &                  &                   & $\checkmark$         \\ \hline
      \hline
      \end{tabular}
      \end{center}
 \end{frame}
 
-\section{Estrategias para la IdentificaciÛn de Requisitos}
+\section{Estrategias para la Identificaci√≥n de Requisitos}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item \alert{Estrategias para la IdentificaciÛn de Requisitos}.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item \alert{Estrategias para la Identificaci√≥n de Requisitos}.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item Sumario.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item \alert<2->{Entrevistas}.
          \item Talleres.
-         \item Grupos de InterÈs.
-         \item ObservaciÛn.
+         \item Grupos de Inter√©s.
+         \item Observaci√≥n.
          \item Cuestionarios.
          \item Lectura con perspectiva.
     \end{enumerate}
@@ -649,54 +629,54 @@
     \frametitle{Entrevistas - Fundamento}
     \begin{block}{Tipos de Entrevistas}
         \begin{description}[<+->]
-            \item[Estandarizada] Existen unas preguntas predefinidas de las que el entrevistador no se puede desvÌar.
-            \item[Exploratoria] Existen unas preguntas predefinidas de las que el entrevistador se puede desvÌar.
-            \item[No estructurada] Cada miembro invierte dinero en funciÛn de su criterio personal.
+            \item[Estandarizada] Existen unas preguntas predefinidas de las que el entrevistador no se puede desv√≠ar.
+            \item[Exploratoria] Existen unas preguntas predefinidas de las que el entrevistador se puede desv√≠ar.
+            \item[No estructurada] Cada miembro invierte dinero en funci√≥n de su criterio personal.
         \end{description}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Entrevistas - PreparaciÛn del Evento}
+    \frametitle{Entrevistas - Preparaci√≥n del Evento}
     \begin{enumerate}[<+->]
-        \item Definir claramente el objetivo de la reuniÛn.
+        \item Definir claramente el objetivo de la reuni√≥n.
         \item Elegir los participantes para la entrevista.
         \item Elegir un sitio adecuado (aislado y sin ruidos) para realizar las entrevistas.
-        \item Invitar a los participantes con antelaciÛn suficiente.
+        \item Invitar a los participantes con antelaci√≥n suficiente.
         \item Explicar el objetivo y procedimiento a los participantes.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Entrevistas - PreparaciÛn de la Entrevista}
-    \begin{block}{PreparaciÛn de la Entrevista}
+    \frametitle{Entrevistas - Preparaci√≥n de la Entrevista}
+    \begin{block}{Preparaci√≥n de la Entrevista}
     \begin{enumerate}[<+->]
-        \item Utilizar preguntas cerradas y abiertas seg˙n convenga.
+        \item Utilizar preguntas cerradas y abiertas seg√∫n convenga.
         \item Precisar un contexto para cada pregunta si ello fuese necesario.
         \item Evitar preguntas \emph{sugerentes}.
     \end{enumerate}
     \end{block}
     \uncover<4->{
-    \begin{block}{PreparaciÛn del Entrevistador}
+    \begin{block}{Preparaci√≥n del Entrevistador}
     \begin{enumerate}
         \item<4-> Familiarizarse con los entrevistados.
-        \item<5-> Familiarizarse con la terminologÌa propia de los entrevistados y utilizarla.
+        \item<5-> Familiarizarse con la terminolog√≠a propia de los entrevistados y utilizarla.
     \end{enumerate}
     \end{block}
     }
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Entrevistas - EjecuciÛn}
+    \frametitle{Entrevistas - Ejecuci√≥n}
     \begin{enumerate}[<+->]
-        \item Al principio, repasar el objetivo y proporcionar informaciÛn adicional (si fuese necesario).
+        \item Al principio, repasar el objetivo y proporcionar informaci√≥n adicional (si fuese necesario).
         \item Realizar una pregunta introductoria.
-        \item Ligar las respuestas recibidas con las preguntas para corroborar que la informaciÛn recibida es correcta.
-        \item Crear modelos y escenarios para verificar que la informaciÛn recibida es correcta.
-        \item Examinar la \emph{comunicaciÛn no verbal} de los entrevistados.
+        \item Ligar las respuestas recibidas con las preguntas para corroborar que la informaci√≥n recibida es correcta.
+        \item Crear modelos y escenarios para verificar que la informaci√≥n recibida es correcta.
+        \item Examinar la \emph{comunicaci√≥n no verbal} de los entrevistados.
         \item Realizar descansos cortos (5-10m.) tras 45m de entrevista.
         \item No irse por las ramas ni perderse en detalles.
-        \item Agradecer a los entrevistados su participaciÛn al final y comentar su importancia.
+        \item Agradecer a los entrevistados su participaci√≥n al final y comentar su importancia.
     \end{enumerate}
 \end{frame}
 
@@ -715,12 +695,12 @@
 \subsection{Talleres}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item Entrevistas.
          \item \alert{Talleres}.
-         \item Grupos de InterÈs.
-         \item ObservaciÛn.
+         \item Grupos de Inter√©s.
+         \item Observaci√≥n.
          \item Cuestionarios.
          \item Lectura con perspectiva.
     \end{enumerate}
@@ -729,37 +709,37 @@
 \begin{frame}[t]
     \frametitle{Talleres - Fundamento}
     \begin{block}{Taller de Captura de Requisitos}
-        Se re˙ne un grupo de \emph{stakeholders}, los cuales trabajan conjuntamente, durante una o m·s jornadas y mediante diversas actividades de grupo, para dar respuesta a una serie de preguntas planteadas. Dichas respuestas permiten obtener una serie de requisitos que ha de satisfacer el sistema bajo desarrollo.
+        Se re√∫ne un grupo de \emph{stakeholders}, los cuales trabajan conjuntamente, durante una o m√°s jornadas y mediante diversas actividades de grupo, para dar respuesta a una serie de preguntas planteadas. Dichas respuestas permiten obtener una serie de requisitos que ha de satisfacer el sistema bajo desarrollo.
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Talleres - PreparaciÛn}
+    \frametitle{Talleres - Preparaci√≥n}
     \begin{enumerate}[<+->]
         \item Definir claramente el objetivo del taller.
         \item Definir los resultados esperados.
-        \item DiseÒar un mÈtodo de trabajo adecuado para alcanzar los objetivos.
+        \item Dise√±ar un m√©todo de trabajo adecuado para alcanzar los objetivos.
         \item Elaborar la \alert{\emph{agenda}} del taller (incluir descansos).
         \item Seleccionar los participantes de forma que haya hetereogeneidad y teniendo en cuenta el objetivo.
-        \item Invitar a los participantes con antelaciÛn, explicando el objetivo (negociable).
+        \item Invitar a los participantes con antelaci√≥n, explicando el objetivo (negociable).
         \item Reservar una sala adecuada (sin ruidos y con equipamiento).
         \item Elegir a un moderador y secretario (externos).
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Talleres - EjecuciÛn}
+    \frametitle{Talleres - Ejecuci√≥n}
     \begin{enumerate}[<+->]
         \item Presentar y debatir el objetivo, los resultados esperados y la agenda.
         \item Explicar las actividades (de grupo) a realizar.
-        \item Explicar y votar las reglas que regir·n el desarrollo del taller.
+        \item Explicar y votar las reglas que regir√°n el desarrollo del taller.
         \item El moderador controla las actividades y el cumplimiento de las reglas.
         \item El secretario levanta acta de los resultados intermedios y finales obtenidos, documentando las decisiones adoptadas.
-        \item Se debe prestar especial atenciÛn a los conflictos.
+        \item Se debe prestar especial atenci√≥n a los conflictos.
         \item Recopilar todas las cuestiones que hayan quedado abiertas.
-        \item Definir un procedimiento a seguir para cada cuestiÛn.
+        \item Definir un procedimiento a seguir para cada cuesti√≥n.
         \item Recoger datos sobre la productividad del taller para su mejora.
-        \item Agradecer a los participantes su asistencia y participaciÛn.
+        \item Agradecer a los participantes su asistencia y participaci√≥n.
     \end{enumerate}
 \end{frame}
 
@@ -767,28 +747,28 @@
     \frametitle{Talleres - Resultados}
     \begin{enumerate}[<+->]
         \item Elaborar el acta e informe de resultados definitivo.
-        \item Enviar dichos documentos a los participantes para su aprobaciÛn.
+        \item Enviar dichos documentos a los participantes para su aprobaci√≥n.
     \end{enumerate}
 \end{frame}
 
-\subsection{Grupos de InterÈs}
+\subsection{Grupos de Inter√©s}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item Entrevistas.
          \item Talleres.
-         \item \alert{Grupos de InterÈs}.
-         \item ObservaciÛn.
+         \item \alert{Grupos de Inter√©s}.
+         \item Observaci√≥n.
          \item Cuestionarios.
          \item Lectura con perspectiva.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Grupos de InterÈs - Fundamento}
-    \begin{block}{Grupo de InterÈs para la Captura de Requisitos}
-        Se re˙ne un grupo de \emph{stakeholders}, expertos en una determinada ·rea, los cuales debaten para dar respuesta a una pregunta planteada.
+    \frametitle{Grupos de Inter√©s - Fundamento}
+    \begin{block}{Grupo de Inter√©s para la Captura de Requisitos}
+        Se re√∫ne un grupo de \emph{stakeholders}, expertos en una determinada √°rea, los cuales debaten para dar respuesta a una pregunta planteada.
     \end{block}
 
     %%============================================================================================%%
@@ -796,11 +776,11 @@
     %%============================================================================================%%
     %%
     %%    \uncover<2->{
-    %%    \begin{block}{Tipos de Grupos de InterÈs}
+    %%    \begin{block}{Tipos de Grupos de Inter√©s}
     %%        \begin{description}
     %%            \item<2->[Exploratorio] Orientado a identificar nuevos requisitos.
     %%            \item<3->[Comparativo] Se compara el sistema bajo desarrollo con otro existente.
-    %%            \item<4->[PriorizaciÛn] Se ordenan requisitos ya capturados por prioridad
+    %%            \item<4->[Priorizaci√≥n] Se ordenan requisitos ya capturados por prioridad
     %%        \end{description}
     %%    \end{block}
     %%    }
@@ -809,76 +789,76 @@
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Grupos de InterÈs - PreparaciÛn}
+    \frametitle{Grupos de Inter√©s - Preparaci√≥n}
     \begin{enumerate}[<+->]
-        \item Definir claramente el objetivo y el elemento de interÈs.
+        \item Definir claramente el objetivo y el elemento de inter√©s.
         \item Seleccionar los participantes adecuados.
         \item Reservar una sala adecuada (sin ruidos y con equipamiento).
         \item Elegir a un moderador y secretario (externos).
-        \item Invitar a los participantes con antelaciÛn, explicando el objetivo (negociable).
+        \item Invitar a los participantes con antelaci√≥n, explicando el objetivo (negociable).
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Grupos de InterÈs - EjecuciÛn}
+    \frametitle{Grupos de Inter√©s - Ejecuci√≥n}
     \begin{enumerate}[<+->]
         \item Recibir a los participantes.
         \item Abrir con una pregunta inicial.
-        \item Fomentar la participaciÛn de todos los miembros.
+        \item Fomentar la participaci√≥n de todos los miembros.
         \item Evitar discusiones acaloradas y periodos largos de silencio.
         \item El secretario levanta acta, documentando las decisiones adoptadas.
-        \item Agradecer a los participantes su asistencia y participaciÛn.
+        \item Agradecer a los participantes su asistencia y participaci√≥n.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Grupos de InterÈs - Resultados}
+    \frametitle{Grupos de Inter√©s - Resultados}
     \begin{enumerate}[<+->]
         \item Elaborar el acta e informe de resultados definitivo.
-        \item Enviar dichos documentos a los participantes para su aprobaciÛn.
+        \item Enviar dichos documentos a los participantes para su aprobaci√≥n.
         \item Recopilar y procesar las cuestiones que hayan quedado abiertas.
     \end{enumerate}
 \end{frame}
 
-\subsection{ObservaciÛn}
+\subsection{Observaci√≥n}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item Entrevistas.
          \item Talleres.
-         \item Grupos de InterÈs.
-         \item \alert{ObservaciÛn}.
+         \item Grupos de Inter√©s.
+         \item \alert{Observaci√≥n}.
          \item Cuestionarios.
          \item Lectura con perspectiva.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{ObservaciÛn - Fundamento}
-    \begin{block}{Tipos de ObservaciÛn}
+    \frametitle{Observaci√≥n - Fundamento}
+    \begin{block}{Tipos de Observaci√≥n}
         \begin{description}
             \item[Directa] El observador observa y analiza como se comportan los \emph{stakeholders}.
-            \item[Etnogr·fica] El observador aprende a realizar y realiza las tareas propias de un \emph{stakeholder}.
+            \item[Etnogr√°fica] El observador aprende a realizar y realiza las tareas propias de un \emph{stakeholder}.
         \end{description}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{ObservaciÛn - PreparaciÛn y EjecuciÛn}
-    \begin{block}{PreparaciÛn de una ObservaciÛn}
+    \frametitle{Observaci√≥n - Preparaci√≥n y Ejecuci√≥n}
+    \begin{block}{Preparaci√≥n de una Observaci√≥n}
         \begin{enumerate}
-            \item<1-> Definir claramente el objetivo de la observaciÛn.
+            \item<1-> Definir claramente el objetivo de la observaci√≥n.
             \item<2-> Definir los elementos que deben ser observados.
             \item<3-> Definir los resultados esperados.
         \end{enumerate}
     \end{block}
     \uncover<4->{
-        \begin{block}{EjecuciÛn de una ObservaciÛn}
+        \begin{block}{Ejecuci√≥n de una Observaci√≥n}
             \begin{enumerate}
                 \item<4-> Ganarse la confianza de los \emph{stakeholders}.
                 \item<5-> Observar con detalle el comportamiento de los \emph{stakeholders}.
-                \item<6-> Documentar los elementos de interÈs tal como sucedan (texto, audio o vÌdeo).
+                \item<6-> Documentar los elementos de inter√©s tal como sucedan (texto, audio o v√≠deo).
                 \item<7-> Verificar la objetividad y autenticidad de los resultados.
             \end{enumerate}
         \end{block}
@@ -886,9 +866,9 @@
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{ObservaciÛn - Resultados}
+    \frametitle{Observaci√≥n - Resultados}
     \begin{enumerate}[<+->]
-        \item Elaborar un informe final de resultados conforme los est·ndares establecidos.
+        \item Elaborar un informe final de resultados conforme los est√°ndares establecidos.
         \item Vincular los resultados con los \emph{stakeholders} que los produjeron.
         \item Vincular los requisitos capturados con la correspondiente fuente.
     \end{enumerate}
@@ -897,34 +877,34 @@
 \subsection{Cuestionarios}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item Entrevistas.
          \item Talleres.
-         \item Grupos de InterÈs.
-         \item ObservaciÛn.
+         \item Grupos de Inter√©s.
+         \item Observaci√≥n.
          \item \alert{Cuestionarios}.
          \item Lectura con perspectiva.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Cuestionarios - PreparaciÛn y EjecuciÛn}
-    \begin{block}{PreparaciÛn}
+    \frametitle{Cuestionarios - Preparaci√≥n y Ejecuci√≥n}
+    \begin{block}{Preparaci√≥n}
         \begin{enumerate}
             \item<1-> Definir claramente el objetivo del cuestionario.
             \item<2-> Definir los resultados esperados.
-            \item<3-> Seleccionar a los \emph{stakeholders} que completar·n el cuestionario.
+            \item<3-> Seleccionar a los \emph{stakeholders} que completar√°n el cuestionario.
             \item<4-> Elaborar las preguntas del cuestionario.
         \end{enumerate}
     \end{block}
     \uncover<5->{
-        \begin{block}{EjecuciÛn}
+        \begin{block}{Ejecuci√≥n}
             \begin{enumerate}
                 \item<5-> Aclarar a los \stk el objetivo final del cuestionario.
-                \item<6-> Establecer una fecha lÌmite para completar el cuestionario.
-                \item<7-> Proporcionar un mecanismo de contacto para la resoluciÛn de dudas durante el cumplimiento del formulario.
-                \item<8-> Agradecer a los participantes su colaboraciÛn.
+                \item<6-> Establecer una fecha l√≠mite para completar el cuestionario.
+                \item<7-> Proporcionar un mecanismo de contacto para la resoluci√≥n de dudas durante el cumplimiento del formulario.
+                \item<8-> Agradecer a los participantes su colaboraci√≥n.
             \end{enumerate}
         \end{block}
     }
@@ -936,19 +916,19 @@
         \begin{enumerate}[<+->]
             \item Procesar las respuestas.
             \item Clarificar las respuestas ambiguas, siempre que sea posible.
-            \item Prestar especial atenciÛn a los conflictos entre requisitos.
+            \item Prestar especial atenci√≥n a los conflictos entre requisitos.
             \item Comunicar los resultados a los participantes.
         \end{enumerate}
     \end{block}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{TÈcnicas de IdentificaciÛn}
+    \frametitle{T√©cnicas de Identificaci√≥n}
     \begin{enumerate}
          \item Entrevistas.
          \item Talleres.
-         \item Grupos de InterÈs.
-         \item ObservaciÛn.
+         \item Grupos de Inter√©s.
+         \item Observaci√≥n.
          \item Cuestionarios.
          \item \alert{Lectura con perspectiva}.
     \end{enumerate}
@@ -957,17 +937,17 @@
 \subsection{Lectura en Perspectiva}
 
 \begin{frame}[c]
-    \frametitle{Lectura con perspectiva - PreparaciÛn y EjecuciÛn}
+    \frametitle{Lectura con perspectiva - Preparaci√≥n y Ejecuci√≥n}
     \begin{block}{Lectura con perspectiva - Fundamento}
         Un determinado lector analiza un documento concreto desde una determinada perspectiva, analizando los detalles que son relevantes desde esa perspectiva e ignorando los irrelevantes.
     \end{block}
     \uncover<2->{
-        \begin{block}{PreparaciÛn}
+        \begin{block}{Preparaci√≥n}
             \begin{enumerate}
                 \item<2-> Definir claramente el objetivo de las lecturas.
                 \item<3-> Definir las perspectivas.
                 \item<4-> Seleccionar los documentos a analizar.
-                \item<5-> Seleccionar a los lectores y avisarlos con antelaciÛn.
+                \item<5-> Seleccionar a los lectores y avisarlos con antelaci√≥n.
             \end{enumerate}
         \end{block}
     }
@@ -975,9 +955,9 @@
 
 \begin{frame}[t]
     \frametitle{Lectura con perspectiva - Resultados}
-    \begin{block}{EjecuciÛn}
+    \begin{block}{Ejecuci√≥n}
         \begin{enumerate}
-            \item<1-> Seleccionar una tÈcnica para analizar los documentos (secuencial o dirigida).
+            \item<1-> Seleccionar una t√©cnica para analizar los documentos (secuencial o dirigida).
             \item<2-> Vincular los requisitos identificados con los pasajes de texto correspondientes.
         \end{enumerate}
     \end{block}
@@ -985,7 +965,7 @@
         \begin{block}{Resultados}
             \begin{enumerate}
                 \item<3-> Elaborar un informe de resultados.
-                \item<4-> Prestar especial atenciÛn a los conflictos entre requisitos.
+                \item<4-> Prestar especial atenci√≥n a los conflictos entre requisitos.
             \end{enumerate}
         \end{block}
     }
@@ -994,15 +974,15 @@
 \subsection{Resumen}
 
 \begin{frame}[c]
-    \frametitle{Resumen TÈcnicas de IdentificaciÛn}
+    \frametitle{Resumen T√©cnicas de Identificaci√≥n}
     \begin{center}
     \begin{tabular}{||l|l|c|c|c||}
         \hline \hline
-        \textbf{TÈcnica}    & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
+        \textbf{T√©cnica}    & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
         Entrevistas         & Medio-Alto     & $\checkmark$     & $\checkmark$        & $\checkmark$    \\ \hline
         Talleres            & Alto-Muy Alto  & $\checkmark$     & $\checkmark$        & $\checkmark$    \\ \hline
-        Grupos de InterÈs   & Medio-Alto     &                  & $\checkmark$        & $\checkmark$    \\ \hline
-        ObservaciÛn         & Alto-Muy Alto  &                  & $\checkmark$        &                 \\ \hline
+        Grupos de Inter√©s   & Medio-Alto     &                  & $\checkmark$        & $\checkmark$    \\ \hline
+        Observaci√≥n         & Alto-Muy Alto  &                  & $\checkmark$        &                 \\ \hline
         Cuestionarios       & Bajo-Medio     & $\checkmark$     & $\checkmark$        &                 \\ \hline
         Lectura Perspectiva & Medio-Alto     &                  & $\checkmark$        &                 \\ \hline
         \hline
@@ -1010,17 +990,17 @@
     \end{center}
 \end{frame}
 
-\section{IdentificaciÛn de Fuentes}
+\section{Identificaci√≥n de Fuentes}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item \alert{IdentificaciÛn de Fuentes para la Captura de Requisitos}.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item \alert{Identificaci√≥n de Fuentes para la Captura de Requisitos}.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item Sumario.
     \end{enumerate}
 \end{frame}
@@ -1050,35 +1030,35 @@
      \end{itemize}
 \end{frame}
 
-\subsection{Proceso de IdentificaciÛn de Fuentes}
+\subsection{Proceso de Identificaci√≥n de Fuentes}
 
 \begin{frame}
-     \frametitle{Proceso de IdentificaciÛn de Fuentes}
+     \frametitle{Proceso de Identificaci√≥n de Fuentes}
      \begin{enumerate}
-        \item<1-> Seleccionar las fuentes obvias (e.g., documento con la visiÛn del sistema) (listas de comprobaciÛn).
-        \item<2-> Identificar nuevas fuentes mediante el an·lisis de:
+        \item<1-> Seleccionar las fuentes obvias (e.g., documento con la visi√≥n del sistema) (listas de comprobaci√≥n).
+        \item<2-> Identificar nuevas fuentes mediante el an√°lisis de:
             \begin{enumerate}
-                \item<3-> \emph{Stakeholders} identificados (entrevistas, talleres, grupos de interÈs, cuestionarios).
+                \item<3-> \emph{Stakeholders} identificados (entrevistas, talleres, grupos de inter√©s, cuestionarios).
                 \item<4-> Documentos identificados (lectura en perspectiva).
-                \item<5-> An·lisis de sistemas actualmente existentes (observaciÛn, cuestionarios, grupos de interÈs).
+                \item<5-> An√°lisis de sistemas actualmente existentes (observaci√≥n, cuestionarios, grupos de inter√©s).
             \end{enumerate}
-        \item<6-> Registrar las nuevas fuentes identificadas. Si el n˙mero de nuevas fuentes detectadas es suficientemente bajo, ir al paso 5.
+        \item<6-> Registrar las nuevas fuentes identificadas. Si el n√∫mero de nuevas fuentes detectadas es suficientemente bajo, ir al paso 5.
         \item<7-> Por cada nueva fuente identificada, repetir el paso 2.
         \item<8-> Seleccionar aquellas fuentes que se consideren de mayor relevancia.
      \end{enumerate}
 \end{frame}
 
-\section{IdentificaciÛn de Requisitos}
+\section{Identificaci√≥n de Requisitos}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item \alert{Procesos de IdentificaciÛn de Requisitos}.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item \alert{Procesos de Identificaci√≥n de Requisitos}.
          \item Sumario.
     \end{enumerate}
 \end{frame}
@@ -1086,21 +1066,21 @@
 \subsection{Requisitos Existentes}
 
 \begin{frame}[c]
-    \frametitle{IdentificaciÛn de Requisitos Existentes}
+    \frametitle{Identificaci√≥n de Requisitos Existentes}
     \begin{center}
         \includegraphics[width=0.75\linewidth]{images/proceso/requisitosViejos.eps}
     \end{center}
 \end{frame}
 
 \begin{frame}[c]
-     \frametitle{IdentificaciÛn de Requisitos Existentes}
+     \frametitle{Identificaci√≥n de Requisitos Existentes}
      \begin{tabular}{||l|c|c|c||}
         \hline \hline
                                      & \textbf{Stakeholders} & \textbf{Documentos} & \textbf{Sistemas} \\ \hline
         \textbf{Entrevistas}         & $\checkmark$          &                     & ($\checkmark$)    \\ \hline
         \textbf{Talleres}            & $\checkmark$          &                     &                   \\ \hline
-        \textbf{Grupos de InterÈs}   & $\checkmark$          &                     & $\checkmark$      \\ \hline
-        \textbf{ObservaciÛn}         & $\checkmark$          &                     & $\checkmark$      \\ \hline
+        \textbf{Grupos de Inter√©s}   & $\checkmark$          &                     & $\checkmark$      \\ \hline
+        \textbf{Observaci√≥n}         & $\checkmark$          &                     & $\checkmark$      \\ \hline
         \textbf{Cuestionarios}       & $\checkmark$          &                     & $\checkmark$      \\ \hline
         \textbf{Lectura Perspectiva} &                       & $\checkmark$        & $\checkmark$      \\ \hline
         \hline
@@ -1110,49 +1090,49 @@
 \subsection{Requisitos Nuevos}
 
 \begin{frame}[c]
-    \frametitle{IdentificaciÛn de Nuevos Requisitos}
+    \frametitle{Identificaci√≥n de Nuevos Requisitos}
     \begin{center}
         \includegraphics[width=0.75\linewidth]{images/proceso/requisitosNuevos.eps}
     \end{center}
 \end{frame}
 
 \begin{frame}[c]
-     \frametitle{IdentificaciÛn de Nuevos Requisitos}
+     \frametitle{Identificaci√≥n de Nuevos Requisitos}
      \begin{enumerate}[<+->]
         \item Talleres
-        \item Grupos de InterÈs
+        \item Grupos de Inter√©s
         \item Entrevistas
         \item Cuestionarios
-        \item ConsultorÌa mediante observaciÛn.
+        \item Consultor√≠a mediante observaci√≥n.
      \end{enumerate}
 \end{frame}
 
 \section{Sumario}
 
 \begin{frame}[c]
-    \frametitle{Õndice}
+    \frametitle{√çndice}
     \begin{enumerate}
          \item Procesos de Captura de Requisitos.
-         \item TÈcnicas y MÈtodos utilizadas en Procesos de Captura de Requisitos.
-         \item DefiniciÛn del Contexto de un Sistema Sw.
-         \item Estrategias para la IdentificaciÛn de Requisitos.
-         \item IdentificaciÛn de Fuentes para la Captura de Requisitos.
-         \item Procesos de IdentificaciÛn de Requisitos.
+         \item T√©cnicas y M√©todos utilizadas en Procesos de Captura de Requisitos.
+         \item Definici√≥n del Contexto de un Sistema Sw.
+         \item Estrategias para la Identificaci√≥n de Requisitos.
+         \item Identificaci√≥n de Fuentes para la Captura de Requisitos.
+         \item Procesos de Identificaci√≥n de Requisitos.
          \item \alert{Sumario}.
     \end{enumerate}
 \end{frame}
 
 
 \begin{frame}
-    \frametitle{øQuÈ Tengo que Saber de Todo Esto?}
+    \frametitle{¬øQu√© Tengo que Saber de Todo Esto?}
     \begin{enumerate}
-        \item Entender cÛmo funciona  y saber aplicar \emph{procesos de captura de requisitos}.
-        \item Conocer, entender y saber aplicar tÈcnicas como la \emph{tormenta de ideas}, el \emph{mÈtodo KJ} o el \emph{test de los 100\$}.
-        \item Saber elaborar \emph{mapas mentales}, \emph{prototipos} y \emph{listas de comprobaciÛn}, asÌ como saber para quÈ sirven y cÛmo funcionan.
-        \item Conocer, entender y saber aplicar tÈcnicas de identificaciÛn de requisitos tales como las \emph{entrevistas}, los \emph{cuestionarios}, los \emph{talleres}, los \emph{grupos de interÈs}, la \emph{observaciÛn} o la \emph{lectura en perspectiva}.
-        \item Conocer de quÈ se compone el \emph{contexto de un sistema} y saber los elementos de dicho contexto.
+        \item Entender c√≥mo funciona  y saber aplicar \emph{procesos de captura de requisitos}.
+        \item Conocer, entender y saber aplicar t√©cnicas como la \emph{tormenta de ideas}, el \emph{m√©todo KJ} o el \emph{test de los 100\$}.
+        \item Saber elaborar \emph{mapas mentales}, \emph{prototipos} y \emph{listas de comprobaci√≥n}, as√≠ como saber para qu√© sirven y c√≥mo funcionan.
+        \item Conocer, entender y saber aplicar t√©cnicas de identificaci√≥n de requisitos tales como las \emph{entrevistas}, los \emph{cuestionarios}, los \emph{talleres}, los \emph{grupos de inter√©s}, la \emph{observaci√≥n} o la \emph{lectura en perspectiva}.
+        \item Conocer de qu√© se compone el \emph{contexto de un sistema} y saber los elementos de dicho contexto.
         \item Saber identificar las fuentes de requisitos para un sistema dado.
-        \item Ser capaz de diseÒar planes para la identificaciÛn de requisitos, tanto existentes como novedosos, utilizando para ello las tÈcnicas que se consideren m·s adecuadas en funciÛn del objetivo perseguido y la fuente.
+        \item Ser capaz de dise√±ar planes para la identificaci√≥n de requisitos, tanto existentes como novedosos, utilizando para ello las t√©cnicas que se consideren m√°s adecuadas en funci√≥n del objetivo perseguido y la fuente.
     \end{enumerate}
 \end{frame}
 
