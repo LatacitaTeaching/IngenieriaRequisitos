@@ -1,4 +1,4 @@
-﻿\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -19,7 +19,7 @@
 \date{}
 
 \begin{document}
-
+	
 \begin{frame}[c]
 	\titlepage
 	\begin{columns}
@@ -43,20 +43,25 @@
     \end{center}
 \end{frame}
 
+\section{Introducción}
+
+\subsection{Objetivos del Tema}
+
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
     \begin{enumerate}[<+->]
-         \item Conocer y entender las diferentes etapas que conforman los procesos de captura de requisitos.
-         \item Conocer, entender y saber utilizar las actividades que utilizan las estrategias de captura de requisitos.
-         \item Conocer, entender y saber aplicar las diferentes estrategias para la captura de requisitos.
-         \item Saber definir el contexto de un sistema software.
-         \item Saber identificar fuentes para la captura de requisitos de un sistema sw.
-         \item Saber diseñar planes y estrategias para la captura de requisitos.
-         \item Saber utilizar herramientas para la captura de requisitos de un sistema sw.
+         \item Comprender cuáles son las diferentes etapas que conforman un \emph{proceso de captura de requisitos}.
+         \item Saber utilizar técnicas frecuentemente utilizadas en las actividades de un Proceso de Captura de Requisitos.
+         \item Saber definir el \emph{contexto de un sistema software}.
+         \item Saber identificar \emph{fuentes de requisitos} de un sistema sw.
+         \item Saber seleccionar \emph{estrategias para la captura de requisitos}.
+         \item Saber diseñar y ejecutar \emph la captura de requisitos.
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[t]
+\subsection{Bibliografía}
+
+\begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{1}
 
@@ -73,20 +78,7 @@
 \end{thebibliography}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item \alert<2->{Procesos de Captura de Requisitos}.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item Definición del Contexto de un Sistema Sw.
-         \item Estrategias para la Identificación de Requisitos.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item Procesos de Identificación de Requisitos.
-         \item Sumario.
-    \end{enumerate}
-\end{frame}
-
-\section{Procesos de Captura de Requisitos}
+\subsection{Procesos de Captura de Requisitos}
 
 \begin{frame}
     \frametitle{Proceso de Ingeniería de Requisitos}
@@ -107,34 +99,9 @@
     \end{center}
 \end{frame}
 
-\section{Técnicas y Métodos}
-
-\begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item \alert{Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos}.
-         \item Definición del Contexto de un Sistema Sw.
-         \item Estrategias para la Identificación de Requisitos.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item Procesos de Identificación de Requisitos.
-         \item Sumario.
-    \end{enumerate}
-\end{frame}
+\section{Técnicas Base}
 
 \subsection{Tormenta de Ideas}
-
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ingeniería de Requisitos}
-    \begin{enumerate}
-         \item \alert<2->{Tormenta de Ideas}.
-         \item Prototipado.
-         \item Método KJ.
-         \item Mapas mentales.
-         \item Listas de comprobación.
-         \item El test de los 100\$
-    \end{enumerate}
-\end{frame}
 
 \begin{frame}[t]
     \frametitle{Tormenta de Ideas - Fundamento}
@@ -185,17 +152,6 @@
 
 \subsection{Prototipado}
 
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ingeniería de Requisitos}
-    \begin{enumerate}
-         \item Tormenta de Ideas.
-         \item \alert{Prototipado}.
-         \item Método KJ.
-         \item Mapas mentales.
-         \item Listas de comprobación.
-    \end{enumerate}
-\end{frame}
-
 \begin{frame}[t]
     \frametitle{Prototipado - Fundamento}
     \begin{block}{Prototipado}
@@ -228,17 +184,6 @@
 \end{frame}
 
 \subsection{Método KJ}
-
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ingeniería de Requisitos}
-    \begin{enumerate}
-         \item Tormenta de Ideas.
-         \item Prototipado.
-         \item \alert{Método KJ}.
-         \item Mapas mentales.
-         \item Listas de comprobación.
-    \end{enumerate}
-\end{frame}
 
 \begin{frame}[t]
     \frametitle{Método KJ - Fundamento}
@@ -289,17 +234,6 @@
 \end{frame}
 
 \subsection{Mapas Mentales}
-
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ingeniería de Requisitos}
-    \begin{enumerate}
-         \item Tormenta de Ideas.
-         \item Prototipado.
-         \item Método KJ.
-         \item \alert{Mapas mentales}.
-         \item Listas de control.
-    \end{enumerate}
-\end{frame}
 
 \begin{frame}[t]
     \frametitle{Mapas mentales - Fundamento}
@@ -354,18 +288,6 @@
 
 \subsection{Listas de Control}
 
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ing. Req.}
-    \begin{enumerate}
-         \item Tormenta de Ideas.
-         \item Prototipado.
-         \item Método KJ.
-         \item Mapas mentales.
-         \item \alert{Listas de control}.
-         \item El test de los 100\$.
-    \end{enumerate}
-\end{frame}
-
 \begin{frame}[t]
     \frametitle{Listas de Control - Fundamento}
     \begin{block}{Listas de Control}
@@ -404,17 +326,6 @@
 
 \subsection{Test 100\$}
 
-\begin{frame}[c]
-    \frametitle{Técnicas y Métodos para Ing. Req.}
-    \begin{enumerate}
-         \item Tormenta de Ideas.
-         \item Prototipado.
-         \item Método KJ.
-         \item Mapas mentales.
-         \item Listas de control.
-         \item \alert{El test de los 100\$}
-    \end{enumerate}
-\end{frame}
 
 \begin{frame}[t]
     \frametitle{100\$ Test - Fundamento}
@@ -456,38 +367,9 @@
     \end{enumerate}
  \end{frame}
 
-\subsection{Resumen}
 
-\begin{frame}[c]
-    \frametitle{Resumen Técnicas y Métodos}
-    \begin{center}
-    \begin{tabular}{||l|l|c|c|c||}
-        \hline \hline
-        \textbf{Técnica}  & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
-        Tormenta de Ideas & Bajo           & $\checkmark$     &                     & $\checkmark$    \\ \hline
-        Prototipado       & Variable       &                  & $\checkmark$        & $\checkmark$    \\ \hline
-        Método KJ         & Bajo           & $\checkmark$     & $\checkmark$        & ($\checkmark$)  \\ \hline
-        Mapa Mental       & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline
-        Listas de Control & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline \hline
-    \end{tabular}
-    \end{center}
-\end{frame}
 
 \section{Definición del Contexto de un Sistema Sw}
-
-\begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item \alert{Definición del Contexto de un Sistema Sw}.
-         \item Estrategias para la Identificación de Requisitos.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item Procesos de Identificación de Requisitos.
-         \item Sumario.
-    \end{enumerate}
-\end{frame}
-
 
 \subsection{Contexto y Frontera de un Sistema Sw}
 
@@ -596,31 +478,65 @@
      \end{center}
 \end{frame}
 
+\section{Fuentes para la Captura de Requisitos}
+
+\begin{frame}[c]
+	\frametitle{Fuentes para la Captura de Requisitos}
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{images/proceso/fuentes.eps}
+	\end{center}
+\end{frame}
+
+\subsection{Tipos de Fuentes de Requisitos}
+
+\begin{frame}[c]
+	\frametitle{Fuentes Habituales de Requisitos}
+	\begin{itemize}[<+->]
+		\item Stakeholders.
+		\begin{itemize}[<+->]
+			\item Usuarios (los que lo usan).
+			\item Clientes (los que costean su desarrollo).
+			\item Analistas de mercados.
+			\item Entidades reguladoras.
+			\item Ingenieros Sw.
+		\end{itemize}
+		\item Documentos.
+		\item Sistemas e infraestructura actualmente existentes.
+	\end{itemize}
+\end{frame}
+
+\subsection{Proceso de Identificación de Fuentes de Requisitos}
+
+\begin{frame}[c]
+	\frametitle{Proceso de Identificación de Fuentes}
+	\begin{enumerate}
+		\item<1-> Seleccionar las fuentes obvias (e.g., documento con la visión del sistema) (listas de comprobación).
+		\item<2-> Identificar nuevas fuentes mediante el análisis de:
+		\begin{enumerate}
+			\item<3-> \emph{Stakeholders} identificados.
+			\item<4-> Documentos identificados.
+			\item<5-> Análisis de sistemas actualmente existentes.
+		\end{enumerate}
+		\item<6-> Registrar las nuevas fuentes identificadas. Si el número de nuevas fuentes detectadas es suficientemente bajo, ir al paso 5.
+		\item<7-> Por cada nueva fuente identificada, repetir el paso 2.
+		\item<8-> Seleccionar aquellas fuentes que se consideren de mayor relevancia.
+	\end{enumerate}
+\end{frame}
+
 \section{Estrategias para la Identificación de Requisitos}
 
 \begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item Definición del Contexto de un Sistema Sw.
-         \item \alert{Estrategias para la Identificación de Requisitos}.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item Procesos de Identificación de Requisitos.
-         \item Sumario.
-    \end{enumerate}
+	\frametitle{Identificación de Requisitos Existentes}
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{images/proceso/requisitosViejos.eps}
+	\end{center}
 \end{frame}
 
 \begin{frame}[c]
-    \frametitle{Técnicas de Identificación}
-    \begin{enumerate}
-         \item \alert<2->{Entrevistas}.
-         \item Talleres.
-         \item Grupos de Interés.
-         \item Observación.
-         \item Cuestionarios.
-         \item Lectura con perspectiva.
-    \end{enumerate}
+	\frametitle{Identificación de Nuevos Requisitos}
+	\begin{center}
+		\includegraphics[width=0.75\linewidth]{images/proceso/requisitosNuevos.eps}
+	\end{center}
 \end{frame}
 
 \subsection{Entrevistas}
@@ -922,18 +838,6 @@
     \end{block}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Técnicas de Identificación}
-    \begin{enumerate}
-         \item Entrevistas.
-         \item Talleres.
-         \item Grupos de Interés.
-         \item Observación.
-         \item Cuestionarios.
-         \item \alert{Lectura con perspectiva}.
-    \end{enumerate}
-\end{frame}
-
 \subsection{Lectura en Perspectiva}
 
 \begin{frame}[c]
@@ -974,6 +878,21 @@
 \subsection{Resumen}
 
 \begin{frame}[c]
+	\frametitle{Resumen Técnicas Básicas}
+	\begin{center}
+		\begin{tabular}{||l|l|c|c|c||}
+			\hline \hline
+			\textbf{Técnica}  & \textbf{Coste} & \textbf{Fuentes} & \textbf{Existentes} & \textbf{Nuevos} \\ \hline \hline
+			Tormenta de Ideas & Bajo           & $\checkmark$     &                     & $\checkmark$    \\ \hline
+			Prototipado       & Variable       &                  & $\checkmark$        & $\checkmark$    \\ \hline
+			Método KJ         & Bajo           & $\checkmark$     & $\checkmark$        & ($\checkmark$)  \\ \hline
+			Mapa Mental       & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline
+			Listas de Control & Bajo           & $\checkmark$     & $\checkmark$        & $\checkmark$  \\ \hline \hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\begin{frame}[c]
     \frametitle{Resumen Técnicas de Identificación}
     \begin{center}
     \begin{tabular}{||l|l|c|c|c||}
@@ -990,138 +909,34 @@
     \end{center}
 \end{frame}
 
-\section{Identificación de Fuentes}
-
 \begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item Definición del Contexto de un Sistema Sw.
-         \item Estrategias para la Identificación de Requisitos.
-         \item \alert{Identificación de Fuentes para la Captura de Requisitos}.
-         \item Procesos de Identificación de Requisitos.
-         \item Sumario.
-    \end{enumerate}
-\end{frame}
-
-\subsection{Fuentes para la Captura de Requisitos}
-
-\begin{frame}[c]
-    \frametitle{Fuentes para la Captura de Requisitos}
-    \begin{center}
-        \includegraphics[width=0.75\linewidth]{images/proceso/fuentes.eps}
-    \end{center}
+	\frametitle{Identificación de Requisitos Existentes}
+	\begin{tabular}{||l|c|c|c||}
+		\hline \hline
+		& \textbf{Stakeholders} & \textbf{Documentos} & \textbf{Sistemas} \\ \hline
+		\textbf{Entrevistas}         & $\checkmark$          &                     & ($\checkmark$)    \\ \hline
+		\textbf{Talleres}            & $\checkmark$          &                     &                   \\ \hline
+		\textbf{Grupos de Interés}   & $\checkmark$          &                     & $\checkmark$      \\ \hline
+		\textbf{Observación}         & $\checkmark$          &                     & $\checkmark$      \\ \hline
+		\textbf{Cuestionarios}       & $\checkmark$          &                     & $\checkmark$      \\ \hline
+		\textbf{Lectura Perspectiva} &                       & $\checkmark$        & $\checkmark$      \\ \hline
+		\hline
+	\end{tabular}
 \end{frame}
 
 \begin{frame}[c]
-     \frametitle{Fuentes Habituales de Requisitos}
-     \begin{itemize}[<+->]
-        \item Stakeholders.
-            \begin{itemize}[<+->]
-                \item Usuarios (los que lo usan).
-                \item Clientes (los que costean su desarrollo).
-                \item Analistas de mercados.
-                \item Entidades reguladoras.
-                \item Ingenieros Sw.
-            \end{itemize}
-        \item Documentos.
-        \item Sistemas e infraestructura actualmente existentes.
-     \end{itemize}
+	\frametitle{Identificación de Nuevos Requisitos}
+	\begin{enumerate}[<+->]
+		\item Talleres
+		\item Grupos de Interés
+		\item Entrevistas
+		\item Cuestionarios
+		\item Consultoría mediante observación.
+	\end{enumerate}
 \end{frame}
 
-\subsection{Proceso de Identificación de Fuentes}
 
-\begin{frame}
-     \frametitle{Proceso de Identificación de Fuentes}
-     \begin{enumerate}
-        \item<1-> Seleccionar las fuentes obvias (e.g., documento con la visión del sistema) (listas de comprobación).
-        \item<2-> Identificar nuevas fuentes mediante el análisis de:
-            \begin{enumerate}
-                \item<3-> \emph{Stakeholders} identificados (entrevistas, talleres, grupos de interés, cuestionarios).
-                \item<4-> Documentos identificados (lectura en perspectiva).
-                \item<5-> Análisis de sistemas actualmente existentes (observación, cuestionarios, grupos de interés).
-            \end{enumerate}
-        \item<6-> Registrar las nuevas fuentes identificadas. Si el número de nuevas fuentes detectadas es suficientemente bajo, ir al paso 5.
-        \item<7-> Por cada nueva fuente identificada, repetir el paso 2.
-        \item<8-> Seleccionar aquellas fuentes que se consideren de mayor relevancia.
-     \end{enumerate}
-\end{frame}
-
-\section{Identificación de Requisitos}
-
-\begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item Definición del Contexto de un Sistema Sw.
-         \item Estrategias para la Identificación de Requisitos.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item \alert{Procesos de Identificación de Requisitos}.
-         \item Sumario.
-    \end{enumerate}
-\end{frame}
-
-\subsection{Requisitos Existentes}
-
-\begin{frame}[c]
-    \frametitle{Identificación de Requisitos Existentes}
-    \begin{center}
-        \includegraphics[width=0.75\linewidth]{images/proceso/requisitosViejos.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-     \frametitle{Identificación de Requisitos Existentes}
-     \begin{tabular}{||l|c|c|c||}
-        \hline \hline
-                                     & \textbf{Stakeholders} & \textbf{Documentos} & \textbf{Sistemas} \\ \hline
-        \textbf{Entrevistas}         & $\checkmark$          &                     & ($\checkmark$)    \\ \hline
-        \textbf{Talleres}            & $\checkmark$          &                     &                   \\ \hline
-        \textbf{Grupos de Interés}   & $\checkmark$          &                     & $\checkmark$      \\ \hline
-        \textbf{Observación}         & $\checkmark$          &                     & $\checkmark$      \\ \hline
-        \textbf{Cuestionarios}       & $\checkmark$          &                     & $\checkmark$      \\ \hline
-        \textbf{Lectura Perspectiva} &                       & $\checkmark$        & $\checkmark$      \\ \hline
-        \hline
-     \end{tabular}
-\end{frame}
-
-\subsection{Requisitos Nuevos}
-
-\begin{frame}[c]
-    \frametitle{Identificación de Nuevos Requisitos}
-    \begin{center}
-        \includegraphics[width=0.75\linewidth]{images/proceso/requisitosNuevos.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-     \frametitle{Identificación de Nuevos Requisitos}
-     \begin{enumerate}[<+->]
-        \item Talleres
-        \item Grupos de Interés
-        \item Entrevistas
-        \item Cuestionarios
-        \item Consultoría mediante observación.
-     \end{enumerate}
-\end{frame}
-
-\section{Sumario}
-
-\begin{frame}[c]
-    \frametitle{Índice}
-    \begin{enumerate}
-         \item Procesos de Captura de Requisitos.
-         \item Técnicas y Métodos utilizadas en Procesos de Captura de Requisitos.
-         \item Definición del Contexto de un Sistema Sw.
-         \item Estrategias para la Identificación de Requisitos.
-         \item Identificación de Fuentes para la Captura de Requisitos.
-         \item Procesos de Identificación de Requisitos.
-         \item \alert{Sumario}.
-    \end{enumerate}
-\end{frame}
-
+\section{Sumario y Referencias}
 
 \begin{frame}
     \frametitle{¿Qué Tengo que Saber de Todo Esto?}
@@ -1135,8 +950,6 @@
         \item Ser capaz de diseñar planes para la identificación de requisitos, tanto existentes como novedosos, utilizando para ello las técnicas que se consideren más adecuadas en función del objetivo perseguido y la fuente.
     \end{enumerate}
 \end{frame}
-
- \subsection{Referencias}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{Referencias}
