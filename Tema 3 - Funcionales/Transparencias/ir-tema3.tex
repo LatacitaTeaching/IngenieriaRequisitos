@@ -250,6 +250,24 @@ Cohn, M. (2004).
 \end{frame}
 
 \begin{frame}[c]
+	\frametitle{Sintaxis GRL/KAOS - Tarea}
+	\begin{block}{Tarea/Operación}
+		Un \alert{\emph{tarea}} u \alert{\emph{operación}} representa una forma concreta de llevar a cabo una acción que afecta al estado del sistema.
+		Las tareas representan la materialización de un objetivo.
+		\ \\
+		\ \\
+		\begin{columns}[c]
+			\begin{column}{0.50\linewidth}
+				\centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/task(GRL).eps}
+			\end{column}
+			\begin{column}{0.50\linewidth}
+				\centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/operation(KAOS).eps}
+			\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
     \frametitle{Sintaxis GRL/KAOS - Relaciones AND}
     \begin{block}{Refinamiento AND}
         Un \alert{\emph{refinamiento AND}} descompone un objetivo padre en diversos subobjetivos hijos, los cuales han de satisfacerse todos para que el padre pueda ser satisfecho. Si la satisfacción de los objetivos es suficiente para la satisfacción del objetivo padre, se dice que el refinamiento es \emph{completo}.
@@ -357,23 +375,94 @@ Cohn, M. (2004).
     \end{block}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Sintaxis GRL/KAOS - Tarea}
-    \begin{block}{Tarea/Operación}
-        Un \alert{\emph{tarea}} u \alert{\emph{operación}} representa una forma concreta de llevar a cabo una acción que afecta al estado del sistema.
-        Las tareas representan la materialización de un objetivo.
-        \ \\
-        \ \\
-        \begin{columns}[c]
-            \begin{column}{0.50\linewidth}
-                \centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/task(GRL).eps}
-            \end{column}
-            \begin{column}{0.50\linewidth}
-                \centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/operation(KAOS).eps}
-            \end{column}
-        \end{columns}
-    \end{block}
+
+\subsection{Análisis de Influencias entre Objetivos}
+
+\begin{frame}[t]
+	\frametitle{Influencias entre NFRs}
+	\only<1>{
+		\rput[lt](0,0){
+			\includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
+	}
 \end{frame}
+
+\begin{frame}[c]
+	\frametitle{Algoritmo de Hao}
+	\begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja}
+		\begin{center}
+			\includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) =
+		\begin{cases}
+		100, \text{si\ } X \text{\ está seleccionado} \\
+		0, \text{otro caso}
+		\end{cases}
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Relaciones AND}
+	\begin{block}{Regla de Evaluación de Relación AND (Hao)}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = min_{i=1}^{n} V(Y_{i})
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Relaciones OR}
+	\begin{block}{Regla de Evaluación de Relación OR (Hao)}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = max_{i=1}^{n} V(Y_{i})
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Contribuciones/Correlaciones}
+	\begin{block}{Regla de Evaluación de Contribuciones}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ejemplo 1: Índices y Verificación de Firmas}
+	\only<1>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
+	}
+	\only<2>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
+	}
+	\only<3>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
+	}
+	\only<4>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
+	}
+\end{frame}
+
+
 
 \subsection[Sintaxis GRL/KAOS (II)]{Sintaxis GRL/KAOS - Elementos Avanzados}
 
