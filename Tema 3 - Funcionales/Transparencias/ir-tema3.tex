@@ -1,4 +1,4 @@
-\documentclass[handout,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -45,7 +45,7 @@
 
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
          \item Entender el papel de los modelos orientados a solución en Ingeniería de Requisitos.
          \item Aprender a descomponer jerárquicamente requisitos, utilizando tanto objetivos como escenarios.
          \item Aprender a modelar y especificar requisitos de alto nivel utilizando objetivos.
@@ -360,11 +360,11 @@ Cohn, M. (2004).
     \begin{block}{Tipos de Contribución/Correlación (GRL)}
         \begin{description}
             \item[Make] La contribución es positiva y suficiente.
-            \item[Help] La contribución es positiva, pero no suficiente.
-            \item[Some Positive] La contribución es positiva, pero no significativa.
+            \item[Some Positive] La contribución es positiva, pero no suficiente.
+            \item[Help] La contribución es positiva, pero no significativa.
             \item[Unknown] Un elemento afecta al otro, pero no se sabe cómo.
-            \item[Some Negative] La contribución es negativa, pero no significativa.
-            \item[Hurt] La contribución es negativa, pero no impide la satisfacción del elemento destino.
+            \item[Hurt] La contribución es negativa, pero no significativa.
+            \item[Some Negative] La contribución es negativa, pero no impide la satisfacción del elemento destino.
             \item[Break] La contribución es negativa e impide la satisfacción del elemento destino.
         \end{description}
         \begin{columns}[c]
@@ -375,11 +375,10 @@ Cohn, M. (2004).
     \end{block}
 \end{frame}
 
-
 \subsection{Análisis de Influencias entre Objetivos}
 
 \begin{frame}[t]
-	\frametitle{Influencias entre NFRs}
+	\frametitle{Influencias entre Objetivos}
 	\only<1>{
 		\rput[lt](0,0){
 			\includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
@@ -405,7 +404,7 @@ Cohn, M. (2004).
 
 \begin{frame}[c]
 	\frametitle{Evaluación de Relaciones AND}
-	\begin{block}{Regla de Evaluación de Relación AND (Hao)}
+	\begin{block}{Regla de Evaluación de Relación AND}
 		\begin{center}
 			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
 		\end{center}
@@ -443,7 +442,7 @@ Cohn, M. (2004).
 \end{frame}
 
 \begin{frame}
-	\frametitle{Ejemplo 1: Índices y Verificación de Firmas}
+	\frametitle{Ejemplo: Índices y Verificación de Firmas}
 	\only<1>{
 		\rput[lt](0,0){
 			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
@@ -461,8 +460,6 @@ Cohn, M. (2004).
 			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
 	}
 \end{frame}
-
-
 
 \subsection[Sintaxis GRL/KAOS (II)]{Sintaxis GRL/KAOS - Elementos Avanzados}
 
@@ -586,22 +583,6 @@ Cohn, M. (2004).
     \end{block}
 \end{frame}
 
-\subsection{Ventajas de los Objetivos}
-
-\begin{frame}[c]
-    \frametitle{Ventajas de los Objetivos}
-    \begin{enumerate}[<+->]
-        \item Facilita el refinamiento de la \emph{visión del sistema}.
-        \item Dirige y organiza el proceso de captura de requisitos.
-        \item Favorece la identificación y análisis de alternativas.
-        \item Permite detectar requisitos irrelevantes.
-        \item Permite justificar la existencia de los requisitos.
-        \item Permite evaluar la completitud de una especificación de requisitos.
-        \item Favorece la identificación y resolución de conflictos.
-        \item Los objetivos poseen una alta estabilidad con respecto a los cambios en el sistema.
-    \end{enumerate}
-\end{frame}
-
 %%\begin{frame}
 %%    \frametitle{Diagrama GRL}
 %%    \begin{center}
@@ -617,15 +598,16 @@ Cohn, M. (2004).
          \item Identificar objetivos estratégicos y problemas del sistema actual.
          \item Identificar deseos y esperanzas de cada \emph{stakeholder}.
          \item Buscar palabras claves en la documentación a analizar (oral o escrita).
+         \item Análisis de alternativas.
          \item Utilizar categorías predefinidas (no funcionales).
-         \item Análisis de ventajas e inconvenientes de cada alternativa.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Refinado de Objetivos}
     \begin{enumerate}[<+->]
-         \item Preguntar \emph{cómo} y \emph{por qué}.
+         \item Preguntar \emph{cómo} para identificar subobjetivos.
+         \item Preguntar \emph{por qué} para identificar superobjetivos.
          \item Dividir responsabilidades.
          \item Análisis de obstáculos, amenazas y conflictos.
          %% \item Analizar si las condiciones \emph{si} son convertibles en \emph{si y sólo si}.
@@ -636,7 +618,7 @@ Cohn, M. (2004).
 \begin{frame}[c]
     \frametitle{Criterio de Parada}
     \begin{enumerate}[<+->]
-         \item Parar cuando un objetivo pueda ser asignado a un único agente o actor.
+         \item Parar cuando un objetivo esté el nivel del mar.
          \item Parar cuando un objetivo esté fuera del contexto del sistema.
     \end{enumerate}
 \end{frame}
@@ -646,13 +628,12 @@ Cohn, M. (2004).
     \begin{enumerate}[<+->]
          \item Confundir objetivos y operaciones.
          \item Confundir descomposiciones AND con descomposiciones OR.
+         \item Abusar de relaciones AND y OR.
          \item Imprecisiones.
          %% sobreespecificaciones.
          \item Modelar secuencia temporal como dependencias.
     \end{enumerate}
 \end{frame}
-
-\subsection{Especificación de Objetivos}
 
 \begin{frame}[c]
     \frametitle{Reglas para la Documentación de Objetivos}
@@ -663,6 +644,22 @@ Cohn, M. (2004).
         \item Redactar explícitamente el valor de cada objetivo.
         \item Evitar introducir restricciones innecesarias.
     \end{enumerate}
+\end{frame}
+
+\subsection{Ventajas de los Objetivos}
+
+\begin{frame}[c]
+	\frametitle{Ventajas de los Objetivos}
+	\begin{enumerate}[<+->]
+		\item Facilita el refinamiento de la \emph{visión del sistema}.
+		\item Dirige y organiza el proceso de captura de requisitos.
+		\item Favorece la identificación y análisis de alternativas.
+		\item Permite detectar requisitos irrelevantes.
+		\item Permite justificar la existencia de los requisitos.
+		\item Permite evaluar la completitud de una especificación de requisitos.
+		\item Favorece la identificación y resolución de conflictos.
+		\item Los objetivos poseen una alta estabilidad con respecto a los cambios en el sistema.
+	\end{enumerate}
 \end{frame}
 
 \subsection{Patrones Orientados a Objetivos}
