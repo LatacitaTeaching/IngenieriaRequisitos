@@ -1,4 +1,4 @@
-\documentclass[handout,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -45,7 +45,7 @@
 
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
          \item Entender el papel de los modelos orientados a solución en Ingeniería de Requisitos.
          \item Aprender a descomponer jerárquicamente requisitos, utilizando tanto objetivos como escenarios.
          \item Aprender a modelar y especificar requisitos de alto nivel utilizando objetivos.
@@ -250,6 +250,24 @@ Cohn, M. (2004).
 \end{frame}
 
 \begin{frame}[c]
+	\frametitle{Sintaxis GRL/KAOS - Tarea}
+	\begin{block}{Tarea/Operación}
+		Un \alert{\emph{tarea}} u \alert{\emph{operación}} representa una forma concreta de llevar a cabo una acción que afecta al estado del sistema.
+		Las tareas representan la materialización de un objetivo.
+		\ \\
+		\ \\
+		\begin{columns}[c]
+			\begin{column}{0.50\linewidth}
+				\centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/task(GRL).eps}
+			\end{column}
+			\begin{column}{0.50\linewidth}
+				\centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/operation(KAOS).eps}
+			\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
     \frametitle{Sintaxis GRL/KAOS - Relaciones AND}
     \begin{block}{Refinamiento AND}
         Un \alert{\emph{refinamiento AND}} descompone un objetivo padre en diversos subobjetivos hijos, los cuales han de satisfacerse todos para que el padre pueda ser satisfecho. Si la satisfacción de los objetivos es suficiente para la satisfacción del objetivo padre, se dice que el refinamiento es \emph{completo}.
@@ -342,11 +360,11 @@ Cohn, M. (2004).
     \begin{block}{Tipos de Contribución/Correlación (GRL)}
         \begin{description}
             \item[Make] La contribución es positiva y suficiente.
-            \item[Help] La contribución es positiva, pero no suficiente.
-            \item[Some Positive] La contribución es positiva, pero no significativa.
+            \item[Some Positive] La contribución es positiva, pero no suficiente.
+            \item[Help] La contribución es positiva, pero no significativa.
             \item[Unknown] Un elemento afecta al otro, pero no se sabe cómo.
-            \item[Some Negative] La contribución es negativa, pero no significativa.
-            \item[Hurt] La contribución es negativa, pero no impide la satisfacción del elemento destino.
+            \item[Hurt] La contribución es negativa, pero no significativa.
+            \item[Some Negative] La contribución es negativa, pero no impide la satisfacción del elemento destino.
             \item[Break] La contribución es negativa e impide la satisfacción del elemento destino.
         \end{description}
         \begin{columns}[c]
@@ -357,22 +375,90 @@ Cohn, M. (2004).
     \end{block}
 \end{frame}
 
+\subsection{Análisis de Influencias entre Objetivos}
+
+\begin{frame}[t]
+	\frametitle{Influencias entre Objetivos}
+	\only<1>{
+		\rput[lt](0,0){
+			\includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
+	}
+\end{frame}
+
 \begin{frame}[c]
-    \frametitle{Sintaxis GRL/KAOS - Tarea}
-    \begin{block}{Tarea/Operación}
-        Un \alert{\emph{tarea}} u \alert{\emph{operación}} representa una forma concreta de llevar a cabo una acción que afecta al estado del sistema.
-        Las tareas representan la materialización de un objetivo.
-        \ \\
-        \ \\
-        \begin{columns}[c]
-            \begin{column}{0.50\linewidth}
-                \centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/task(GRL).eps}
-            \end{column}
-            \begin{column}{0.50\linewidth}
-                \centering \includegraphics[width=0.5\columnwidth,keepaspectratio=true]{images/objetivos/operation(KAOS).eps}
-            \end{column}
-        \end{columns}
-    \end{block}
+	\frametitle{Algoritmo de Hao}
+	\begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja}
+		\begin{center}
+			\includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) =
+		\begin{cases}
+		100, \text{si\ } X \text{\ está seleccionado} \\
+		0, \text{otro caso}
+		\end{cases}
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Relaciones AND}
+	\begin{block}{Regla de Evaluación de Relación AND}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = min_{i=1}^{n} V(Y_{i})
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Relaciones OR}
+	\begin{block}{Regla de Evaluación de Relación OR (Hao)}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = max_{i=1}^{n} V(Y_{i})
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación de Contribuciones/Correlaciones}
+	\begin{block}{Regla de Evaluación de Contribuciones}
+		\begin{center}
+			\includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
+		\end{center}
+		\begin{equation*}
+		V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
+		\end{equation*}
+		\ \\ \ \\
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ejemplo: Índices y Verificación de Firmas}
+	\only<1>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
+	}
+	\only<2>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
+	}
+	\only<3>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
+	}
+	\only<4>{
+		\rput[lt](0,0){
+			\includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
+	}
 \end{frame}
 
 \subsection[Sintaxis GRL/KAOS (II)]{Sintaxis GRL/KAOS - Elementos Avanzados}
@@ -497,22 +583,6 @@ Cohn, M. (2004).
     \end{block}
 \end{frame}
 
-\subsection{Ventajas de los Objetivos}
-
-\begin{frame}[c]
-    \frametitle{Ventajas de los Objetivos}
-    \begin{enumerate}[<+->]
-        \item Facilita el refinamiento de la \emph{visión del sistema}.
-        \item Dirige y organiza el proceso de captura de requisitos.
-        \item Favorece la identificación y análisis de alternativas.
-        \item Permite detectar requisitos irrelevantes.
-        \item Permite justificar la existencia de los requisitos.
-        \item Permite evaluar la completitud de una especificación de requisitos.
-        \item Favorece la identificación y resolución de conflictos.
-        \item Los objetivos poseen una alta estabilidad con respecto a los cambios en el sistema.
-    \end{enumerate}
-\end{frame}
-
 %%\begin{frame}
 %%    \frametitle{Diagrama GRL}
 %%    \begin{center}
@@ -528,15 +598,16 @@ Cohn, M. (2004).
          \item Identificar objetivos estratégicos y problemas del sistema actual.
          \item Identificar deseos y esperanzas de cada \emph{stakeholder}.
          \item Buscar palabras claves en la documentación a analizar (oral o escrita).
+         \item Análisis de alternativas.
          \item Utilizar categorías predefinidas (no funcionales).
-         \item Análisis de ventajas e inconvenientes de cada alternativa.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{Refinado de Objetivos}
     \begin{enumerate}[<+->]
-         \item Preguntar \emph{cómo} y \emph{por qué}.
+         \item Preguntar \emph{cómo} para identificar subobjetivos.
+         \item Preguntar \emph{por qué} para identificar superobjetivos.
          \item Dividir responsabilidades.
          \item Análisis de obstáculos, amenazas y conflictos.
          %% \item Analizar si las condiciones \emph{si} son convertibles en \emph{si y sólo si}.
@@ -547,7 +618,7 @@ Cohn, M. (2004).
 \begin{frame}[c]
     \frametitle{Criterio de Parada}
     \begin{enumerate}[<+->]
-         \item Parar cuando un objetivo pueda ser asignado a un único agente o actor.
+         \item Parar cuando un objetivo esté el nivel del mar.
          \item Parar cuando un objetivo esté fuera del contexto del sistema.
     \end{enumerate}
 \end{frame}
@@ -557,24 +628,38 @@ Cohn, M. (2004).
     \begin{enumerate}[<+->]
          \item Confundir objetivos y operaciones.
          \item Confundir descomposiciones AND con descomposiciones OR.
-         \item Ambigüedades o sobreespecificaciones.
+         \item Abusar de relaciones AND y OR.
+         \item Imprecisiones.
+         %% sobreespecificaciones.
          \item Modelar secuencia temporal como dependencias.
     \end{enumerate}
 \end{frame}
-
-\subsection{Especificación de Objetivos}
 
 \begin{frame}[c]
     \frametitle{Reglas para la Documentación de Objetivos}
     \begin{enumerate}[<+->]
         \item Concisión
         \item Evitar usar oraciones pasivas (inglés) o impersonales.
-        \item Documentar la intención de los \emph{stakeholders} de forma precisa y verificable.
-        \item Descomponer los objetivos de alto nivel en diversos objetivos de bajo nivel.
-        \item Redactar explícitamente el valor adicional de cada objetivo.
-        \item Explicar brevemente (si fuere necesario) la justificación de cada objetivo.
+        \item Documentar intenciones de forma precisa y verificable.
+        \item Redactar explícitamente el valor de cada objetivo.
         \item Evitar introducir restricciones innecesarias.
     \end{enumerate}
+\end{frame}
+
+\subsection{Ventajas de los Objetivos}
+
+\begin{frame}[c]
+	\frametitle{Ventajas de los Objetivos}
+	\begin{enumerate}[<+->]
+		\item Facilita el refinamiento de la \emph{visión del sistema}.
+		\item Dirige y organiza el proceso de captura de requisitos.
+		\item Favorece la identificación y análisis de alternativas.
+		\item Permite detectar requisitos irrelevantes.
+		\item Permite justificar la existencia de los requisitos.
+		\item Permite evaluar la completitud de una especificación de requisitos.
+		\item Favorece la identificación y resolución de conflictos.
+		\item Los objetivos poseen una alta estabilidad con respecto a los cambios en el sistema.
+	\end{enumerate}
 \end{frame}
 
 \subsection{Patrones Orientados a Objetivos}
@@ -669,7 +754,7 @@ Cohn, M. (2004).
     \frametitle{Escenario de Éxito, Escenario Principal y Extensión}
     \begin{description}[<+->]
         \item[Escenario de Éxito] Escenario que termina con la satisfacción del objetivo.
-        \item[Escenario de No Éxito] Escenario que no es de éxito
+        \item[Escenario de No Éxito] Escenario que no es de éxito.
         \item[Escenario Principal] Escenario de éxito que describe el modo habitual de utilización del sistema.
         \item[Extensión] Fragmento de un escenario que describe una variación, de éxito o no, del mismo.
         \item[Condición de Extensión] Razones o circunstancias por las cuales un cierto comportamiento se desvía de su escenario principal y entra en una extensión.
@@ -709,7 +794,7 @@ Cohn, M. (2004).
         \item Mostrar el proceso avanzando.
         \item Describir las intenciones del usuario, no sus movimientos.
         \item Escribir \emph{validar}, en lugar de \emph{el sistema comprueba si}.
-        \item Mencionar si es necesario la temporización
+        \item Mencionar si es necesario la temporización.
         \item Escribir \emph{el usuario require que el sistema ...} para acciones con terceros.
         \item Truco: \emph{Repetir los pasos X-Y hasta que $<$condición$>$}.
         \item Truco: \emph{Los pasos X-Y pueden suceder en cualquier orden}.
@@ -762,8 +847,8 @@ Cohn, M. (2004).
         Un \emph{historia de usuario} describe una funcionalidad del sistema que posee valor para algún \emph{stakeholder} del sistema.
         \uncover<2->{Una historia de usuario se compone de tres elementos:
         \begin{description}
-            \item<3->[Conversación] Corresponde con las conversaciones (efímeras) mantenidas entre las diferentes personas involucradas en el desarrollo de la historia de usuario, tales como usuarios, clientes, testadores, programadores, etc. Se puede documentar parte de estas conversaciones.
-            \item<4->[Tarjeta] Cada historia de usuario se anota en una tarjeta física, que representa la historia de usuario.
+            \item<3->[Tarjeta] Cada historia de usuario se anota en una tarjeta física, que representa la historia de usuario.
+            \item<4->[Conversación] Corresponde con las conversaciones (efímeras) mantenidas entre las diferentes personas involucradas en el desarrollo de la historia de usuario, tales como usuarios, clientes, testadores, programadores, etc. Se puede documentar parte de estas conversaciones.
             \item<5->[Confirmación] Procedimiento para verificar que la historia de usuario ha sido realizada.
         \end{description}
         }
