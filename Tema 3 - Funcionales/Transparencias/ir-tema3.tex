@@ -529,6 +529,20 @@ International Telecommunication Union (ITU).
      \end{block}
 \end{frame}
 
+\begin{frame}[t]
+	\frametitle{Sintaxis GRL/KAOS - Dependencias GRL}
+	\begin{block}{Dependencia}
+		Una \alert{\emph{dependencia}} describe como un elemento de un actor depende de otro  elemento de otro actor.
+		\ \\
+		\ \\
+		\begin{columns}
+			\begin{column}{\linewidth}
+				\centering \includegraphics[width=0.75\columnwidth,keepaspectratio=true]{images/objetivos/dependency(GRL).eps}
+			\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+
 \begin{frame}[c]
     \frametitle{Sintaxis GRL/KAOS - Requisito}
     \begin{block}{Requisito o Expectativa (KAOS)}
@@ -572,20 +586,6 @@ International Telecommunication Union (ITU).
             \end{column}
             \begin{column}{0.50\linewidth}
                 \centering \includegraphics[width=0.65\columnwidth,keepaspectratio=true]{images/objetivos/responsabilityAsig(KAOS).eps}
-            \end{column}
-        \end{columns}
-    \end{block}
-\end{frame}
-
-\begin{frame}[t]
-    \frametitle{Sintaxis GRL/KAOS - Dependencias GRL}
-    \begin{block}{Dependencia}
-        Una \alert{\emph{dependencia}} describe como un elemento de un actor depende de otro  elemento de otro actor.
-        \ \\
-        \ \\
-        \begin{columns}
-            \begin{column}{\linewidth}
-                \centering \includegraphics[width=0.75\columnwidth,keepaspectratio=true]{images/objetivos/dependency(GRL).eps}
             \end{column}
         \end{columns}
     \end{block}
@@ -670,49 +670,49 @@ International Telecommunication Union (ITU).
 	\end{enumerate}
 \end{frame}
 
-\subsection{Patrones Orientados a Objetivos}
-
-\begin{frame}[c]
-    \frametitle{Patrón Punto Intermedio}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/milestonePattern.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Patrón Descomposición por Casos}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/casePattern.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Patrón Introducir Guarda}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/guardPattern.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Patrón Divide y Vencerás}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/divideAndConquerPattern.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Patrón Condición No Observable}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/unmonitorabilityPattern.eps}
-    \end{center}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Patrón Condición No Controlable}
-    \begin{center}
-        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/uncontrolabilityPattern.eps}
-    \end{center}
-\end{frame}
+%\subsection{Patrones Orientados a Objetivos}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Punto Intermedio}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/milestonePattern.eps}
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Descomposición por Casos}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/casePattern.eps}
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Introducir Guarda}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/guardPattern.eps}
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Divide y Vencerás}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/divideAndConquerPattern.eps}
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Condición No Observable}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/unmonitorabilityPattern.eps}
+%    \end{center}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Patrón Condición No Controlable}
+%    \begin{center}
+%        \includegraphics[width=0.70\linewidth,keepaspectratio=true]{images/objetivos/uncontrolabilityPattern.eps}
+%    \end{center}
+%\end{frame}
 
 \section{Modelado y Especificación de Escenarios}
 
@@ -731,17 +731,19 @@ International Telecommunication Union (ITU).
     \end{block}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Tipos de Escenarios}
-    \begin{enumerate}[<+->]
-        \item Sistema actual o sistema a construir.
-        \item Positivos o negativos (permitidos o prohibidos).
-        \item Descriptivos, exploratorios o explicativos.
-        \item De tipos, de instancia o mixtos.
-        \item Internos, de interacción con el sistema o de contexto.
-        \item Principal, alternativo o excepcional.
-    \end{enumerate}
-\end{frame}
+%\begin{frame}[c]
+%    \frametitle{Tipos de Escenarios}
+%    \begin{enumerate}[<+->]
+%        \item Sistema actual o sistema a construir.
+%		%% Positivo: Satisface un objetivo. 
+%		%% Negativo: No se satisface el objetivo.
+%        \item Positivos o negativos (permitidos o prohibidos).
+%        %% \item Descriptivos, exploratorios o explicativos.
+%        %% \item De tipos, de instancia o mixtos.
+%        %% \item Internos, de interacción con el sistema o de contexto.
+%        \item Principal, alternativo o excepcional.
+%    \end{enumerate}
+%\end{frame}
 
 %\begin{frame}[t]
 %    \frametitle{Escenarios de mal uso (misuse scenarios)}
