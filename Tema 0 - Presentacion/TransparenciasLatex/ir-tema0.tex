@@ -1,4 +1,4 @@
-\documentclass[a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -29,18 +29,6 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[c]
-	\frametitle{Índice}
-	\begin{enumerate}
-        \item \alert{Índice}
-        \item Datos Administrativos
-        \item Objetivos y Temario
-        \item Metodología
-        \item Evaluación
-        \item Bibliografía
-	\end{enumerate}
-\end{frame}
-
 \section{Datos Administrativos}
 
 \subsection{Profesorado}
@@ -57,65 +45,34 @@
 	\end{center}
 \end{frame}
 
-\subsection{Horarios}
-
-\begin{frame}[c]
-	\frametitle{Horario Clases}
-	\begin{small}
-	\begin{center}
-	\begin{tabular}{||l|c|c|c|c|c||}
-	\hline \hline
-				   & Lunes  & Martes      & Miércoles    & Jueves       & Viernes      \\ \hline \hline
-    08:30 - 09:30  &        &             &              &              &              \\ \hline
-    09:30 - 10:30  &        &             &              &              & Laboratorio  \\ \hline \hline
-	10:45 - 11:45  &        &             &              &              & Laboratorio  \\ \hline
-    11:45 - 12:45  &        &  Aula       & Aula         &              &              \\ \hline
-    12:45 - 13:45  &        &             &              &              &              \\ \hline
-	\end{tabular}
-	\end{center}
-	\end{small}
-	\begin{itemize}
-		\item<2-> La asistencia a las clases teóricas y prácticas no es obligatoria, \uncover<3->{\alert{pero si altamente recomendable e incluso necesaria}.}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[c]
-	\frametitle{Horario Tutorías}
-    \begin{itemize}[<+->]
-        \item A cualquier hora, preferentemente de mañana.
-        \item Disponible tardes de Lunes y Jueves.
-        \item Si se quiere asegurar disponibilidad, avisar con antelación.
-        \item Disponible a través de correo y \alert{moodle}.
-	\end{itemize}
-\end{frame}
 
 \section{Objetivos y Temario}
 
 \subsection{Objetivos}
 
-\begin{frame}[t]
+\begin{frame}[c]
 	\frametitle{Objetivos de la Asignatura}
-    \begin{enumerate}
-			\item<1-> Conocer y comprender la importancia y papel de la \emph{Ingeniería de Requisitos}.
-            \item<2-> Conocer, comprender y saber diseñar y ejecutar procesos de \emph{Ingeniería de Requisitos}.
-			\item<3-> Conocer, comprender y saber aplicar técnicas para la \emph{Captura de Requisitos}.
-			\item<4-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Requisitos Funcionales}.
-			\item<5-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Requisitos No Funcionales}.
-			\item<6-> Conocer, comprender y saber aplicar técnicas para la especificación de \emph{Procesos de Negocio}.
+    \begin{enumerate}[<+->]
+			\item Conocer y comprender la importancia y papel de la \emph{Ingeniería de Requisitos}.
+            \item Saber diseñar y ejecutar procesos de \emph{Ingeniería de Requisitos}.
+			\item Saber aplicar técnicas para la \emph{Captura de Requisitos}.
+			\item Saber aplicar técnicas para la especificación de \emph{Requisitos Funcionales}.
+			\item Conocer y comprender la naturaleza \emph{Requisitos No Funcionales}.
+			\item Saber especificar algunos \emph{Requisitos No Funcionales}.
+			\item Saber especificar de manera básica \emph{Procesos de Negocio}.
 	 \end{enumerate}
 \end{frame}
 
 \subsection{Resultados de Aprendizaje}
 
-\begin{frame}[t]
+\begin{frame}[c]
 	\frametitle{Resultados de Aprendizaje}
-    	\begin{enumerate}
-			\item<1-> El alumno conocerá, comprenderá y sabrá utilizar la terminología propia de la \emph{Ingeniería de Requisitos}.
-			\item<2-> El alumno sabrá diseñar y ejecutar procesos de \emph{Ingeniería de Requisitos}.
-            \item<3-> El alumno sabrá diseñar y ejecutar procesos de \emph{Captura de Requisitos}, empleando diferentes técnicas y estrategias, y sabiendo escoger la más adecuada en función de cada tipo de proyecto.
-            \item<4-> El alumno sabrá especificar requisitos funcionales utilizando para ello \emph{objetivos}, \emph{escenarios}, \emph{casos de uso} e \emph{historias de usuario}.
-            \item<5-> El alumno sabrá especificar requisitos no funcionales, en especial los requisitos relacionados con la seguridad, utilizando para ello \emph{objetivos} y catálogos predefinidos de requisitos no funcionales.
-            \item<6-> El alumno sabrá modelar procesos de negocio mediante alguna notación estándar, como BPMN.
+    	\begin{enumerate}[<+->]
+			\item El alumno conocerá, comprenderá y sabrá utilizar la terminología propia de la \emph{Ingeniería de Requisitos}.
+            \item El alumno sabrá diseñar y ejecutar procesos de \emph{Captura de Requisitos}, empleando diferentes técnicas para la identificación de requisitos, sabiendo escoger la más adecuada en función de cada situación.
+            \item El alumno sabrá especificar requisitos funcionales utilizando para ello \emph{objetivos}, \emph{casos de uso} e \emph{historias de usuario}.
+            \item El alumno sabrá especificar requisitos no funcionales, en especial los requisitos relacionados con la seguridad.
+            \item El alumno sabrá modelar procesos de negocio mediante alguna notación estándar, como BPMN.
 		\end{enumerate}
 \end{frame}
 
@@ -153,12 +110,12 @@
         Entender los conocimientos teóricos que constituyen la base de las habilidades, destrezas y competencias a adquirir al final de la asignatura.
 	\end{block}
 	\begin{itemize}
-        \item<2-> Preparación autónoma y exposición del contenido teórico.
-        \item<3-> Actividades de aprendizaje activo en función del contenido y predisposición del alumnado.
+        \item<2-> Ciertas actividades requerirán la preparación del material fuera del aula (\emph{flipped learning}).
+        \item<3-> Actividades de aprendizaje activo como puzzles. 
 		\item<4-> Resolución autónoma, dirigida y supervisada de ejercicios.
 		\item<5-> Clases magistrales puntuales usando pizarra y/o transparencias.
-		\item<6-> NOTA: \alert{Las transparencias} son material de apoyo a la docencia, \alert{no son apuntes}.
-		\item<7-> \alert{Sin conocimiento teórico es imposible alcanzar las habilidades prácticas}.
+		\item<6-> \alert{Las transparencias} son material de apoyo, \alert{no apuntes}.
+		\item<7-> \alert{Sin conocimiento teórico no puede haber habilidades prácticas}.
 	\end{itemize}
 \end{frame}
 
@@ -169,10 +126,23 @@
         de desarrollar las competencias procedimentales y actitudinales deseadas.
 	\end{block}
 	\begin{itemize}
-        \item<2-> Desarrollo de un proyecto de especificación de requisitos, dividido en varias etapas.
-		\item<3-> Dos etapas diferenciadas: \emph{definición del proceso} y \emph{ejecución del proceso} de Ingeniería de Requisitos.
-        \item<4-> La primera parte del proyecto requiere del trabajo en equipo y de actividades de grupo.
-        \item<5-> La segunda parte se realizará de manera coordinada pero individual.
+        \item<2-> Desarrollo de un proyecto de especificación de requisitos.
+		\item<3-> Dos etapas diferenciadas: \emph{definición} y \emph{ejecución} del proceso de Ingeniería de Requisitos.
+        \item<4-> Se utilizarán casos de estudio diferente en cada etapa.
+        \item<5-> Hay etapas tanto colectivas como individuales.
+        \item<6-> Los resultados se utilizarán para la realización de un proyecto integrado en cuarto curso.
+	\end{itemize}
+\end{frame}
+
+\subsection{Tutorías}
+
+\begin{frame}[c]
+	\frametitle{Horario Tutorías}
+    \begin{itemize}[<+->]
+        \item A cualquier hora, preferentemente de mañana.
+        \item Disponible tardes de Lunes y Jueves.
+        \item Si se quiere asegurar disponibilidad, avisar con antelación.
+        \item Disponible a través de correo y \alert{moodle}.
 	\end{itemize}
 \end{frame}
 
@@ -185,23 +155,23 @@
 	\begin{block}{Fórmula de Cálculo de la Calificación Final}
 		\begin{scriptsize}
         \begin{tabular}{ll}
-			Calificación Final = & SI Calificación Proyecto >= 5.00 ENTONCES \\
-                                 & \ \ \ SI Calificación Prueba Final  $>$= Calificación Proyecto ENTONCES \\
-                                 & \ \ \ \ \ \ Calificación Prueba Final + 1  \\
+			Calificación Final = & SI Proyecto $\geq$ 5.00 \\
+                                 & \ \ AND Participación ENTONCES \\
+                                 & \ \ \ SI Prueba Final  $\geq$ Proyecto ENTONCES \\
+                                 & \ \ \ \ \ \ Prueba Final + 1 + Participación \\
                                  & \ \ \ SINO \\
-                                 & \ \ \ \ \ \ Calificación Proyecto \\
+                                 & \ \ \ \ \ \ Proyecto + Participación \\
                                  & \ \ \ FINSI \\
                                  & SINO \\
-                                 & \ \ \  Calificación Prueba Final \\
+                                 & \ \ \ avf(Prueba Final, Proyecto)  \\
                                  & FINSI \\
-                                 & + Calificación Participación
 		\end{tabular}
         \end{scriptsize}
 	\end{block}
 	\begin{itemize}
 		\item<2-> Es necesario presentarse a la prueba final para superar la asignatura.
-        \item<4-> La calificación por participación es un extra adicional que variará entre (0, 0.5).
-        \item<5-> La calificación por participación dependerá del desempeño y la actitud de cada alumno en el aula.
+        \item<3-> La participación es un extra que variará entre 0 y 0.5.
+        \item<4-> En caso de no haber participación, la calificación mínima de la prueba final es de 4.
 	\end{itemize}
 \end{frame}
 
@@ -211,44 +181,42 @@
 	\frametitle{Prueba Evaluable Escrita Final}
 	\begin{itemize}[<+->]
 		\item Prueba evaluable escrita en las fechas asignadas por el centro.
-		\item La prueba contendrá ejercicios y cuestiones sobre razonamientos teóricos.
+		\item La prueba contendrá ejercicios y razonamientos teóricos.
 		\item Tendrá una duración de unas 4 horas, dividida en dos partes.
         \item Se podrá hacer uso todo tipo de material escrito.
         \item En ningún caso se dejará hacer uso de dispositivos electrónicos, especialmente, de aquellos con capacidades de comunicación inalámbrica.
-		\item \alert{El material escrito debe servir para consultar cuestiones puntuales, pero en el caso ideal no debería hacerse ningín uso de los mismos}.
-		\item Aquellas respuestas que sean una simple copia de lo disponible en algún tipo de material de la asignatura se calificarán con 0 puntos.
+		\item \alert{El material escrito debe servir para consultar cuestiones puntuales}.
+		\item Aquellas respuestas que sean una simple copia de lo disponible en algún tipo de material se calificarán con 0 puntos.
         \item Hay modelos de pruebas escritas disponibles en moodle.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[c]
-	\frametitle{Evaluación del Proyecto}
-	\begin{itemize}[<+->]
-        \item La calificación de la primera parte es única para todo el grupo.
-        \item La calificación de la segunda parte es individual.
-        \item Calificación final determinada por la media ponderada de las diversas entregas.
-        \item Por cada entrega se proporcionarán unos criterios de evaluación y calificación claros.
-        \item Hay que demostrar un mínimo de desempeño en la parte individual para poder superar la asignatura.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}[c]
 	\frametitle{Peso de las Etapas del Proyecto}
     \begin{center}
-	\begin{tabular}{||l|r||}
+	\begin{tabular}{||l|r|c||}
     \hline \hline
-    Actas y Planes de Trabajo        & 5\% \\ \hline
-    Definición de la Visión del Proyecto        & 10\% \\ \hline
-    Definición del Contexto                           & 15\% \\ \hline
-    Identificación de las Fuentes de Requisitos & 10\% \\ \hline
-    Diseño del Plan de Captura de Requisitos    & 10\% \\ \hline \hline
-    Diseño de una Actividad de Captura de Requisitos & 10\% \\ \hline
-    Especificación de un Modelo de Objetivos    & 15\% \\ \hline
-    Especificación de Requisitos Funcionales    & 15\% \\ \hline
-    Especificación de Requisitos No Funcionales & 10\% \\ \hline \hline
-    Modelado de Procesos de Negocio             &  5\% \\ \hline \hline
+    Actas y Planes de Trabajo                   &  5\% & G \\ \hline
+    Definición de la Visión del Proyecto        & 10\% & G \\ \hline
+    Definición del Contexto                     & 15\% & G \\ \hline
+    Identificación de las Fuentes de Requisitos & 10\% & G \\ \hline
+    Diseño del Plan de Captura de Requisitos    & 10\% & G \\ \hline \hline
+    Diseño de una Actividad de Captura de Requisitos & 10\% & G \\ \hline
+    Especificación de un Modelo de Objetivos    & 15\% & G \\ \hline
+    Especificación de Requisitos Funcionales    & 15\% & I \\ \hline
+    Especificación de Requisitos No Funcionales & 10\% & I \\ \hline \hline
+    Modelado de Procesos de Negocio             &  5\% & I \\ \hline \hline
 	\end{tabular}
 \end{center}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Evaluación del Proyecto}
+	\begin{itemize}[<+->]
+        \item Hay calificaciones tanto conjuntas como individuales en las actividades conjuntas.
+        \item Calificación final determinada por la media ponderada de las diversas entregas.
+        \item Hay que sacar un mínimo en la parte individual para poder superar la asignatura. 
+	\end{itemize}
 \end{frame}
 
 \section{Bibliografía}
