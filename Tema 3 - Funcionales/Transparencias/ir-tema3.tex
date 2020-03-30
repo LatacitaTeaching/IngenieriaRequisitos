@@ -1,4 +1,4 @@
-\documentclass[slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[handout,slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \input{slidesHeader.tex}
 
@@ -767,7 +767,7 @@ International Telecommunication Union (ITU).
         \item[Escenario de No Éxito] Escenario que no es de éxito.
         \item[Escenario Principal] Escenario de éxito que describe el modo habitual de utilización del sistema.
         \item[Extensión] Fragmento de un escenario que describe una variación, de éxito o no, del mismo.
-        \item[Condición de Extensión] Razones o circunstancias por las cuales un cierto comportamiento se desvía de su escenario principal y entra en una extensión.
+        \item[Condición de Extensión] Circunstancias por las cuales un comportamiento se desvía de su escenario principal y entra en una extensión.
     \end{description}
 \end{frame}
 
@@ -778,14 +778,14 @@ International Telecommunication Union (ITU).
     \begin{description}[<+->]
         \item[Evento de Disparo (Trigger)] Evento que da lugar al inicio del caso de uso.
         \item[Precondición] Condición necesaria para que el escenario termine con éxito.
-        \item[Garantías Mínimas] Condición mínima que ha de satisfacerse cuando el objetivo del escenario no puede alcanzarse.
         \item[Garantías de Éxito] Condición que se cumple siempre y cuando el escenario termina con éxito.
+        \item[Garantías Mínimas] Condición mínima que ha de satisfacerse cuando el objetivo del escenario no puede alcanzarse.
         \item[Paso] Acción con o del sistema que puede ser:
              \begin{small}
              \begin{enumerate}[<+->]
-                 \item Una interacción entre un actor y el sistema (en cualquier dirección);
-                 \item Una validación para proteger algún objetivo de un \emph{stakeholder};
-                 \item Un cambio interno en el sistema para satisfacer algún objetivo de un \emph{stakeholder}.
+                 \item Una interacción entre un actor y el sistema;
+                 \item Una validación del sistema;
+                 \item Un cómputo del sistema.
             \end{enumerate}
             \end{small}
         \item[Escenario Principal] Conjunto de pasos que describen el escenario principal.
@@ -804,6 +804,7 @@ International Telecommunication Union (ITU).
         \item Mostrar el proceso avanzando.
         \item Describir las intenciones del usuario, no sus movimientos.
         \item Escribir \emph{validar}, en lugar de \emph{el sistema comprueba si}.
+        %% NOTA: Si es necesario se pueden meter frases como "tan pronto como ... ", "en cualquier momento ..."
         \item Mencionar si es necesario la temporización.
         \item Escribir \emph{el usuario require que el sistema ...} para acciones con terceros.
         \item Truco: \emph{Repetir los pasos X-Y hasta que $<$condición$>$}.
@@ -817,17 +818,16 @@ International Telecommunication Union (ITU).
         \item Identificar, mediante una técnica adecuada, todas las desviaciones del escenario principal que se consigan imaginar. Prestar atención a:
             \begin{enumerate}
                 \item Caminos de éxito alternativos.
-                \item Comportamientos erróneos del actor primario y último.
-                \item Inactividad del actor primario y último.
-                \item Inactividad de un actor secundario con el que interactua el sistema.
+                \item Comportamientos erróneos del actor primario.
+                \item Inactividad del actor primario.
+                \item Inactividad de un actor secundario con el que interactúa el sistema.
                 \item Caminos alternativos para \emph{el sistema valida}.
                 \item Fallo interno, detectable y recuperable del sistema.
-                \item Fallos inesperados.
                 \item Fallos de rendimiento.
+                \item Fallos inesperados.
             \end{enumerate}
         \item Descartar aquellas extensiones cuyas condiciones sean indetectables.
         \item Fusionar aquellas extensiones cuyas condiciones y efecto sean equivalente.
-        \item Escribir cada extensión.
     \end{enumerate}
 \end{frame}
 
@@ -835,8 +835,8 @@ International Telecommunication Union (ITU).
     \frametitle{Formas de Terminación de una Extensión}
     \begin{enumerate}[<+->]
         \item El caso de uso sigue un camino de éxito alternativo.
+        \item El usuario recibe otra oportunidad y el caso de uso prosigue normal.
         \item La situación anómala se soluciona y el caso de uso prosigue normal.
-        \item Se da al usuario una nueva oportunidad y el caso de uso prosigue normal.
         \item Se detecta un fallo insalvable y el caso de uso termina.
      \end{enumerate}
 \end{frame}
