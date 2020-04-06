@@ -45,7 +45,7 @@
 
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
          \item Entender la naturaleza y papel de los requisitos no funcionales en las especificaciones de requisitos.
          \item Conocer y saber interpretar la norma ISO 25010.
          \item Conocer y comprender el concepto de \emph{sistema confiable} y su importancia dentro de los sistemas sociotécnicos.
@@ -55,7 +55,7 @@
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{}
         \bibitem[Sommerville, 2010]{sommerville:2010a}
@@ -76,7 +76,7 @@
     \end{thebibliography}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{}
         \bibitem[Chung et~al., 1999]{chung:1999a}
@@ -90,10 +90,10 @@
           Techniques}}.
         \newblock Springer.
 
-        \bibitem[Sindre and Opdahl, 2004]{Sindre2004a}
-        Sindre, G. and Opdahl, A.~L. (2004).
-        \newblock {Eliciting security requirements with misuse cases}.
-        \newblock {\em Requirements Engineering}, 10(1):34--44.
+%        \bibitem[Sindre and Opdahl, 2004]{Sindre2004a}
+%        Sindre, G. and Opdahl, A.~L. (2004).
+%        \newblock {Eliciting security requirements with misuse cases}.
+%        \newblock {\em Requirements Engineering}, 10(1):34--44.
 
     \end{thebibliography}
 \end{frame}
@@ -131,15 +131,15 @@
 
 \begin{frame}[c]
     \frametitle{Características Requisitos No Funcionales}
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
         \item Suelen aplicarse al sistema como un todo, tienen influencia global.
         \item Su no satisfacción puede significar el fracaso del proyecto.
         %% Ejemplo: Incumplir una ley, no ser capaz de filtrar trolls
         \item Aparecen recurrentemente a través de aplicaciones de diferente índole y/o dominio.
         \item Se materializan en requisitos funcionales frecuentemente.
         \item Complejos y costosos de verificar y medir en ocasiones.
-        \item Suelen presentar conflictos entre ellos.
         \item A pesar de su coste, podrían no utilizarse nunca.
+        \item Suelen presentar conflictos entre ellos.
     \end{enumerate}
 \end{frame}
 
@@ -282,38 +282,38 @@
     \end{center}
 \end{frame}
 
-\subsection[Casos de Mal Uso]{Casos de Mal Uso}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Elementos}
-    \begin{block}{Actor de mal uso (\emph{Misuser})~\cite{Sindre2005}}
-        Actor(persona o sistema) que, de forma deliberada o no deliberada, inicia un caso de mal uso.
-    \end{block}
-    \uncover<2->{
-    \begin{block}{Caso de Mal Uso (\emph{Misuse Case})~\cite{Sindre2005}}
-        Escenario, incluyendo variaciones y extensiones, ejecutado por un actor de mal uso, que, si se ejecuta con éxito, constituye una amenaza para la seguridad del sistema.
-    \end{block}
-    }
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Relaciones}
-    \begin{block}{Amenaza (\emph{theaten})~\cite{Sindre2005}}
-        Relación entre un caso de mal uso y un caso de uso que indica que el el caso de mal uso utiliza o se basa en el caso de uso para ejecutar un ataque.
-    \end{block}
-    \uncover<2->{
-       \begin{block}{Mitiga (\emph{Mitigate})~\cite{Sindre2005}}
-            Relación entre un caso de uso y un caso de mal uso que indica que el caso de uso se utiliza para evitar o mitigar el daño o perjuicio causado por un caso de mal uso.
-       \end{block}
-    }
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Notación}
-    \begin{center}	
-        \includegraphics[width=\linewidth,keepaspectratio=true]{images/security/misusecase.eps}
-    \end{center}
-\end{frame}
+%\subsection[Casos de Mal Uso]{Casos de Mal Uso}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Elementos}
+%    \begin{block}{Actor de mal uso (\emph{Misuser})~\cite{Sindre2005}}
+%        Actor(persona o sistema) que, de forma deliberada o no deliberada, inicia un caso de mal uso.
+%    \end{block}
+%    \uncover<2->{
+%    \begin{block}{Caso de Mal Uso (\emph{Misuse Case})~\cite{Sindre2005}}
+%        Escenario, incluyendo variaciones y extensiones, ejecutado por un actor de mal uso, que, si se ejecuta con éxito, constituye una amenaza para la seguridad del sistema.
+%    \end{block}
+%    }
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Relaciones}
+%    \begin{block}{Amenaza (\emph{theaten})~\cite{Sindre2005}}
+%        Relación entre un caso de mal uso y un caso de uso que indica que el el caso de mal uso utiliza o se basa en el caso de uso para ejecutar un ataque.
+%    \end{block}
+%    \uncover<2->{
+%       \begin{block}{Mitiga (\emph{Mitigate})~\cite{Sindre2005}}
+%            Relación entre un caso de uso y un caso de mal uso que indica que el caso de uso se utiliza para evitar o mitigar el daño o perjuicio causado por un caso de mal uso.
+%       \end{block}
+%    }
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Notación}
+%    \begin{center}	
+%        \includegraphics[width=\linewidth,keepaspectratio=true]{images/security/misusecase.eps}
+%    \end{center}
+%\end{frame}
 
 \subsection{Directrices para la Gestión de la Seguridad}
 
@@ -344,96 +344,96 @@
 \end{frame}
 
 
-\section[Influencias entre Requisitos No Funcionales]{Modelado y Análisis de Influencias entre Requisitos No Funcionales}
-
-\subsection{Influencias entre NFRs}
-
-%% To animate
-\begin{frame}[t]
-    \frametitle{Influencias entre NFRs}
-    \only<1>{
-	\rput[lt](0,0){
-	   \includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
-	}
-\end{frame}
-
-\subsection{Evaluación de un Modelo de Objetivos}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Objetivos/Tareas Hoja}
-    \begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) =
-            \begin{cases}
-                100, \text{si\ } X \text{\ está seleccionado} \\
-                0, \text{otro caso}
-            \end{cases}
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Relaciones AND}
-    \begin{block}{Regla de Evaluación de Relación AND (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) = min_{i=1}^{n} V(Y_{i})
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Relaciones OR}
-    \begin{block}{Regla de Evaluación de Relación OR (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) = max_{i=1}^{n} V(Y_{i})
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Contribuciones/Correlaciones}
-    \begin{block}{Regla de Evaluación de Contribuciones}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
-        \end{center}
-        \begin{equation*}
-            V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Ejemplo 1: Índices y Verificación de Firmas}
-    \only<1>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
-	}
-    \only<2>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
-	}
-    \only<3>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
-	}
-    \only<4>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
-	}
-\end{frame}
+%\section[Influencias entre Requisitos No Funcionales]{Modelado y Análisis de Influencias entre Requisitos No Funcionales}
+%
+%\subsection{Influencias entre NFRs}
+%
+%%% To animate
+%\begin{frame}[t]
+%    \frametitle{Influencias entre NFRs}
+%    \only<1>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
+%	}
+%\end{frame}
+%
+%\subsection{Evaluación de un Modelo de Objetivos}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Objetivos/Tareas Hoja}
+%    \begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) =
+%            \begin{cases}
+%                100, \text{si\ } X \text{\ está seleccionado} \\
+%                0, \text{otro caso}
+%            \end{cases}
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Relaciones AND}
+%    \begin{block}{Regla de Evaluación de Relación AND (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) = min_{i=1}^{n} V(Y_{i})
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Relaciones OR}
+%    \begin{block}{Regla de Evaluación de Relación OR (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) = max_{i=1}^{n} V(Y_{i})
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Contribuciones/Correlaciones}
+%    \begin{block}{Regla de Evaluación de Contribuciones}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%            V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}
+%    \frametitle{Ejemplo 1: Índices y Verificación de Firmas}
+%    \only<1>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
+%	}
+%    \only<2>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
+%	}
+%    \only<3>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
+%	}
+%    \only<4>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
+%	}
+%\end{frame}
 
 \section{Negociación}
 
