@@ -1,4 +1,4 @@
-\documentclass[handout,a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
+\documentclass[a4paper,slidestop,xcolor=pst,dvips,blue]{beamer}
 
 \newcommand{\imp}[1]{{\small{\sf #1}}}
 
@@ -45,17 +45,17 @@
 
 \begin{frame}[c]
     \frametitle{Objetivos del Tema}
-    \begin{enumerate}
-         \item Entender la naturaleza y papel de los requisitos no funcionales en las especificaciones de requisitos.
-         \item Conocer y saber interpretar la norma ISO 25010.
-         \item Conocer y comprender el concepto de \emph{sistema confiable} y su importancia dentro de los sistemas sociotécnicos.
-         \item Saber identificar, modelar y especificar requisitos de \emph{seguridad} de un sistema software confiable.
-         \item Saber identificar, analizar y evaluar influencias entre requisitos no funcionales sobre otros.
-         \item Conocer y comprender el funcionamiento de las técnicas de negociación.
+    \begin{enumerate}[<+->]
+         \item Comprender la naturaleza y papel de los requisitos no funcionales.
+         \item Saber interpretar la norma ISO 25010.
+         \item Comprender los conceptos de \emph{sistema confiable} y \emph{sistemas sociotécnico}.
+         \item Ser capaz de especificar \emph{requisitos de seguridad}.
+         \item Comprender los principios de la negociación de requisitos.
+         \item Ser capaz de aplicar la técnica de negociación \emph{Plus Minus Interesting}.
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{}
         \bibitem[Sommerville, 2010]{sommerville:2010a}
@@ -76,31 +76,30 @@
     \end{thebibliography}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}[c]
     \frametitle{Bibliografía}
     \begin{thebibliography}{}
-        \bibitem[Chung et~al., 1999]{chung:1999a}
-        Chung, L., Nixon, B.~A., Yu, E., and Mylopoulos, J. (1999).
-        \newblock {\em {Non-Functional Requirements in Software Engineering}}.
-        \newblock Kluwer Academic Puvlishers.
+%        \bibitem[Chung et~al., 1999]{chung:1999a}
+%        Chung, L., Nixon, B.~A., Yu, E., and Mylopoulos, J. (1999).
+%        \newblock {\em {Non-Functional Requirements in Software Engineering}}.
+%        \newblock Kluwer Academic Puvlishers.
 
         \bibitem[Pohl, 2010]{pohl:2010a}
         Pohl, K. (2010).
-        \newblock {\em {Requirements Engineering: Fundamentals, Principles and
-          Techniques}}.
+        \newblock {\em {Requirements Engineering: Fundamentals, Principles and Techniques}}.
         \newblock Springer.
 
-        \bibitem[Sindre and Opdahl, 2004]{Sindre2004a}
-        Sindre, G. and Opdahl, A.~L. (2004).
-        \newblock {Eliciting security requirements with misuse cases}.
-        \newblock {\em Requirements Engineering}, 10(1):34--44.
+%        \bibitem[Sindre and Opdahl, 2004]{Sindre2004a}
+%        Sindre, G. and Opdahl, A.~L. (2004).
+%        \newblock {Eliciting security requirements with misuse cases}.
+%        \newblock {\em Requirements Engineering}, 10(1):34--44.
 
     \end{thebibliography}
 \end{frame}
 
 \section{Introducción}
 
-\subsection{Requisitos No Funcionales en Procesos IR}
+\subsection[RNFs en Procesos de Ing. Req.]{Requisitos No Funcionales en Procesos de Ingeniería de Requisitos}
 
 \begin{frame}
     \frametitle{Proceso de Ingeniería de Requisitos}
@@ -131,15 +130,15 @@
 
 \begin{frame}[c]
     \frametitle{Características Requisitos No Funcionales}
-    \begin{enumerate}
+    \begin{enumerate}[<+->]
         \item Suelen aplicarse al sistema como un todo, tienen influencia global.
+        \item Aparecen recurrentemente en aplicaciones de diferente dominio.
         \item Su no satisfacción puede significar el fracaso del proyecto.
         %% Ejemplo: Incumplir una ley, no ser capaz de filtrar trolls
-        \item Aparecen recurrentemente a través de aplicaciones de diferente índole y/o dominio.
         \item Se materializan en requisitos funcionales frecuentemente.
-        \item Complejos y costosos de verificar y medir en ocasiones.
-        \item Suelen presentar conflictos entre ellos.
+        \item Pueden ser complejos y costosos de verificar.
         \item A pesar de su coste, podrían no utilizarse nunca.
+        \item Suelen presentar conflictos entre ellos.
     \end{enumerate}
 \end{frame}
 
@@ -189,8 +188,7 @@
 \begin{frame}[c]
     \frametitle{Seguridad de un Sistema Software~\cite{sommerville:2010}}
     \begin{block}{Seguridad de un Sistema Software}
-        Capacidad de un sistema software de protegerse de ataques externos, los cuales pueden ser accidentales o deliberados,
-         así como de resistirlos en caso de que se produzcan.
+        Capacidad de un sistema software de protegerse de ataques externos, los cuales pueden ser accidentales o deliberados, así como de resistirlos en caso de que se produzcan.
     \end{block}
     \uncover<2->{
         \begin{center}
@@ -206,15 +204,15 @@
     \begin{description}[<+->]
         \item[Activo] Elemento (físico o lógico) de un sistema sw que posee cierto valor y por tanto debe protegerse de posibles ataques.
         %% Presidente del Gobierno
-        \item[Amenazas] Circunstancia que, de materializarse, causaría un daño o perjuicio al sistema.
+        \item[Amenazas] Evento que, de materializarse, causaría un daño o perjuicio al sistema.
         %% Muerte del presidente
         \item[Exposición] Perjuicio o daño que sufriría un sistema sw cuando se materializa una amenaza.
         %% Inestabilidad política, desplome económico del país
         \item[Vulnerabilidad] Debilidad de un sistema sw que puede explotarse para materializar una amenaza.
         %% Actos públicos
-        \item[Ataque] Utilización de una vulnerabilidad para materializar una amenaza.
+        \item[Ataque] Método concreto para materializar una amenaza a través de una vulnerabilidad.
         %% Utilizar un francotirador para asesinar al presidente mientras se desplaza por la calle a un acto público
-        \item[Medida de Control] Decisión adoptada para reducir la vulnerabilidad de un sistema o mitigar un ataque.
+        \item[Medida de Control] Decisión adoptada para reducir la vulnerabilidad de un sistema o para mitigar un ataque.
         %% Utilizar policías para controlar las ventanas y evitar la presencia de francotiradores
         \item[Premisa de Confianza] Hipótesis que ha de ser verdad para que la medida de control sea efectiva.
         %% Sólo puede haber francotiradores en las ventanas
@@ -244,7 +242,7 @@
         \item[Repudiation] Realización de acciones que impidan rastrear otras operaciones.
         \item[Information Disclosure] Acceso a información no autorizada.
         \item[Denial of Service] Impedir el acceso o utilización a usuarios legítimos.
-        \item[Elevation of Privilege] Adquirir un rol que permita ejecutar acciones para los que no se posee permiso en inicio.
+        \item[Elevation of Privilege] Adquirir un rol que permita ejecutar acciones para los que no se posee permiso.
     \end{description}
 \end{frame}
 
@@ -262,60 +260,61 @@
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Redundancia y Diversidad}
-    \begin{block}{Redundancia}
-        La \emph{redundancia} consiste en añadir recursos adicionales a un sistema de forma que puedan ser utilizados en caso de
-        que fallen sus elementos principales.
-    \end{block}
-    \uncover<2->{
-        \begin{block}{Diversidad}
-            La \emph{diversidad} consiste en hacer que los recursos adicionales sean diferentes a los principales, de manera que se evite que un mismo fallo afecte a todos.
-        \end{block}
-    }
-\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Sistemas de Protección}
+%    \begin{center}	
+%        \includegraphics[width=0.50\linewidth,keepaspectratio=true]{images/security/sistemaProteccion.eps}
+%    \end{center}
+%\end{frame}
 
-\begin{frame}[c]
-    \frametitle{Sistemas de Protección}
-    \begin{center}	
-        \includegraphics[width=0.50\linewidth,keepaspectratio=true]{images/security/sistemaProteccion.eps}
-    \end{center}
-\end{frame}
-
-\subsection[Casos de Mal Uso]{Casos de Mal Uso}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Elementos}
-    \begin{block}{Actor de mal uso (\emph{Misuser})~\cite{Sindre2005}}
-        Actor(persona o sistema) que, de forma deliberada o no deliberada, inicia un caso de mal uso.
-    \end{block}
-    \uncover<2->{
-    \begin{block}{Caso de Mal Uso (\emph{Misuse Case})~\cite{Sindre2005}}
-        Escenario, incluyendo variaciones y extensiones, ejecutado por un actor de mal uso, que, si se ejecuta con éxito, constituye una amenaza para la seguridad del sistema.
-    \end{block}
-    }
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Relaciones}
-    \begin{block}{Amenaza (\emph{theaten})~\cite{Sindre2005}}
-        Relación entre un caso de mal uso y un caso de uso que indica que el el caso de mal uso utiliza o se basa en el caso de uso para ejecutar un ataque.
-    \end{block}
-    \uncover<2->{
-       \begin{block}{Mitiga (\emph{Mitigate})~\cite{Sindre2005}}
-            Relación entre un caso de uso y un caso de mal uso que indica que el caso de uso se utiliza para evitar o mitigar el daño o perjuicio causado por un caso de mal uso.
-       \end{block}
-    }
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Casos de Mal Uso - Notación}
-    \begin{center}	
-        \includegraphics[width=\linewidth,keepaspectratio=true]{images/security/misusecase.eps}
-    \end{center}
-\end{frame}
+%\subsection[Casos de Mal Uso]{Casos de Mal Uso}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Elementos}
+%    \begin{block}{Actor de mal uso (\emph{Misuser})~\cite{Sindre2005}}
+%        Actor(persona o sistema) que, de forma deliberada o no deliberada, inicia un caso de mal uso.
+%    \end{block}
+%    \uncover<2->{
+%    \begin{block}{Caso de Mal Uso (\emph{Misuse Case})~\cite{Sindre2005}}
+%        Escenario, incluyendo variaciones y extensiones, ejecutado por un actor de mal uso, que, si se ejecuta con éxito, constituye una amenaza para la seguridad del sistema.
+%    \end{block}
+%    }
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Relaciones}
+%    \begin{block}{Amenaza (\emph{theaten})~\cite{Sindre2005}}
+%        Relación entre un caso de mal uso y un caso de uso que indica que el el caso de mal uso utiliza o se basa en el caso de uso para ejecutar un ataque.
+%    \end{block}
+%    \uncover<2->{
+%       \begin{block}{Mitiga (\emph{Mitigate})~\cite{Sindre2005}}
+%            Relación entre un caso de uso y un caso de mal uso que indica que el caso de uso se utiliza para evitar o mitigar el daño o perjuicio causado por un caso de mal uso.
+%       \end{block}
+%    }
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Casos de Mal Uso - Notación}
+%    \begin{center}	
+%        \includegraphics[width=\linewidth,keepaspectratio=true]{images/security/misusecase.eps}
+%    \end{center}
+%\end{frame}
 
 \subsection{Directrices para la Gestión de la Seguridad}
+
+\begin{frame}[c]
+	\frametitle{Redundancia y Diversidad}
+	\begin{block}{Redundancia}
+		La \emph{redundancia} consiste en añadir recursos adicionales a un sistema de forma que puedan ser utilizados en caso de
+		que fallen sus elementos principales.
+	\end{block}
+	\uncover<2->{
+		\begin{block}{Diversidad}
+			La \emph{diversidad} consiste en hacer que los recursos adicionales sean diferentes a los principales, de manera que se evite que un mismo fallo afecte a todos.
+		\end{block}
+	}
+\end{frame}
 
 \begin{frame}[c]
     \frametitle{Directrices para Garantizar la Seguridad Sw}
@@ -333,107 +332,106 @@
     \end{enumerate}
 \end{frame}
 
-\begin{frame}[c]
-    \frametitle{Gestión y Monitorización del Despliegue}
-    \begin{enumerate}[<+->]
-        \item Incluir soporte para visualizar y analizar configuraciones.
-        \item Centralizar la gestión de la configuración de la aplicación.
-        \item Reducir los privilegios por defecto.
-        \item Proporcionar mecanismos simples para solucionar problemas de seguridad.
-    \end{enumerate}
-\end{frame}
+%\begin{frame}[c]
+%    \frametitle{Gestión y Monitorización del Despliegue}
+%    \begin{enumerate}[<+->]
+%        \item Incluir soporte para visualizar y analizar configuraciones.
+%        \item Centralizar la gestión de la configuración de la aplicación.
+%        \item Reducir los privilegios por defecto.
+%        \item Proporcionar mecanismos simples para solucionar problemas de seguridad.
+%    \end{enumerate}
+%\end{frame}
 
-
-\section[Influencias entre Requisitos No Funcionales]{Modelado y Análisis de Influencias entre Requisitos No Funcionales}
-
-\subsection{Influencias entre NFRs}
-
-%% To animate
-\begin{frame}[t]
-    \frametitle{Influencias entre NFRs}
-    \only<1>{
-	\rput[lt](0,0){
-	   \includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
-	}
-\end{frame}
-
-\subsection{Evaluación de un Modelo de Objetivos}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Objetivos/Tareas Hoja}
-    \begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) =
-            \begin{cases}
-                100, \text{si\ } X \text{\ está seleccionado} \\
-                0, \text{otro caso}
-            \end{cases}
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Relaciones AND}
-    \begin{block}{Regla de Evaluación de Relación AND (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) = min_{i=1}^{n} V(Y_{i})
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Relaciones OR}
-    \begin{block}{Regla de Evaluación de Relación OR (Hao)}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
-        \end{center}
-        \begin{equation*}
-        V(X) = max_{i=1}^{n} V(Y_{i})
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}[c]
-    \frametitle{Evaluación de Contribuciones/Correlaciones}
-    \begin{block}{Regla de Evaluación de Contribuciones}
-        \begin{center}
-    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
-        \end{center}
-        \begin{equation*}
-            V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
-        \end{equation*}
-        \ \\ \ \\
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Ejemplo 1: Índices y Verificación de Firmas}
-    \only<1>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
-	}
-    \only<2>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
-	}
-    \only<3>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
-	}
-    \only<4>{
-	\rput[lt](0,0){
-	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
-	}
-\end{frame}
+%\section[Influencias entre Requisitos No Funcionales]{Modelado y Análisis de Influencias entre Requisitos No Funcionales}
+%
+%\subsection{Influencias entre NFRs}
+%
+%%% To animate
+%\begin{frame}[t]
+%    \frametitle{Influencias entre NFRs}
+%    \only<1>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=12cm,keepaspectratio=true]{images/influences/nfrInfluences.eps}}
+%	}
+%\end{frame}
+%
+%\subsection{Evaluación de un Modelo de Objetivos}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Objetivos/Tareas Hoja}
+%    \begin{block}{Regla de Evaluación de Objetivos/Tareas Hoja (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.5\linewidth,keepaspectratio=true]{images/influences/leafGoal.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) =
+%            \begin{cases}
+%                100, \text{si\ } X \text{\ está seleccionado} \\
+%                0, \text{otro caso}
+%            \end{cases}
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Relaciones AND}
+%    \begin{block}{Regla de Evaluación de Relación AND (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/andRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) = min_{i=1}^{n} V(Y_{i})
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Relaciones OR}
+%    \begin{block}{Regla de Evaluación de Relación OR (Hao)}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/orRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%        V(X) = max_{i=1}^{n} V(Y_{i})
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}[c]
+%    \frametitle{Evaluación de Contribuciones/Correlaciones}
+%    \begin{block}{Regla de Evaluación de Contribuciones}
+%        \begin{center}
+%    	   \includegraphics[width=0.4\linewidth,keepaspectratio=true]{images/influences/contributionRelationship.eps}
+%        \end{center}
+%        \begin{equation*}
+%            V(X) = max(-100,min(100,\frac{\sum_{i=1}^{n} V(Y_{i})*W_{i}}{100}))
+%        \end{equation*}
+%        \ \\ \ \\
+%    \end{block}
+%\end{frame}
+%
+%\begin{frame}
+%    \frametitle{Ejemplo 1: Índices y Verificación de Firmas}
+%    \only<1>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_00.eps}}
+%	}
+%    \only<2>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_01.eps}}
+%	}
+%    \only<3>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_02.eps}}
+%	}
+%    \only<4>{
+%	\rput[lt](0,0){
+%	   \includegraphics[width=11.5cm,keepaspectratio=true]{images/influences/example01_03.eps}}
+%	}
+%\end{frame}
 
 \section{Negociación}
 
@@ -496,9 +494,23 @@
 \begin{frame}[c]
     \frametitle{Estrategias de Negociación}
     \begin{enumerate}
-        \item Consider all facts.
-        \item Plus Minus Interesting
+        \item Consider All Facts.
+        \item Plus Minus Interesting.
     \end{enumerate}
+\end{frame}
+
+\begin{frame}[c]
+	\frametitle{Estrategias \emph{Plus Minus Interesting}}
+	\begin{enumerate}[<+->]
+		\item Cada participante recibe una hoja con tres columnas o apartados, titulados \emph{Plus}, \emph{Minus}, e \emph{Interesting}.
+		\item A continuación, cada participante escribe:
+		\begin{itemize}[<+->]
+			\item En la columna \emph{Plus}, aquellos elementos relacionados con el requisito en conflicto que son fundamentales para él.
+			\item En la columna \emph{Minus}, aquellos elementos que no estaría dispuesto a admitir.		
+			\item En la columna \emph{Interesting}, aquellos elementos que le agradan, pero a los que podría renunciar.		 
+		\end{itemize}
+		\item Finalmente, se examinan todas las hojas y se idean soluciones que traten de incluir todos los \emph{Plus}, excluir todos los \emph{Minus}, e incluir el máximo número de \emph{Interesting} posibles.
+	\end{enumerate}
 \end{frame}
 
 \section{Sumario y Referencias}
@@ -508,16 +520,15 @@
 \begin{frame}[c]
     \frametitle{¿Qué Tengo que Saber de Todo Esto?}
     \begin{enumerate}[<+->]
-        \item Conocer y entender los rasgos diferenciadores de los NFR.
-        \item Conocer y entender la terminología de la norma ISO 25010.
-        \item Conocer y entender el papel de los sistemas software en los sistemas sociotécnicos.
-        \item Comprender la importancia de los NFR en los sistemas sociotécnicos.
-        \item Conocer y entender la terminología asociada a la especificación de la seguridad de un sistema sw.
-        \item Saber analizar y especificar requisitos de seguridad de un sistema sw.
-        \item Saber especificar casos de mal uso y casos de uso de seguridad.
+        \item Comprender los rasgos diferenciadores de los \emph{requisitos no funcionales}.
+        \item Comprender la terminología de la norma ISO 25010.
+        \item Comprender el papel de los sistemas sw en los sistemas sociotécnicos.
+        \item Comprender la importancia de los RNFs en los sistemas sociotécnicos.
+        \item Ser capaz de analizar de la seguridad de un sistema sw.
+        \item Ser capaz de especificar, a nivel básico, requisitos de seguridad para un sistema sw. 
         \item Saber especificar, modelar y analizar las influencias entre NFRs.
-        \item Conocer y entender los principales tipos de conflictos que pueden surgir entre requisitos.
-        \item Saber aplicar técnicas de negociación para la resolución de conflictos.
+        \item Comprender los tipos de conflictos que pueden surgir entre requisitos.
+        \item Ser capaz de aplicar la técnica \emph{Plus Minus Interesting}.
     \end{enumerate}
 \end{frame}
 
